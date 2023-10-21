@@ -1,0 +1,1044 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="adminsifredegisti" xml:space="preserve">
+    <value>The password has been changed successfully, the program is restarting.</value>
+  </data>
+  <data name="adresbos" xml:space="preserve">
+    <value>Address cannot be left blank.</value>
+  </data>
+  <data name="akademisyenadi2karakterdenaz" xml:space="preserve">
+    <value>Academician Name must be at least 2 characters.</value>
+  </data>
+  <data name="akademisyenadibos" xml:space="preserve">
+    <value>Academician Name cannot be left blank.</value>
+  </data>
+  <data name="akademisyenbos" xml:space="preserve">
+    <value>Please choose an academician.</value>
+  </data>
+  <data name="akademisyencikis" xml:space="preserve">
+    <value>Do you want to exit the academician panel?</value>
+  </data>
+  <data name="akademisyenguncellendi" xml:space="preserve">
+    <value>Academician TR Number {0} has been updated successfully.</value>
+  </data>
+  <data name="akademisyenkaydedildi" xml:space="preserve">
+    <value>Academician with TR ID Number {0} was successfully registered.</value>
+  </data>
+  <data name="akademisyenolmayasi" xml:space="preserve">
+    <value>To become an academician, the age limit must be 21.</value>
+  </data>
+  <data name="akademisyensil" xml:space="preserve">
+    <value>Do you want to delete Academician TR Number {0}?</value>
+  </data>
+  <data name="akademisyensilindi" xml:space="preserve">
+    <value>Academician TR Number {0} was successfully deleted.</value>
+  </data>
+  <data name="akademisyensilmebos" xml:space="preserve">
+    <value>Please select an academician you want to delete.</value>
+  </data>
+  <data name="akademisyensoyadi2karakterdenaz" xml:space="preserve">
+    <value>Academician Surname must be at least 2 characters.</value>
+  </data>
+  <data name="akademisyensoyadibos" xml:space="preserve">
+    <value>Academician Surname cannot be left blank.</value>
+  </data>
+  <data name="alanlarbos" xml:space="preserve">
+    <value>Fields cannot be left blank!</value>
+  </data>
+  <data name="anneadi2karakterdenaz" xml:space="preserve">
+    <value>Mother Name must be at least 2 characters.</value>
+  </data>
+  <data name="anneadibos" xml:space="preserve">
+    <value>Mother Name cannot be left blank.</value>
+  </data>
+  <data name="ayniakademisyentc" xml:space="preserve">
+    <value>{0} TR Number available.</value>
+  </data>
+  <data name="aynibolum" xml:space="preserve">
+    <value>There is a section named {0}.</value>
+  </data>
+  <data name="aynidersadi" xml:space="preserve">
+    <value>There is already a course called {0}.</value>
+  </data>
+  <data name="ayniogrencitc" xml:space="preserve">
+    <value>{0} TR Number available.</value>
+  </data>
+  <data name="ayniokulno" xml:space="preserve">
+    <value>{0} School Number available.</value>
+  </data>
+  <data name="babaadi2karakterdenaz" xml:space="preserve">
+    <value>Father Name must be at least 2 characters.</value>
+  </data>
+  <data name="babaadibos" xml:space="preserve">
+    <value>Father Name cannot be left blank.</value>
+  </data>
+  <data name="bilgi" xml:space="preserve">
+    <value>Info</value>
+  </data>
+  <data name="bolum5karakterdenaz" xml:space="preserve">
+    <value>The department name must consist of at least 5 characters.</value>
+  </data>
+  <data name="bolumadimevcutolmayanguncelleme" xml:space="preserve">
+    <value>No department named {0} could be found.</value>
+  </data>
+  <data name="bolumbos" xml:space="preserve">
+    <value>Department name cannot be left blank.</value>
+  </data>
+  <data name="bolumguncellendi" xml:space="preserve">
+    <value>The department named {0} has been updated successfully.</value>
+  </data>
+  <data name="bolumkaydedildi" xml:space="preserve">
+    <value>The department named {0} has been added successfully.</value>
+  </data>
+  <data name="bolumsil" xml:space="preserve">
+    <value>Do you want to delete the department named {0}?</value>
+  </data>
+  <data name="bolumsilindi" xml:space="preserve">
+    <value>The department named {0} has been deleted successfully.</value>
+  </data>
+  <data name="bolumsilmebos" xml:space="preserve">
+    <value>Please select a department name you want to delete.</value>
+  </data>
+  <data name="BtnAdd" xml:space="preserve">
+    <value>Save</value>
+  </data>
+  <data name="BtnCalculate" xml:space="preserve">
+    <value>Calculate</value>
+  </data>
+  <data name="BtnCancel" xml:space="preserve">
+    <value>Cancel</value>
+  </data>
+  <data name="BtnChange" xml:space="preserve">
+    <value>Change</value>
+  </data>
+  <data name="BtnChoose" xml:space="preserve">
+    <value>CHOOSE</value>
+  </data>
+  <data name="BtnDelete" xml:space="preserve">
+    <value>Delete</value>
+  </data>
+  <data name="BtnEdit" xml:space="preserve">
+    <value>Edit</value>
+  </data>
+  <data name="BtnNotificationList" xml:space="preserve">
+    <value>Notification List</value>
+  </data>
+  <data name="ChkConfirmPassword" xml:space="preserve">
+    <value>Show/Hide</value>
+  </data>
+  <data name="ChkCurrentPassword" xml:space="preserve">
+    <value>Show/Hide</value>
+  </data>
+  <data name="ChkNewPassword" xml:space="preserve">
+    <value>Show/Hide</value>
+  </data>
+  <data name="ChkPassword" xml:space="preserve">
+    <value>Show/Hide</value>
+  </data>
+  <data name="ChkShowHidePassword" xml:space="preserve">
+    <value>Show/Hide Password</value>
+  </data>
+  <data name="dersadi5karakterdenaz" xml:space="preserve">
+    <value>Course name must be at least 5 characters.</value>
+  </data>
+  <data name="dersadibos" xml:space="preserve">
+    <value>Course name cannot be left blank.</value>
+  </data>
+  <data name="dersbos" xml:space="preserve">
+    <value>Please select a course you want to delete.</value>
+  </data>
+  <data name="dersguncellendi" xml:space="preserve">
+    <value>The {0} course has been successfully updated.</value>
+  </data>
+  <data name="derskaydedildi" xml:space="preserve">
+    <value>The {0} course was successfully added.</value>
+  </data>
+  <data name="derssil" xml:space="preserve">
+    <value>Do you want to delete the {0} course?</value>
+  </data>
+  <data name="derssilindi" xml:space="preserve">
+    <value>The {0} course was successfully deleted.</value>
+  </data>
+  <data name="duyurubasligibos" xml:space="preserve">
+    <value>Notification title cannot be left blank.</value>
+  </data>
+  <data name="duyurubos" xml:space="preserve">
+    <value>Please select a notification you want to delete.</value>
+  </data>
+  <data name="duyurueklendi" xml:space="preserve">
+    <value>The {0} notification added successfully.</value>
+  </data>
+  <data name="duyuruguncellendi" xml:space="preserve">
+    <value>The notification named {0} has been updated successfully.</value>
+  </data>
+  <data name="duyuruicerigibos" xml:space="preserve">
+    <value>Notification content cannot be left blank.</value>
+  </data>
+  <data name="duyurusil" xml:space="preserve">
+    <value>Do you want to delete the {0} notification?</value>
+  </data>
+  <data name="duyurusilindi" xml:space="preserve">
+    <value>The notification named {0} has been deleted successfully.</value>
+  </data>
+  <data name="errorprovidertc" xml:space="preserve">
+    <value>TR ID Number Must Be 11 Characters!</value>
+  </data>
+  <data name="eskisifrehatali" xml:space="preserve">
+    <value>Your old password is incorrect!</value>
+  </data>
+  <data name="eskiyenisifrelerayni" xml:space="preserve">
+    <value>The old password and the new password should not be the same!</value>
+  </data>
+  <data name="gizleToolStripMenuItem" xml:space="preserve">
+    <value>Hide</value>
+  </data>
+  <data name="groupBox1" xml:space="preserve">
+    <value>Student Informations</value>
+  </data>
+  <data name="groupBox2" xml:space="preserve">
+    <value>Address Informations</value>
+  </data>
+  <data name="groupBox3" xml:space="preserve">
+    <value>Contact Informations</value>
+  </data>
+  <data name="groupBox4" xml:space="preserve">
+    <value>Academician Informations</value>
+  </data>
+  <data name="groupBox5" xml:space="preserve">
+    <value>Note Informations</value>
+  </data>
+  <data name="gösterToolStripMenuItem" xml:space="preserve">
+    <value>Show</value>
+  </data>
+  <data name="hata" xml:space="preserve">
+    <value>Error</value>
+  </data>
+  <data name="hataliguvenlikkodugirisi" xml:space="preserve">
+    <value>Incorrect security code entry!</value>
+  </data>
+  <data name="hatalitcnosifre" xml:space="preserve">
+    <value>Incorrect TR Number, username or password!</value>
+  </data>
+  <data name="hatalitcokulno" xml:space="preserve">
+    <value>Incorrect TR number or school number!</value>
+  </data>
+  <data name="hosgeldiniz" xml:space="preserve">
+    <value>Welcome</value>
+  </data>
+  <data name="lbladdress" xml:space="preserve">
+    <value>Address:</value>
+  </data>
+  <data name="lbladdstudent" xml:space="preserve">
+    <value>Student Registration</value>
+  </data>
+  <data name="lbladsoyad" xml:space="preserve">
+    <value>Name Surname:</value>
+  </data>
+  <data name="lblakademisyen" xml:space="preserve">
+    <value>Academician</value>
+  </data>
+  <data name="lblakademisyenadi" xml:space="preserve">
+    <value>Name:</value>
+  </data>
+  <data name="lblakademisyenara" xml:space="preserve">
+    <value>Search Academician</value>
+  </data>
+  <data name="lblakademisyenaraformu" xml:space="preserve">
+    <value>SEARCH ACADEMICIAN</value>
+  </data>
+  <data name="lblakademisyencombobox" xml:space="preserve">
+    <value>Academician:</value>
+  </data>
+  <data name="lblakademisyenduzenle" xml:space="preserve">
+    <value>Edit Academician</value>
+  </data>
+  <data name="lblakademisyenduzenlemeformu" xml:space="preserve">
+    <value>ACADEMICIAN UPDATE FORM</value>
+  </data>
+  <data name="lblakademisyengirispaneli" xml:space="preserve">
+    <value>ACADEMICIAN LOGIN PANEL</value>
+  </data>
+  <data name="lblakademisyenkayit" xml:space="preserve">
+    <value>Academician Reg.</value>
+  </data>
+  <data name="lblakademisyenkayitformu" xml:space="preserve">
+    <value>ACADEMICIAN REGISTRATION FORM</value>
+  </data>
+  <data name="lblakademisyenler" xml:space="preserve">
+    <value>Academicians</value>
+  </data>
+  <data name="lblakademisyenlistesi" xml:space="preserve">
+    <value>List Academician</value>
+  </data>
+  <data name="lblakademisyenlistesiformu" xml:space="preserve">
+    <value>ACADEMICIAN LIST</value>
+  </data>
+  <data name="lblakademisyenpanel" xml:space="preserve">
+    <value>ACADEMICIANS</value>
+  </data>
+  <data name="lblakademisyenpaneli" xml:space="preserve">
+    <value>ACADEMICIAN PANEL</value>
+  </data>
+  <data name="lblakademisyensayisi" xml:space="preserve">
+    <value>Academician Count:</value>
+  </data>
+  <data name="lblakademisyensil" xml:space="preserve">
+    <value>Delete Academician</value>
+  </data>
+  <data name="lblakademisyensilmeformu" xml:space="preserve">
+    <value>ACADEMICIAN DELETION FORM</value>
+  </data>
+  <data name="lblakademisyensirala" xml:space="preserve">
+    <value>Sort Academician (A-Z):</value>
+  </data>
+  <data name="lblakademisyensiralaters" xml:space="preserve">
+    <value>Sort Academician (Z-A):</value>
+  </data>
+  <data name="lblakademisyensoyadi" xml:space="preserve">
+    <value>Surname:</value>
+  </data>
+  <data name="lblakademisyentcno" xml:space="preserve">
+    <value>TR Number:</value>
+  </data>
+  <data name="lblbirthdate" xml:space="preserve">
+    <value>Birth Date:</value>
+  </data>
+  <data name="lblbirthplace" xml:space="preserve">
+    <value>Birth Place:</value>
+  </data>
+  <data name="lblbolum" xml:space="preserve">
+    <value>Department:</value>
+  </data>
+  <data name="lblbolumadi" xml:space="preserve">
+    <value>Department Name:</value>
+  </data>
+  <data name="lblbolumara" xml:space="preserve">
+    <value>Search Department</value>
+  </data>
+  <data name="lblbolumduzenle" xml:space="preserve">
+    <value>Edit Department</value>
+  </data>
+  <data name="lblbolumduzenlemenu" xml:space="preserve">
+    <value>EDIT DEPT</value>
+  </data>
+  <data name="lblbolumekle" xml:space="preserve">
+    <value>Add Department</value>
+  </data>
+  <data name="lblbolumeklemenu" xml:space="preserve">
+    <value>ADD DEPT</value>
+  </data>
+  <data name="lblbolumler" xml:space="preserve">
+    <value>Departments</value>
+  </data>
+  <data name="lblbolumlerpanel" xml:space="preserve">
+    <value>DEPARTMENTS</value>
+  </data>
+  <data name="lblbolumlistesi" xml:space="preserve">
+    <value>List Department</value>
+  </data>
+  <data name="lblbolumsayisi" xml:space="preserve">
+    <value>Department Count:</value>
+  </data>
+  <data name="lblbolumsil" xml:space="preserve">
+    <value>Delete Department</value>
+  </data>
+  <data name="lblbolumsilmenu" xml:space="preserve">
+    <value>DELETE DEPT</value>
+  </data>
+  <data name="lblbolumsirala" xml:space="preserve">
+    <value>Sort Department (A-Z):</value>
+  </data>
+  <data name="lblbolumsiralaters" xml:space="preserve">
+    <value>Sort Department (Z-A):</value>
+  </data>
+  <data name="lblcity" xml:space="preserve">
+    <value>City:</value>
+  </data>
+  <data name="lblconfirmpassword" xml:space="preserve">
+    <value>Confirm Password:</value>
+  </data>
+  <data name="lblcurrentpassword" xml:space="preserve">
+    <value>Current Password:</value>
+  </data>
+  <data name="lbldeletestudent" xml:space="preserve">
+    <value>Delete Student</value>
+  </data>
+  <data name="lbldepartment" xml:space="preserve">
+    <value>Department:</value>
+  </data>
+  <data name="lblders" xml:space="preserve">
+    <value>Lesson:</value>
+  </data>
+  <data name="lbldersara" xml:space="preserve">
+    <value>Search Lesson</value>
+  </data>
+  <data name="lbldersaraformu" xml:space="preserve">
+    <value>SEARCH LESSON</value>
+  </data>
+  <data name="lbldersarama" xml:space="preserve">
+    <value>Search Lesson:</value>
+  </data>
+  <data name="lbldersduzenle" xml:space="preserve">
+    <value>Edit Lesson</value>
+  </data>
+  <data name="lbldersduzenleformu" xml:space="preserve">
+    <value>EDIT LESSON</value>
+  </data>
+  <data name="lbldersekle" xml:space="preserve">
+    <value>Add Lesson</value>
+  </data>
+  <data name="lbldersekleformu" xml:space="preserve">
+    <value>ADD LESSON</value>
+  </data>
+  <data name="lbldersler" xml:space="preserve">
+    <value>Lessons</value>
+  </data>
+  <data name="lblderslerpanel" xml:space="preserve">
+    <value>LESSONS</value>
+  </data>
+  <data name="lblderslistesi" xml:space="preserve">
+    <value>Lesson List</value>
+  </data>
+  <data name="lblderslistesiformu" xml:space="preserve">
+    <value>LESSON LIST</value>
+  </data>
+  <data name="lblderssayisi" xml:space="preserve">
+    <value>Lesson Count:</value>
+  </data>
+  <data name="lblderssec" xml:space="preserve">
+    <value>Choose Lesson:</value>
+  </data>
+  <data name="lblderssil" xml:space="preserve">
+    <value>Delete Lesson</value>
+  </data>
+  <data name="lblderssilformu" xml:space="preserve">
+    <value>DELETE LESSON</value>
+  </data>
+  <data name="lblderssirala" xml:space="preserve">
+    <value>Sort Lesson (A-Z):</value>
+  </data>
+  <data name="lblderssiralaters" xml:space="preserve">
+    <value>Sort Lesson (Z-A):</value>
+  </data>
+  <data name="lbldildegistir" xml:space="preserve">
+    <value>Change Language</value>
+  </data>
+  <data name="lbldistrict" xml:space="preserve">
+    <value>District:</value>
+  </data>
+  <data name="lblduyuruara" xml:space="preserve">
+    <value>Search Notification</value>
+  </data>
+  <data name="lblduyuruaraformu" xml:space="preserve">
+    <value>SEARCH NOTIFICATION</value>
+  </data>
+  <data name="lblduyuruarama" xml:space="preserve">
+    <value>Search Notification:</value>
+  </data>
+  <data name="lblduyurubasligi" xml:space="preserve">
+    <value>Notification Title:</value>
+  </data>
+  <data name="lblduyuruduzenle" xml:space="preserve">
+    <value>Edit Notification</value>
+  </data>
+  <data name="lblduyuruduzenleformu" xml:space="preserve">
+    <value>EDIT NOTIFICATION</value>
+  </data>
+  <data name="lblduyuruicerik" xml:space="preserve">
+    <value>Content:</value>
+  </data>
+  <data name="lblduyurular" xml:space="preserve">
+    <value>Notifications</value>
+  </data>
+  <data name="lblduyurularogrenci" xml:space="preserve">
+    <value>Notifications</value>
+  </data>
+  <data name="lblduyurularpanel" xml:space="preserve">
+    <value>NOTIFICATIONS</value>
+  </data>
+  <data name="lblduyurulistesi" xml:space="preserve">
+    <value>Notification List</value>
+  </data>
+  <data name="lblduyurulistesiformu" xml:space="preserve">
+    <value>NOTIFICATION LIST</value>
+  </data>
+  <data name="lblduyuruolustur" xml:space="preserve">
+    <value>Create Notification</value>
+  </data>
+  <data name="lblduyuruolusturformu" xml:space="preserve">
+    <value>CREATE NOTIFICATION</value>
+  </data>
+  <data name="lblduyurusayisi" xml:space="preserve">
+    <value>Notification Count:</value>
+  </data>
+  <data name="lblduyurusil" xml:space="preserve">
+    <value>Delete Notification</value>
+  </data>
+  <data name="lblduyurusilformu" xml:space="preserve">
+    <value>DELETE NOTIFICATION</value>
+  </data>
+  <data name="lbleditstudent" xml:space="preserve">
+    <value>Edit Student</value>
+  </data>
+  <data name="lblegitimotomasyonsistemi" xml:space="preserve">
+    <value>Education Automation System</value>
+  </data>
+  <data name="lblegitimotomasyonugirispanelleri" xml:space="preserve">
+    <value>Education Automation Login Panels</value>
+  </data>
+  <data name="lblfathername" xml:space="preserve">
+    <value>Father Name:</value>
+  </data>
+  <data name="lblfinalsinavi" xml:space="preserve">
+    <value>Final Exam:</value>
+  </data>
+  <data name="lblgazeteler" xml:space="preserve">
+    <value>Newspapers</value>
+  </data>
+  <data name="lblgender" xml:space="preserve">
+    <value>Gender:</value>
+  </data>
+  <data name="lblguvenlikkodu" xml:space="preserve">
+    <value>Security Code:</value>
+  </data>
+  <data name="lblhesapmakinesi" xml:space="preserve">
+    <value>Calculator</value>
+  </data>
+  <data name="lblhomephonenumber" xml:space="preserve">
+    <value>Home Phone:</value>
+  </data>
+  <data name="lblkullaniciadi" xml:space="preserve">
+    <value>Username:</value>
+  </data>
+  <data name="lbllistdepartmentmenu" xml:space="preserve">
+    <value>LIST DEPT</value>
+  </data>
+  <data name="lblliststudent" xml:space="preserve">
+    <value>List Student</value>
+  </data>
+  <data name="lbllogineos" xml:space="preserve">
+    <value>Education Automation System</value>
+  </data>
+  <data name="lblmail" xml:space="preserve">
+    <value>Mail:</value>
+  </data>
+  <data name="lblmothername" xml:space="preserve">
+    <value>Mother Name:</value>
+  </data>
+  <data name="lblmuzikdinle" xml:space="preserve">
+    <value>Listen to Music</value>
+  </data>
+  <data name="lblmuzikler" xml:space="preserve">
+    <value>Musics</value>
+  </data>
+  <data name="lblneighborhood" xml:space="preserve">
+    <value>Neighborhood:</value>
+  </data>
+  <data name="lblnewpassword" xml:space="preserve">
+    <value>New Password:</value>
+  </data>
+  <data name="lblnotbilgileri" xml:space="preserve">
+    <value>Note Info</value>
+  </data>
+  <data name="lblnotislemleri" xml:space="preserve">
+    <value>NOTE TRANSACTIONS</value>
+  </data>
+  <data name="lblnotlar" xml:space="preserve">
+    <value>Notes</value>
+  </data>
+  <data name="lblnotlarim" xml:space="preserve">
+    <value>MY NOTES</value>
+  </data>
+  <data name="lblogrenci" xml:space="preserve">
+    <value>Student</value>
+  </data>
+  <data name="lblogrenciarapanel" xml:space="preserve">
+    <value>SEARCH STUDENT</value>
+  </data>
+  <data name="lblogrenciduzenlemeformu" xml:space="preserve">
+    <value>STUDENT EDIT FORM</value>
+  </data>
+  <data name="lblogrencigirispaneli" xml:space="preserve">
+    <value>STUDENT LOGIN PANEL</value>
+  </data>
+  <data name="lblogrenciid" xml:space="preserve">
+    <value>Student ID:</value>
+  </data>
+  <data name="lblogrenciler" xml:space="preserve">
+    <value>Students</value>
+  </data>
+  <data name="lblogrencilistesiformu" xml:space="preserve">
+    <value>STUDENT LIST</value>
+  </data>
+  <data name="lblogrencino" xml:space="preserve">
+    <value>Student No:</value>
+  </data>
+  <data name="lblogrencinoara" xml:space="preserve">
+    <value>Search Student No:</value>
+  </data>
+  <data name="lblogrencipaneli" xml:space="preserve">
+    <value>STUDENT PANEL</value>
+  </data>
+  <data name="lblogrencisayisi" xml:space="preserve">
+    <value>Student Count:</value>
+  </data>
+  <data name="lblogrencisilmeformu" xml:space="preserve">
+    <value>STUDENT DELETION FORM</value>
+  </data>
+  <data name="lblogrencisirala" xml:space="preserve">
+    <value>Sort Student (A-Z):</value>
+  </data>
+  <data name="lblogrencisiralaters" xml:space="preserve">
+    <value>Sort Student (Z-A):</value>
+  </data>
+  <data name="lblortalama" xml:space="preserve">
+    <value>Average:</value>
+  </data>
+  <data name="lblparola" xml:space="preserve">
+    <value>Password:</value>
+  </data>
+  <data name="lblpassword" xml:space="preserve">
+    <value>Password:</value>
+  </data>
+  <data name="lblphonenumber" xml:space="preserve">
+    <value>Phone Number:</value>
+  </data>
+  <data name="lblphoto" xml:space="preserve">
+    <value>Photo:</value>
+  </data>
+  <data name="lblpostalcode" xml:space="preserve">
+    <value>Postal Code:</value>
+  </data>
+  <data name="lblradyo" xml:space="preserve">
+    <value>Radio</value>
+  </data>
+  <data name="lblraporlar" xml:space="preserve">
+    <value>Reports</value>
+  </data>
+  <data name="lblraporlarpaneli" xml:space="preserve">
+    <value>REPORTS</value>
+  </data>
+  <data name="lblsearchdepartmentmenu" xml:space="preserve">
+    <value>SEARCH DEPT</value>
+  </data>
+  <data name="lblsearchstudent" xml:space="preserve">
+    <value>Search Student</value>
+  </data>
+  <data name="lblsifredegisikliği" xml:space="preserve">
+    <value>PASSWORD CHANGE</value>
+  </data>
+  <data name="lblsifredegistir" xml:space="preserve">
+    <value>Change Password</value>
+  </data>
+  <data name="lblson3akademisyenkayit" xml:space="preserve">
+    <value>Last 3 Academician Reg.:</value>
+  </data>
+  <data name="lblson3bolumkayit" xml:space="preserve">
+    <value>Last 3 Department Reg.:</value>
+  </data>
+  <data name="lblson3derskayit" xml:space="preserve">
+    <value>Last 3 Lesson Reg.:</value>
+  </data>
+  <data name="lblson3ogrencikayit" xml:space="preserve">
+    <value>Last 3 Student Reg.:</value>
+  </data>
+  <data name="lblstudent" xml:space="preserve">
+    <value>Student:</value>
+  </data>
+  <data name="lblstudentname" xml:space="preserve">
+    <value>Student Name:</value>
+  </data>
+  <data name="lblstudentnumber" xml:space="preserve">
+    <value>School No:</value>
+  </data>
+  <data name="lblstudentpanel" xml:space="preserve">
+    <value>STUDENTS</value>
+  </data>
+  <data name="lblstudentregistrationform" xml:space="preserve">
+    <value>STUDENT REGISTRATION FORM</value>
+  </data>
+  <data name="lblstudentsurname" xml:space="preserve">
+    <value>Student Surname:</value>
+  </data>
+  <data name="lblstudenttrno" xml:space="preserve">
+    <value>TR No:</value>
+  </data>
+  <data name="lbltcno" xml:space="preserve">
+    <value>TR ID Number:</value>
+  </data>
+  <data name="lbltcnoara" xml:space="preserve">
+    <value>Search TR No:</value>
+  </data>
+  <data name="lbltoplamakademisyensayisi" xml:space="preserve">
+    <value>Total Academician Count:</value>
+  </data>
+  <data name="lbltoplambolumsayisi" xml:space="preserve">
+    <value>Total Department Count:</value>
+  </data>
+  <data name="lbltoplamderssayisi" xml:space="preserve">
+    <value>Total Lesson Count:</value>
+  </data>
+  <data name="lbltoplamogrencisayisi" xml:space="preserve">
+    <value>Total Student Count:</value>
+  </data>
+  <data name="lbluygulamalar" xml:space="preserve">
+    <value>Applications</value>
+  </data>
+  <data name="lbluygulamalarformu" xml:space="preserve">
+    <value>APPLICATIONS</value>
+  </data>
+  <data name="lblvizesinavi" xml:space="preserve">
+    <value>Midterm Exam:</value>
+  </data>
+  <data name="lblyonetici" xml:space="preserve">
+    <value>Admin</value>
+  </data>
+  <data name="lblyoneticigirispaneli" xml:space="preserve">
+    <value>ADMIN LOGIN PANEL</value>
+  </data>
+  <data name="lblyoneticipaneli" xml:space="preserve">
+    <value>ADMIN PANEL</value>
+  </data>
+  <data name="lblyukleniyor" xml:space="preserve">
+    <value>LOADING...</value>
+  </data>
+  <data name="LnkLblClear" xml:space="preserve">
+    <value>CLEAR</value>
+  </data>
+  <data name="LnkLblLogin" xml:space="preserve">
+    <value>LOGIN</value>
+  </data>
+  <data name="mailbos" xml:space="preserve">
+    <value>Email cannot be left blank.</value>
+  </data>
+  <data name="metin" xml:space="preserve">
+    <value>Do you want to exit the program?</value>
+  </data>
+  <data name="metin2" xml:space="preserve">
+    <value>Login was successful, you are directed to the admin panel.</value>
+  </data>
+  <data name="metin3" xml:space="preserve">
+    <value>Login was successful, you are directed to the academician panel.</value>
+  </data>
+  <data name="metin4" xml:space="preserve">
+    <value>Login was successful, you are directed to the student panel.</value>
+  </data>
+  <data name="notifyIcon1" xml:space="preserve">
+    <value>Education Automation System Admin Panel</value>
+  </data>
+  <data name="notifyIcon2" xml:space="preserve">
+    <value>Education Automation System Academician Panel</value>
+  </data>
+  <data name="notifyIcon3" xml:space="preserve">
+    <value>Education Automation System Student Panel</value>
+  </data>
+  <data name="notifyiconakademisyentext" xml:space="preserve">
+    <value>Education Automation System Academician Panel</value>
+  </data>
+  <data name="notifyiconballoontiptext" xml:space="preserve">
+    <value>The program is positioned in the lower right corner.</value>
+  </data>
+  <data name="notifyiconballoontiptitle" xml:space="preserve">
+    <value>Education Automation System is running in the background.</value>
+  </data>
+  <data name="notifyiconogrencitext" xml:space="preserve">
+    <value>Education Automation System Student Panel</value>
+  </data>
+  <data name="notifyiconyoneticitext" xml:space="preserve">
+    <value>Education Automation System Admin Panel</value>
+  </data>
+  <data name="ogrenciadi2karakterdenaz" xml:space="preserve">
+    <value>Student Name must be at least 2 characters.</value>
+  </data>
+  <data name="ogrenciadibos" xml:space="preserve">
+    <value>Student Name cannot be left blank.</value>
+  </data>
+  <data name="ogrencibos" xml:space="preserve">
+    <value>Please choose a student.</value>
+  </data>
+  <data name="ogrencicikis" xml:space="preserve">
+    <value>Do you want to exit the student panel?</value>
+  </data>
+  <data name="ogrencidogumyeribos" xml:space="preserve">
+    <value>Birth Place cannot be left blank.</value>
+  </data>
+  <data name="ogrenciguncellendi" xml:space="preserve">
+    <value>Student number {0} has been updated successfully.</value>
+  </data>
+  <data name="ogrencikaydedildi" xml:space="preserve">
+    <value>Student number {0} has been successfully registered.</value>
+  </data>
+  <data name="ogrencinotuguncellendi" xml:space="preserve">
+    <value>Lecture notes have been successfully updated.</value>
+  </data>
+  <data name="ogrencinotukaydedildi" xml:space="preserve">
+    <value>Lecture notes have been successfully saved.</value>
+  </data>
+  <data name="ogrencinumarabos" xml:space="preserve">
+    <value>Student Number cannot be left blank.</value>
+  </data>
+  <data name="ogrencisil" xml:space="preserve">
+    <value>Do you want to delete Student Number {0}?</value>
+  </data>
+  <data name="ogrencisilindi" xml:space="preserve">
+    <value>Student Number {0} was successfully deleted.</value>
+  </data>
+  <data name="ogrencisilmebos" xml:space="preserve">
+    <value>Please select a student you want to delete.</value>
+  </data>
+  <data name="ogrencisoyadi2karakterdenaz" xml:space="preserve">
+    <value>Student Surname must be at least 2 characters.</value>
+  </data>
+  <data name="ogrencisoyadibos" xml:space="preserve">
+    <value>Student Surname cannot be left blank.</value>
+  </data>
+  <data name="ogrenciuniversiteyasi" xml:space="preserve">
+    <value>The student must be 17 years of age to enroll in the university.</value>
+  </data>
+  <data name="parolabos" xml:space="preserve">
+    <value>Please set a password.</value>
+  </data>
+  <data name="parolalaraynidegil" xml:space="preserve">
+    <value>Passwords do not match!</value>
+  </data>
+  <data name="parolatekrarbos" xml:space="preserve">
+    <value>Password Confirm cannot be left blank.</value>
+  </data>
+  <data name="postakodubos" xml:space="preserve">
+    <value>Postal Code cannot be left blank.</value>
+  </data>
+  <data name="rdbenglish" xml:space="preserve">
+    <value>ENGLISH</value>
+  </data>
+  <data name="RdbFemale" xml:space="preserve">
+    <value>Female</value>
+  </data>
+  <data name="RdbMale" xml:space="preserve">
+    <value>Male</value>
+  </data>
+  <data name="rdbturkce" xml:space="preserve">
+    <value>TURKISH</value>
+  </data>
+  <data name="resimbos" xml:space="preserve">
+    <value>Please select a photo.</value>
+  </data>
+  <data name="semtbos" xml:space="preserve">
+    <value>Neighborhood cannot be left blank.</value>
+  </data>
+  <data name="tcnobos" xml:space="preserve">
+    <value>TR ID Number cannot be left blank.</value>
+  </data>
+  <data name="telefonnobos" xml:space="preserve">
+    <value>Phone Number cannot be left blank.</value>
+  </data>
+  <data name="toolTip1.SetToolTip" xml:space="preserve">
+    <value>Click to add, delete or update departments.</value>
+  </data>
+  <data name="toolTip1.ToolTipTitle" xml:space="preserve">
+    <value>Department Operations</value>
+  </data>
+  <data name="toolTip10.SetToolTip" xml:space="preserve">
+    <value>Click for tools such as listening to radio and music.</value>
+  </data>
+  <data name="toolTip10.ToolTipTitle" xml:space="preserve">
+    <value>Applications</value>
+  </data>
+  <data name="toolTip11.SetToolTip" xml:space="preserve">
+    <value>Click to view reports.</value>
+  </data>
+  <data name="toolTip11.ToolTipTitle" xml:space="preserve">
+    <value>Reports</value>
+  </data>
+  <data name="toolTip12.SetToolTip" xml:space="preserve">
+    <value>Minimize</value>
+  </data>
+  <data name="toolTip13.SetToolTip" xml:space="preserve">
+    <value>Close</value>
+  </data>
+  <data name="toolTip14.SetToolTip" xml:space="preserve">
+    <value>Click to create a notification.</value>
+  </data>
+  <data name="toolTip14.ToolTipTitle" xml:space="preserve">
+    <value>Notification Operations</value>
+  </data>
+  <data name="toolTip2.SetToolTip" xml:space="preserve">
+    <value>Click for tools such as changing passwords, listening to radio and music.</value>
+  </data>
+  <data name="toolTip2.ToolTipTitle" xml:space="preserve">
+    <value>Applications</value>
+  </data>
+  <data name="toolTip3.SetToolTip" xml:space="preserve">
+    <value>Click to add, delete or update notifications.</value>
+  </data>
+  <data name="toolTip3.ToolTipTitle" xml:space="preserve">
+    <value>Notification Operations</value>
+  </data>
+  <data name="toolTip4.SetToolTip" xml:space="preserve">
+    <value>Click to add, delete or update students.</value>
+  </data>
+  <data name="toolTip4.ToolTipTitle" xml:space="preserve">
+    <value>Student Operations</value>
+  </data>
+  <data name="toolTip5.SetToolTip" xml:space="preserve">
+    <value>Click to add, delete or update academicians.</value>
+  </data>
+  <data name="toolTip5.ToolTipTitle" xml:space="preserve">
+    <value>Academician Operations</value>
+  </data>
+  <data name="toolTip6.SetToolTip" xml:space="preserve">
+    <value>Click to add, delete or update lessons.</value>
+  </data>
+  <data name="toolTip6.ToolTipTitle" xml:space="preserve">
+    <value>Lesson Operations</value>
+  </data>
+  <data name="toolTip7.SetToolTip" xml:space="preserve">
+    <value>Click to add notes and updates.</value>
+  </data>
+  <data name="toolTip7.ToolTipTitle" xml:space="preserve">
+    <value>Note Transactions</value>
+  </data>
+  <data name="toolTip8.SetToolTip" xml:space="preserve">
+    <value>Click to view the note.</value>
+  </data>
+  <data name="toolTip8.ToolTipTitle" xml:space="preserve">
+    <value>Grade Information</value>
+  </data>
+  <data name="toolTip9.SetToolTip" xml:space="preserve">
+    <value>Click to see current notifications.</value>
+  </data>
+  <data name="toolTip9.ToolTipTitle" xml:space="preserve">
+    <value>See Notifications</value>
+  </data>
+  <data name="uyari" xml:space="preserve">
+    <value>Warning</value>
+  </data>
+  <data name="yoneticicikis" xml:space="preserve">
+    <value>Do you want to exit the admin panel?</value>
+  </data>
+  <data name="çıkışAdminToolStripMenuItem" xml:space="preserve">
+    <value>Exit</value>
+  </data>
+  <data name="çıkışAkademisyenToolStripMenuItem" xml:space="preserve">
+    <value>Exit</value>
+  </data>
+  <data name="çıkışOgrenciToolStripMenuItem" xml:space="preserve">
+    <value>Exit</value>
+  </data>
+</root>

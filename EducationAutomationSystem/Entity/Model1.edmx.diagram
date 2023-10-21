@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="6b438af813c944d5aee525d9b78fd1f7" Name="Diagram1">
+        <EntityTypeShape EntityType="DbEducationModel.ilceler" Width="1.5" PointX="3" PointY="7.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="DbEducationModel.iller" Width="1.5" PointX="0.75" PointY="7.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="DbEducationModel.sysdiagrams" Width="1.5" PointX="5.75" PointY="1" IsExpanded="true" />
+        <EntityTypeShape EntityType="DbEducationModel.TBLACADEMICIAN" Width="1.5" PointX="6" PointY="6.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="DbEducationModel.TBLADMINLOGIN" Width="1.5" PointX="7.75" PointY="1" IsExpanded="true" />
+        <EntityTypeShape EntityType="DbEducationModel.TBLDEPARTMENT" Width="1.5" PointX="0.75" PointY="2.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="DbEducationModel.TBLLESSON" Width="1.5" PointX="8.25" PointY="7.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="DbEducationModel.TBLNOTE" Width="1.5" PointX="10.5" PointY="4.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="DbEducationModel.TBLNOTIFICATION" Width="1.5" PointX="9.75" PointY="1" IsExpanded="true" />
+        <EntityTypeShape EntityType="DbEducationModel.TBLSTUDENT" Width="1.5" PointX="3" PointY="0.75" IsExpanded="true" />
+        <AssociationConnector Association="DbEducationModel.FK_ilceler_iller1" ManuallyRouted="false" />
+        <AssociationConnector Association="DbEducationModel.FK_TBLACADEMICIAN_iller1" ManuallyRouted="false" />
+        <AssociationConnector Association="DbEducationModel.FK_TBLSTUDENT_iller1" ManuallyRouted="false" />
+        <AssociationConnector Association="DbEducationModel.FK_TBLACADEMICIAN_TBLDEPARTMENT" ManuallyRouted="false" />
+        <AssociationConnector Association="DbEducationModel.FK_TBLLESSON_TBLACADEMICIAN" ManuallyRouted="false" />
+        <AssociationConnector Association="DbEducationModel.FK_TBLNOTE_TBLACADEMICIAN" ManuallyRouted="false" />
+        <AssociationConnector Association="DbEducationModel.FK_TBLLESSON_TBLDEPARTMENT" ManuallyRouted="false" />
+        <AssociationConnector Association="DbEducationModel.FK_TBLSTUDENT_TBLDEPARTMENT" ManuallyRouted="false" />
+        <AssociationConnector Association="DbEducationModel.FK_TBLNOTE_TBLLESSON" ManuallyRouted="false" />
+        <AssociationConnector Association="DbEducationModel.FK_TBLNOTE_TBLSTUDENT" ManuallyRouted="false" />
+        <EntityTypeShape EntityType="DbEducationModel.View_1" Width="1.5" PointX="0.75" PointY="10.75" />
+        <EntityTypeShape EntityType="DbEducationModel.View_2" Width="1.5" PointX="5.75" PointY="3.75" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

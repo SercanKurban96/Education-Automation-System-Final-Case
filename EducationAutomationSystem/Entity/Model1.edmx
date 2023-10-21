@@ -1,0 +1,857 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+    <Schema Namespace="DbEducationModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <EntityType Name="ilceler">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="ilceadi" Type="nvarchar" MaxLength="255" Nullable="false" />
+          <Property Name="sehirid" Type="int" Nullable="false" />
+        </EntityType>
+        <EntityType Name="iller">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="sehiradi" Type="nvarchar" MaxLength="255" />
+        </EntityType>
+        <EntityType Name="sysdiagrams">
+          <Key>
+            <PropertyRef Name="diagram_id" />
+          </Key>
+          <Property Name="name" Type="nvarchar" MaxLength="128" Nullable="false" />
+          <Property Name="principal_id" Type="int" Nullable="false" />
+          <Property Name="diagram_id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="version" Type="int" />
+          <Property Name="definition" Type="varbinary(max)" />
+        </EntityType>
+        <EntityType Name="TBLACADEMICIAN">
+          <Key>
+            <PropertyRef Name="AcademicianID" />
+          </Key>
+          <Property Name="AcademicianID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="AcademicianTRNumber" Type="varchar" MaxLength="11" />
+          <Property Name="AcademicianName" Type="varchar" MaxLength="50" />
+          <Property Name="AcademicianSurname" Type="varchar" MaxLength="50" />
+          <Property Name="AcademicianBirthDate" Type="date" />
+          <Property Name="AcademicianGender" Type="varchar" MaxLength="5" />
+          <Property Name="AcademicianPassword" Type="varchar" MaxLength="50" />
+          <Property Name="AcademicianConfirmPassword" Type="varchar" MaxLength="50" />
+          <Property Name="Department" Type="int" />
+          <Property Name="AcademicianCity" Type="int" />
+          <Property Name="AcademicianDistrict" Type="int" />
+          <Property Name="AcademicianAddress" Type="varchar" MaxLength="500" />
+          <Property Name="AcademicianPhoneNumber" Type="varchar" MaxLength="20" />
+          <Property Name="AcademicianMail" Type="varchar" MaxLength="150" />
+          <Property Name="AcademicianImage" Type="varchar" MaxLength="500" />
+        </EntityType>
+        <EntityType Name="TBLADMINLOGIN">
+          <Key>
+            <PropertyRef Name="AdminID" />
+          </Key>
+          <Property Name="AdminID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="AdminTRNumber" Type="varchar" MaxLength="11" />
+          <Property Name="AdminUsername" Type="varchar" MaxLength="50" />
+          <Property Name="AdminPassword" Type="varchar" MaxLength="50" />
+        </EntityType>
+        <EntityType Name="TBLDEPARTMENT">
+          <Key>
+            <PropertyRef Name="DepartmentID" />
+          </Key>
+          <Property Name="DepartmentID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="DepartmentName" Type="varchar" MaxLength="100" />
+        </EntityType>
+        <EntityType Name="TBLLESSON">
+          <Key>
+            <PropertyRef Name="LessonID" />
+          </Key>
+          <Property Name="LessonID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="LessonName" Type="varchar" MaxLength="100" />
+          <Property Name="Department" Type="int" />
+          <Property Name="Academician" Type="int" />
+        </EntityType>
+        <EntityType Name="TBLNOTE">
+          <Key>
+            <PropertyRef Name="NoteID" />
+          </Key>
+          <Property Name="NoteID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="MidtermExam" Type="tinyint" />
+          <Property Name="FinalExam" Type="tinyint" />
+          <Property Name="Average" Type="decimal" Precision="5" Scale="2" />
+          <Property Name="Lesson" Type="int" />
+          <Property Name="Student" Type="int" />
+          <Property Name="Academician" Type="int" />
+        </EntityType>
+        <EntityType Name="TBLNOTIFICATION">
+          <Key>
+            <PropertyRef Name="NotificationID" />
+          </Key>
+          <Property Name="NotificationID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="NotificationDate" Type="datetime" />
+          <Property Name="NotificationTitle" Type="varchar" MaxLength="50" />
+          <Property Name="NotificationDescription" Type="varchar" MaxLength="500" />
+        </EntityType>
+        <EntityType Name="TBLSTUDENT">
+          <Key>
+            <PropertyRef Name="StudentID" />
+          </Key>
+          <Property Name="StudentID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="StudentTRNumber" Type="bigint" />
+          <Property Name="StudentName" Type="varchar" MaxLength="50" />
+          <Property Name="StudentSurname" Type="varchar" MaxLength="50" />
+          <Property Name="StudentNumber" Type="varchar" MaxLength="5" />
+          <Property Name="StudentBirthDate" Type="date" />
+          <Property Name="StudentBirthPlace" Type="varchar" MaxLength="50" />
+          <Property Name="StudentGender" Type="varchar" MaxLength="5" />
+          <Property Name="MothersName" Type="varchar" MaxLength="50" />
+          <Property Name="FathersName" Type="varchar" MaxLength="50" />
+          <Property Name="Department" Type="int" />
+          <Property Name="City" Type="int" />
+          <Property Name="District" Type="int" />
+          <Property Name="Neighborhood" Type="varchar" MaxLength="50" />
+          <Property Name="PostalCode" Type="int" />
+          <Property Name="Address" Type="varchar" MaxLength="500" />
+          <Property Name="PhoneNumber" Type="varchar" MaxLength="20" />
+          <Property Name="HomePhoneNumber" Type="varchar" MaxLength="20" />
+          <Property Name="StudentMail" Type="varchar" MaxLength="100" />
+          <Property Name="StudentPicture" Type="varchar" MaxLength="500" />
+        </EntityType>
+        <!--Errors Found During Generation:
+warning 6002: The table/view 'DbEducation.dbo.View_1' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+        <EntityType Name="View_1">
+          <Key>
+            <PropertyRef Name="NoteID" />
+          </Key>
+          <Property Name="NoteID" Type="int" Nullable="false" />
+          <Property Name="MidtermExam" Type="tinyint" />
+          <Property Name="FinalExam" Type="tinyint" />
+          <Property Name="LessonName" Type="varchar" MaxLength="100" />
+          <Property Name="StudentName" Type="varchar" MaxLength="50" />
+          <Property Name="StudentSurname" Type="varchar" MaxLength="50" />
+          <Property Name="DepartmentName" Type="varchar" MaxLength="100" />
+          <Property Name="Average" Type="decimal" Precision="5" Scale="2" />
+        </EntityType>
+        <!--Errors Found During Generation:
+warning 6002: The table/view 'DbEducation.dbo.View_2' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+        <EntityType Name="View_2">
+          <Key>
+            <PropertyRef Name="LessonID" />
+          </Key>
+          <Property Name="LessonID" Type="int" Nullable="false" />
+          <Property Name="StudentName" Type="varchar" MaxLength="50" />
+        </EntityType>
+        <Association Name="FK_ilceler_iller1">
+          <End Role="iller" Type="Self.iller" Multiplicity="1" />
+          <End Role="ilceler" Type="Self.ilceler" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="iller">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="ilceler">
+              <PropertyRef Name="sehirid" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_TBLACADEMICIAN_iller1">
+          <End Role="iller" Type="Self.iller" Multiplicity="0..1" />
+          <End Role="TBLACADEMICIAN" Type="Self.TBLACADEMICIAN" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="iller">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="TBLACADEMICIAN">
+              <PropertyRef Name="AcademicianCity" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_TBLACADEMICIAN_TBLDEPARTMENT">
+          <End Role="TBLDEPARTMENT" Type="Self.TBLDEPARTMENT" Multiplicity="0..1" />
+          <End Role="TBLACADEMICIAN" Type="Self.TBLACADEMICIAN" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="TBLDEPARTMENT">
+              <PropertyRef Name="DepartmentID" />
+            </Principal>
+            <Dependent Role="TBLACADEMICIAN">
+              <PropertyRef Name="Department" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_TBLLESSON_TBLACADEMICIAN">
+          <End Role="TBLACADEMICIAN" Type="Self.TBLACADEMICIAN" Multiplicity="0..1" />
+          <End Role="TBLLESSON" Type="Self.TBLLESSON" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="TBLACADEMICIAN">
+              <PropertyRef Name="AcademicianID" />
+            </Principal>
+            <Dependent Role="TBLLESSON">
+              <PropertyRef Name="Academician" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_TBLLESSON_TBLDEPARTMENT">
+          <End Role="TBLDEPARTMENT" Type="Self.TBLDEPARTMENT" Multiplicity="0..1" />
+          <End Role="TBLLESSON" Type="Self.TBLLESSON" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="TBLDEPARTMENT">
+              <PropertyRef Name="DepartmentID" />
+            </Principal>
+            <Dependent Role="TBLLESSON">
+              <PropertyRef Name="Department" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_TBLNOTE_TBLACADEMICIAN">
+          <End Role="TBLACADEMICIAN" Type="Self.TBLACADEMICIAN" Multiplicity="0..1" />
+          <End Role="TBLNOTE" Type="Self.TBLNOTE" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="TBLACADEMICIAN">
+              <PropertyRef Name="AcademicianID" />
+            </Principal>
+            <Dependent Role="TBLNOTE">
+              <PropertyRef Name="Academician" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_TBLNOTE_TBLLESSON">
+          <End Role="TBLLESSON" Type="Self.TBLLESSON" Multiplicity="0..1">
+            <OnDelete Action="Cascade" />
+          </End>
+          <End Role="TBLNOTE" Type="Self.TBLNOTE" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="TBLLESSON">
+              <PropertyRef Name="LessonID" />
+            </Principal>
+            <Dependent Role="TBLNOTE">
+              <PropertyRef Name="Lesson" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_TBLNOTE_TBLSTUDENT">
+          <End Role="TBLSTUDENT" Type="Self.TBLSTUDENT" Multiplicity="0..1" />
+          <End Role="TBLNOTE" Type="Self.TBLNOTE" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="TBLSTUDENT">
+              <PropertyRef Name="StudentID" />
+            </Principal>
+            <Dependent Role="TBLNOTE">
+              <PropertyRef Name="Student" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_TBLSTUDENT_iller1">
+          <End Role="iller" Type="Self.iller" Multiplicity="0..1" />
+          <End Role="TBLSTUDENT" Type="Self.TBLSTUDENT" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="iller">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="TBLSTUDENT">
+              <PropertyRef Name="City" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_TBLSTUDENT_TBLDEPARTMENT">
+          <End Role="TBLDEPARTMENT" Type="Self.TBLDEPARTMENT" Multiplicity="0..1">
+            <OnDelete Action="Cascade" />
+          </End>
+          <End Role="TBLSTUDENT" Type="Self.TBLSTUDENT" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="TBLDEPARTMENT">
+              <PropertyRef Name="DepartmentID" />
+            </Principal>
+            <Dependent Role="TBLSTUDENT">
+              <PropertyRef Name="Department" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <EntityContainer Name="DbEducationModelStoreContainer">
+          <EntitySet Name="ilceler" EntityType="Self.ilceler" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="iller" EntityType="Self.iller" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="sysdiagrams" EntityType="Self.sysdiagrams" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="TBLACADEMICIAN" EntityType="Self.TBLACADEMICIAN" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="TBLADMINLOGIN" EntityType="Self.TBLADMINLOGIN" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="TBLDEPARTMENT" EntityType="Self.TBLDEPARTMENT" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="TBLLESSON" EntityType="Self.TBLLESSON" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="TBLNOTE" EntityType="Self.TBLNOTE" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="TBLNOTIFICATION" EntityType="Self.TBLNOTIFICATION" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="TBLSTUDENT" EntityType="Self.TBLSTUDENT" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="View_1" EntityType="Self.View_1" store:Type="Views" store:Schema="dbo">
+            <DefiningQuery>SELECT 
+    [View_1].[NoteID] AS [NoteID], 
+    [View_1].[MidtermExam] AS [MidtermExam], 
+    [View_1].[FinalExam] AS [FinalExam], 
+    [View_1].[LessonName] AS [LessonName], 
+    [View_1].[StudentName] AS [StudentName], 
+    [View_1].[StudentSurname] AS [StudentSurname], 
+    [View_1].[DepartmentName] AS [DepartmentName], 
+    [View_1].[Average] AS [Average]
+    FROM [dbo].[View_1] AS [View_1]</DefiningQuery>
+          </EntitySet>
+          <EntitySet Name="View_2" EntityType="Self.View_2" store:Type="Views" store:Schema="dbo">
+            <DefiningQuery>SELECT 
+    [View_2].[LessonID] AS [LessonID], 
+    [View_2].[StudentName] AS [StudentName]
+    FROM [dbo].[View_2] AS [View_2]</DefiningQuery>
+          </EntitySet>
+          <AssociationSet Name="FK_ilceler_iller1" Association="Self.FK_ilceler_iller1">
+            <End Role="iller" EntitySet="iller" />
+            <End Role="ilceler" EntitySet="ilceler" />
+          </AssociationSet>
+          <AssociationSet Name="FK_TBLACADEMICIAN_iller1" Association="Self.FK_TBLACADEMICIAN_iller1">
+            <End Role="iller" EntitySet="iller" />
+            <End Role="TBLACADEMICIAN" EntitySet="TBLACADEMICIAN" />
+          </AssociationSet>
+          <AssociationSet Name="FK_TBLACADEMICIAN_TBLDEPARTMENT" Association="Self.FK_TBLACADEMICIAN_TBLDEPARTMENT">
+            <End Role="TBLDEPARTMENT" EntitySet="TBLDEPARTMENT" />
+            <End Role="TBLACADEMICIAN" EntitySet="TBLACADEMICIAN" />
+          </AssociationSet>
+          <AssociationSet Name="FK_TBLLESSON_TBLACADEMICIAN" Association="Self.FK_TBLLESSON_TBLACADEMICIAN">
+            <End Role="TBLACADEMICIAN" EntitySet="TBLACADEMICIAN" />
+            <End Role="TBLLESSON" EntitySet="TBLLESSON" />
+          </AssociationSet>
+          <AssociationSet Name="FK_TBLLESSON_TBLDEPARTMENT" Association="Self.FK_TBLLESSON_TBLDEPARTMENT">
+            <End Role="TBLDEPARTMENT" EntitySet="TBLDEPARTMENT" />
+            <End Role="TBLLESSON" EntitySet="TBLLESSON" />
+          </AssociationSet>
+          <AssociationSet Name="FK_TBLNOTE_TBLACADEMICIAN" Association="Self.FK_TBLNOTE_TBLACADEMICIAN">
+            <End Role="TBLACADEMICIAN" EntitySet="TBLACADEMICIAN" />
+            <End Role="TBLNOTE" EntitySet="TBLNOTE" />
+          </AssociationSet>
+          <AssociationSet Name="FK_TBLNOTE_TBLLESSON" Association="Self.FK_TBLNOTE_TBLLESSON">
+            <End Role="TBLLESSON" EntitySet="TBLLESSON" />
+            <End Role="TBLNOTE" EntitySet="TBLNOTE" />
+          </AssociationSet>
+          <AssociationSet Name="FK_TBLNOTE_TBLSTUDENT" Association="Self.FK_TBLNOTE_TBLSTUDENT">
+            <End Role="TBLSTUDENT" EntitySet="TBLSTUDENT" />
+            <End Role="TBLNOTE" EntitySet="TBLNOTE" />
+          </AssociationSet>
+          <AssociationSet Name="FK_TBLSTUDENT_iller1" Association="Self.FK_TBLSTUDENT_iller1">
+            <End Role="iller" EntitySet="iller" />
+            <End Role="TBLSTUDENT" EntitySet="TBLSTUDENT" />
+          </AssociationSet>
+          <AssociationSet Name="FK_TBLSTUDENT_TBLDEPARTMENT" Association="Self.FK_TBLSTUDENT_TBLDEPARTMENT">
+            <End Role="TBLDEPARTMENT" EntitySet="TBLDEPARTMENT" />
+            <End Role="TBLSTUDENT" EntitySet="TBLSTUDENT" />
+          </AssociationSet>
+        </EntityContainer>
+      </Schema></edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="DbEducationModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+        <EntityType Name="ilceler">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="ilceadi" Type="String" MaxLength="255" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="sehirid" Type="Int32" Nullable="false" />
+          <NavigationProperty Name="iller" Relationship="Self.FK_ilceler_iller1" FromRole="ilceler" ToRole="iller" />
+        </EntityType>
+        <EntityType Name="iller">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="sehiradi" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <NavigationProperty Name="ilceler" Relationship="Self.FK_ilceler_iller1" FromRole="iller" ToRole="ilceler" />
+          <NavigationProperty Name="TBLACADEMICIAN" Relationship="Self.FK_TBLACADEMICIAN_iller1" FromRole="iller" ToRole="TBLACADEMICIAN" />
+          <NavigationProperty Name="TBLSTUDENT" Relationship="Self.FK_TBLSTUDENT_iller1" FromRole="iller" ToRole="TBLSTUDENT" />
+        </EntityType>
+        <EntityType Name="sysdiagrams">
+          <Key>
+            <PropertyRef Name="diagram_id" />
+          </Key>
+          <Property Name="name" Type="String" MaxLength="128" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="principal_id" Type="Int32" Nullable="false" />
+          <Property Name="diagram_id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="version" Type="Int32" />
+          <Property Name="definition" Type="Binary" MaxLength="Max" FixedLength="false" />
+        </EntityType>
+        <EntityType Name="TBLACADEMICIAN">
+          <Key>
+            <PropertyRef Name="AcademicianID" />
+          </Key>
+          <Property Name="AcademicianID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="AcademicianTRNumber" Type="String" MaxLength="11" FixedLength="false" Unicode="false" />
+          <Property Name="AcademicianName" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="AcademicianSurname" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="AcademicianBirthDate" Type="DateTime" Precision="0" />
+          <Property Name="AcademicianGender" Type="String" MaxLength="5" FixedLength="false" Unicode="false" />
+          <Property Name="AcademicianPassword" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="AcademicianConfirmPassword" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="Department" Type="Int32" />
+          <Property Name="AcademicianCity" Type="Int32" />
+          <Property Name="AcademicianDistrict" Type="Int32" />
+          <Property Name="AcademicianAddress" Type="String" MaxLength="500" FixedLength="false" Unicode="false" />
+          <Property Name="AcademicianPhoneNumber" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Name="AcademicianMail" Type="String" MaxLength="150" FixedLength="false" Unicode="false" />
+          <Property Name="AcademicianImage" Type="String" MaxLength="500" FixedLength="false" Unicode="false" />
+          <NavigationProperty Name="iller" Relationship="Self.FK_TBLACADEMICIAN_iller1" FromRole="TBLACADEMICIAN" ToRole="iller" />
+          <NavigationProperty Name="TBLDEPARTMENT" Relationship="Self.FK_TBLACADEMICIAN_TBLDEPARTMENT" FromRole="TBLACADEMICIAN" ToRole="TBLDEPARTMENT" />
+          <NavigationProperty Name="TBLLESSON" Relationship="Self.FK_TBLLESSON_TBLACADEMICIAN" FromRole="TBLACADEMICIAN" ToRole="TBLLESSON" />
+          <NavigationProperty Name="TBLNOTE" Relationship="Self.FK_TBLNOTE_TBLACADEMICIAN" FromRole="TBLACADEMICIAN" ToRole="TBLNOTE" />
+        </EntityType>
+        <EntityType Name="TBLADMINLOGIN">
+          <Key>
+            <PropertyRef Name="AdminID" />
+          </Key>
+          <Property Name="AdminID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="AdminTRNumber" Type="String" MaxLength="11" FixedLength="false" Unicode="false" />
+          <Property Name="AdminUsername" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="AdminPassword" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+        </EntityType>
+        <EntityType Name="TBLDEPARTMENT">
+          <Key>
+            <PropertyRef Name="DepartmentID" />
+          </Key>
+          <Property Name="DepartmentID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="DepartmentName" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+          <NavigationProperty Name="TBLACADEMICIAN" Relationship="Self.FK_TBLACADEMICIAN_TBLDEPARTMENT" FromRole="TBLDEPARTMENT" ToRole="TBLACADEMICIAN" />
+          <NavigationProperty Name="TBLLESSON" Relationship="Self.FK_TBLLESSON_TBLDEPARTMENT" FromRole="TBLDEPARTMENT" ToRole="TBLLESSON" />
+          <NavigationProperty Name="TBLSTUDENT" Relationship="Self.FK_TBLSTUDENT_TBLDEPARTMENT" FromRole="TBLDEPARTMENT" ToRole="TBLSTUDENT" />
+        </EntityType>
+        <EntityType Name="TBLLESSON">
+          <Key>
+            <PropertyRef Name="LessonID" />
+          </Key>
+          <Property Name="LessonID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="LessonName" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Name="Department" Type="Int32" />
+          <Property Name="Academician" Type="Int32" />
+          <NavigationProperty Name="TBLACADEMICIAN" Relationship="Self.FK_TBLLESSON_TBLACADEMICIAN" FromRole="TBLLESSON" ToRole="TBLACADEMICIAN" />
+          <NavigationProperty Name="TBLDEPARTMENT" Relationship="Self.FK_TBLLESSON_TBLDEPARTMENT" FromRole="TBLLESSON" ToRole="TBLDEPARTMENT" />
+          <NavigationProperty Name="TBLNOTE" Relationship="Self.FK_TBLNOTE_TBLLESSON" FromRole="TBLLESSON" ToRole="TBLNOTE" />
+        </EntityType>
+        <EntityType Name="TBLNOTE">
+          <Key>
+            <PropertyRef Name="NoteID" />
+          </Key>
+          <Property Name="NoteID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="MidtermExam" Type="Byte" />
+          <Property Name="FinalExam" Type="Byte" />
+          <Property Name="Average" Type="Decimal" Precision="5" Scale="2" />
+          <Property Name="Lesson" Type="Int32" />
+          <Property Name="Student" Type="Int32" />
+          <Property Name="Academician" Type="Int32" />
+          <NavigationProperty Name="TBLACADEMICIAN" Relationship="Self.FK_TBLNOTE_TBLACADEMICIAN" FromRole="TBLNOTE" ToRole="TBLACADEMICIAN" />
+          <NavigationProperty Name="TBLLESSON" Relationship="Self.FK_TBLNOTE_TBLLESSON" FromRole="TBLNOTE" ToRole="TBLLESSON" />
+          <NavigationProperty Name="TBLSTUDENT" Relationship="Self.FK_TBLNOTE_TBLSTUDENT" FromRole="TBLNOTE" ToRole="TBLSTUDENT" />
+        </EntityType>
+        <EntityType Name="TBLNOTIFICATION">
+          <Key>
+            <PropertyRef Name="NotificationID" />
+          </Key>
+          <Property Name="NotificationID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="NotificationDate" Type="DateTime" Precision="3" />
+          <Property Name="NotificationTitle" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="NotificationDescription" Type="String" MaxLength="500" FixedLength="false" Unicode="false" />
+        </EntityType>
+        <EntityType Name="TBLSTUDENT">
+          <Key>
+            <PropertyRef Name="StudentID" />
+          </Key>
+          <Property Name="StudentID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="StudentTRNumber" Type="Int64" />
+          <Property Name="StudentName" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="StudentSurname" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="StudentNumber" Type="String" MaxLength="5" FixedLength="false" Unicode="false" />
+          <Property Name="StudentBirthDate" Type="DateTime" Precision="0" />
+          <Property Name="StudentBirthPlace" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="StudentGender" Type="String" MaxLength="5" FixedLength="false" Unicode="false" />
+          <Property Name="MothersName" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="FathersName" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="Department" Type="Int32" />
+          <Property Name="City" Type="Int32" />
+          <Property Name="District" Type="Int32" />
+          <Property Name="Neighborhood" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="PostalCode" Type="Int32" />
+          <Property Name="Address" Type="String" MaxLength="500" FixedLength="false" Unicode="false" />
+          <Property Name="PhoneNumber" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Name="HomePhoneNumber" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Name="StudentMail" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Name="StudentPicture" Type="String" MaxLength="500" FixedLength="false" Unicode="false" />
+          <NavigationProperty Name="iller" Relationship="Self.FK_TBLSTUDENT_iller1" FromRole="TBLSTUDENT" ToRole="iller" />
+          <NavigationProperty Name="TBLDEPARTMENT" Relationship="Self.FK_TBLSTUDENT_TBLDEPARTMENT" FromRole="TBLSTUDENT" ToRole="TBLDEPARTMENT" />
+          <NavigationProperty Name="TBLNOTE" Relationship="Self.FK_TBLNOTE_TBLSTUDENT" FromRole="TBLSTUDENT" ToRole="TBLNOTE" />
+        </EntityType>
+        <Association Name="FK_ilceler_iller1">
+          <End Role="iller" Type="Self.iller" Multiplicity="1" />
+          <End Role="ilceler" Type="Self.ilceler" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="iller">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="ilceler">
+              <PropertyRef Name="sehirid" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_TBLACADEMICIAN_iller1">
+          <End Role="iller" Type="Self.iller" Multiplicity="0..1" />
+          <End Role="TBLACADEMICIAN" Type="Self.TBLACADEMICIAN" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="iller">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="TBLACADEMICIAN">
+              <PropertyRef Name="AcademicianCity" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_TBLSTUDENT_iller1">
+          <End Role="iller" Type="Self.iller" Multiplicity="0..1" />
+          <End Role="TBLSTUDENT" Type="Self.TBLSTUDENT" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="iller">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="TBLSTUDENT">
+              <PropertyRef Name="City" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_TBLACADEMICIAN_TBLDEPARTMENT">
+          <End Role="TBLDEPARTMENT" Type="Self.TBLDEPARTMENT" Multiplicity="0..1" />
+          <End Role="TBLACADEMICIAN" Type="Self.TBLACADEMICIAN" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="TBLDEPARTMENT">
+              <PropertyRef Name="DepartmentID" />
+            </Principal>
+            <Dependent Role="TBLACADEMICIAN">
+              <PropertyRef Name="Department" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_TBLLESSON_TBLACADEMICIAN">
+          <End Role="TBLACADEMICIAN" Type="Self.TBLACADEMICIAN" Multiplicity="0..1" />
+          <End Role="TBLLESSON" Type="Self.TBLLESSON" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="TBLACADEMICIAN">
+              <PropertyRef Name="AcademicianID" />
+            </Principal>
+            <Dependent Role="TBLLESSON">
+              <PropertyRef Name="Academician" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_TBLNOTE_TBLACADEMICIAN">
+          <End Role="TBLACADEMICIAN" Type="Self.TBLACADEMICIAN" Multiplicity="0..1" />
+          <End Role="TBLNOTE" Type="Self.TBLNOTE" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="TBLACADEMICIAN">
+              <PropertyRef Name="AcademicianID" />
+            </Principal>
+            <Dependent Role="TBLNOTE">
+              <PropertyRef Name="Academician" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_TBLLESSON_TBLDEPARTMENT">
+          <End Role="TBLDEPARTMENT" Type="Self.TBLDEPARTMENT" Multiplicity="0..1" />
+          <End Role="TBLLESSON" Type="Self.TBLLESSON" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="TBLDEPARTMENT">
+              <PropertyRef Name="DepartmentID" />
+            </Principal>
+            <Dependent Role="TBLLESSON">
+              <PropertyRef Name="Department" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_TBLSTUDENT_TBLDEPARTMENT">
+          <End Role="TBLDEPARTMENT" Type="Self.TBLDEPARTMENT" Multiplicity="0..1">
+            <OnDelete Action="Cascade" />
+          </End>
+          <End Role="TBLSTUDENT" Type="Self.TBLSTUDENT" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="TBLDEPARTMENT">
+              <PropertyRef Name="DepartmentID" />
+            </Principal>
+            <Dependent Role="TBLSTUDENT">
+              <PropertyRef Name="Department" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_TBLNOTE_TBLLESSON">
+          <End Role="TBLLESSON" Type="Self.TBLLESSON" Multiplicity="0..1">
+            <OnDelete Action="Cascade" />
+          </End>
+          <End Role="TBLNOTE" Type="Self.TBLNOTE" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="TBLLESSON">
+              <PropertyRef Name="LessonID" />
+            </Principal>
+            <Dependent Role="TBLNOTE">
+              <PropertyRef Name="Lesson" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_TBLNOTE_TBLSTUDENT">
+          <End Role="TBLSTUDENT" Type="Self.TBLSTUDENT" Multiplicity="0..1" />
+          <End Role="TBLNOTE" Type="Self.TBLNOTE" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="TBLSTUDENT">
+              <PropertyRef Name="StudentID" />
+            </Principal>
+            <Dependent Role="TBLNOTE">
+              <PropertyRef Name="Student" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <EntityContainer Name="DbEducationEntities4" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="ilceler" EntityType="Self.ilceler" />
+          <EntitySet Name="iller" EntityType="Self.iller" />
+          <EntitySet Name="sysdiagrams" EntityType="Self.sysdiagrams" />
+          <EntitySet Name="TBLACADEMICIAN" EntityType="Self.TBLACADEMICIAN" />
+          <EntitySet Name="TBLADMINLOGIN" EntityType="Self.TBLADMINLOGIN" />
+          <EntitySet Name="TBLDEPARTMENT" EntityType="Self.TBLDEPARTMENT" />
+          <EntitySet Name="TBLLESSON" EntityType="Self.TBLLESSON" />
+          <EntitySet Name="TBLNOTE" EntityType="Self.TBLNOTE" />
+          <EntitySet Name="TBLNOTIFICATION" EntityType="Self.TBLNOTIFICATION" />
+          <EntitySet Name="TBLSTUDENT" EntityType="Self.TBLSTUDENT" />
+          <AssociationSet Name="FK_ilceler_iller1" Association="Self.FK_ilceler_iller1">
+            <End Role="iller" EntitySet="iller" />
+            <End Role="ilceler" EntitySet="ilceler" />
+          </AssociationSet>
+          <AssociationSet Name="FK_TBLACADEMICIAN_iller1" Association="Self.FK_TBLACADEMICIAN_iller1">
+            <End Role="iller" EntitySet="iller" />
+            <End Role="TBLACADEMICIAN" EntitySet="TBLACADEMICIAN" />
+          </AssociationSet>
+          <AssociationSet Name="FK_TBLSTUDENT_iller1" Association="Self.FK_TBLSTUDENT_iller1">
+            <End Role="iller" EntitySet="iller" />
+            <End Role="TBLSTUDENT" EntitySet="TBLSTUDENT" />
+          </AssociationSet>
+          <AssociationSet Name="FK_TBLACADEMICIAN_TBLDEPARTMENT" Association="Self.FK_TBLACADEMICIAN_TBLDEPARTMENT">
+            <End Role="TBLDEPARTMENT" EntitySet="TBLDEPARTMENT" />
+            <End Role="TBLACADEMICIAN" EntitySet="TBLACADEMICIAN" />
+          </AssociationSet>
+          <AssociationSet Name="FK_TBLLESSON_TBLACADEMICIAN" Association="Self.FK_TBLLESSON_TBLACADEMICIAN">
+            <End Role="TBLACADEMICIAN" EntitySet="TBLACADEMICIAN" />
+            <End Role="TBLLESSON" EntitySet="TBLLESSON" />
+          </AssociationSet>
+          <AssociationSet Name="FK_TBLNOTE_TBLACADEMICIAN" Association="Self.FK_TBLNOTE_TBLACADEMICIAN">
+            <End Role="TBLACADEMICIAN" EntitySet="TBLACADEMICIAN" />
+            <End Role="TBLNOTE" EntitySet="TBLNOTE" />
+          </AssociationSet>
+          <AssociationSet Name="FK_TBLLESSON_TBLDEPARTMENT" Association="Self.FK_TBLLESSON_TBLDEPARTMENT">
+            <End Role="TBLDEPARTMENT" EntitySet="TBLDEPARTMENT" />
+            <End Role="TBLLESSON" EntitySet="TBLLESSON" />
+          </AssociationSet>
+          <AssociationSet Name="FK_TBLSTUDENT_TBLDEPARTMENT" Association="Self.FK_TBLSTUDENT_TBLDEPARTMENT">
+            <End Role="TBLDEPARTMENT" EntitySet="TBLDEPARTMENT" />
+            <End Role="TBLSTUDENT" EntitySet="TBLSTUDENT" />
+          </AssociationSet>
+          <AssociationSet Name="FK_TBLNOTE_TBLLESSON" Association="Self.FK_TBLNOTE_TBLLESSON">
+            <End Role="TBLLESSON" EntitySet="TBLLESSON" />
+            <End Role="TBLNOTE" EntitySet="TBLNOTE" />
+          </AssociationSet>
+          <AssociationSet Name="FK_TBLNOTE_TBLSTUDENT" Association="Self.FK_TBLNOTE_TBLSTUDENT">
+            <End Role="TBLSTUDENT" EntitySet="TBLSTUDENT" />
+            <End Role="TBLNOTE" EntitySet="TBLNOTE" />
+          </AssociationSet>
+          <EntitySet Name="View_1" EntityType="DbEducationModel.View_1" />
+          <EntitySet Name="View_2" EntityType="DbEducationModel.View_2" />
+        </EntityContainer>
+        <EntityType Name="View_1">
+          <Key>
+            <PropertyRef Name="NoteID" />
+          </Key>
+          <Property Name="NoteID" Type="Int32" Nullable="false" />
+          <Property Name="MidtermExam" Type="Byte" />
+          <Property Name="FinalExam" Type="Byte" />
+          <Property Name="LessonName" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Name="StudentName" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="StudentSurname" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="DepartmentName" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Name="Average" Type="Decimal" Precision="5" Scale="2" />
+        </EntityType>
+        <EntityType Name="View_2">
+          <Key>
+            <PropertyRef Name="LessonID" />
+          </Key>
+          <Property Name="LessonID" Type="Int32" Nullable="false" />
+          <Property Name="StudentName" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+        </EntityType>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="DbEducationModelStoreContainer" CdmEntityContainer="DbEducationEntities4">
+          <EntitySetMapping Name="ilceler">
+            <EntityTypeMapping TypeName="DbEducationModel.ilceler">
+              <MappingFragment StoreEntitySet="ilceler">
+                <ScalarProperty Name="id" ColumnName="id" />
+                <ScalarProperty Name="ilceadi" ColumnName="ilceadi" />
+                <ScalarProperty Name="sehirid" ColumnName="sehirid" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="iller">
+            <EntityTypeMapping TypeName="DbEducationModel.iller">
+              <MappingFragment StoreEntitySet="iller">
+                <ScalarProperty Name="id" ColumnName="id" />
+                <ScalarProperty Name="sehiradi" ColumnName="sehiradi" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="sysdiagrams">
+            <EntityTypeMapping TypeName="DbEducationModel.sysdiagrams">
+              <MappingFragment StoreEntitySet="sysdiagrams">
+                <ScalarProperty Name="name" ColumnName="name" />
+                <ScalarProperty Name="principal_id" ColumnName="principal_id" />
+                <ScalarProperty Name="diagram_id" ColumnName="diagram_id" />
+                <ScalarProperty Name="version" ColumnName="version" />
+                <ScalarProperty Name="definition" ColumnName="definition" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="TBLACADEMICIAN">
+            <EntityTypeMapping TypeName="DbEducationModel.TBLACADEMICIAN">
+              <MappingFragment StoreEntitySet="TBLACADEMICIAN">
+                <ScalarProperty Name="AcademicianID" ColumnName="AcademicianID" />
+                <ScalarProperty Name="AcademicianTRNumber" ColumnName="AcademicianTRNumber" />
+                <ScalarProperty Name="AcademicianName" ColumnName="AcademicianName" />
+                <ScalarProperty Name="AcademicianSurname" ColumnName="AcademicianSurname" />
+                <ScalarProperty Name="AcademicianBirthDate" ColumnName="AcademicianBirthDate" />
+                <ScalarProperty Name="AcademicianGender" ColumnName="AcademicianGender" />
+                <ScalarProperty Name="AcademicianPassword" ColumnName="AcademicianPassword" />
+                <ScalarProperty Name="AcademicianConfirmPassword" ColumnName="AcademicianConfirmPassword" />
+                <ScalarProperty Name="Department" ColumnName="Department" />
+                <ScalarProperty Name="AcademicianCity" ColumnName="AcademicianCity" />
+                <ScalarProperty Name="AcademicianDistrict" ColumnName="AcademicianDistrict" />
+                <ScalarProperty Name="AcademicianAddress" ColumnName="AcademicianAddress" />
+                <ScalarProperty Name="AcademicianPhoneNumber" ColumnName="AcademicianPhoneNumber" />
+                <ScalarProperty Name="AcademicianMail" ColumnName="AcademicianMail" />
+                <ScalarProperty Name="AcademicianImage" ColumnName="AcademicianImage" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="TBLADMINLOGIN">
+            <EntityTypeMapping TypeName="DbEducationModel.TBLADMINLOGIN">
+              <MappingFragment StoreEntitySet="TBLADMINLOGIN">
+                <ScalarProperty Name="AdminID" ColumnName="AdminID" />
+                <ScalarProperty Name="AdminTRNumber" ColumnName="AdminTRNumber" />
+                <ScalarProperty Name="AdminUsername" ColumnName="AdminUsername" />
+                <ScalarProperty Name="AdminPassword" ColumnName="AdminPassword" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="TBLDEPARTMENT">
+            <EntityTypeMapping TypeName="DbEducationModel.TBLDEPARTMENT">
+              <MappingFragment StoreEntitySet="TBLDEPARTMENT">
+                <ScalarProperty Name="DepartmentID" ColumnName="DepartmentID" />
+                <ScalarProperty Name="DepartmentName" ColumnName="DepartmentName" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="TBLLESSON">
+            <EntityTypeMapping TypeName="DbEducationModel.TBLLESSON">
+              <MappingFragment StoreEntitySet="TBLLESSON">
+                <ScalarProperty Name="LessonID" ColumnName="LessonID" />
+                <ScalarProperty Name="LessonName" ColumnName="LessonName" />
+                <ScalarProperty Name="Department" ColumnName="Department" />
+                <ScalarProperty Name="Academician" ColumnName="Academician" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="TBLNOTE">
+            <EntityTypeMapping TypeName="DbEducationModel.TBLNOTE">
+              <MappingFragment StoreEntitySet="TBLNOTE">
+                <ScalarProperty Name="NoteID" ColumnName="NoteID" />
+                <ScalarProperty Name="MidtermExam" ColumnName="MidtermExam" />
+                <ScalarProperty Name="FinalExam" ColumnName="FinalExam" />
+                <ScalarProperty Name="Average" ColumnName="Average" />
+                <ScalarProperty Name="Lesson" ColumnName="Lesson" />
+                <ScalarProperty Name="Student" ColumnName="Student" />
+                <ScalarProperty Name="Academician" ColumnName="Academician" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="TBLNOTIFICATION">
+            <EntityTypeMapping TypeName="DbEducationModel.TBLNOTIFICATION">
+              <MappingFragment StoreEntitySet="TBLNOTIFICATION">
+                <ScalarProperty Name="NotificationID" ColumnName="NotificationID" />
+                <ScalarProperty Name="NotificationDate" ColumnName="NotificationDate" />
+                <ScalarProperty Name="NotificationTitle" ColumnName="NotificationTitle" />
+                <ScalarProperty Name="NotificationDescription" ColumnName="NotificationDescription" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="TBLSTUDENT">
+            <EntityTypeMapping TypeName="DbEducationModel.TBLSTUDENT">
+              <MappingFragment StoreEntitySet="TBLSTUDENT">
+                <ScalarProperty Name="StudentID" ColumnName="StudentID" />
+                <ScalarProperty Name="StudentTRNumber" ColumnName="StudentTRNumber" />
+                <ScalarProperty Name="StudentName" ColumnName="StudentName" />
+                <ScalarProperty Name="StudentSurname" ColumnName="StudentSurname" />
+                <ScalarProperty Name="StudentNumber" ColumnName="StudentNumber" />
+                <ScalarProperty Name="StudentBirthDate" ColumnName="StudentBirthDate" />
+                <ScalarProperty Name="StudentBirthPlace" ColumnName="StudentBirthPlace" />
+                <ScalarProperty Name="StudentGender" ColumnName="StudentGender" />
+                <ScalarProperty Name="MothersName" ColumnName="MothersName" />
+                <ScalarProperty Name="FathersName" ColumnName="FathersName" />
+                <ScalarProperty Name="Department" ColumnName="Department" />
+                <ScalarProperty Name="City" ColumnName="City" />
+                <ScalarProperty Name="District" ColumnName="District" />
+                <ScalarProperty Name="Neighborhood" ColumnName="Neighborhood" />
+                <ScalarProperty Name="PostalCode" ColumnName="PostalCode" />
+                <ScalarProperty Name="Address" ColumnName="Address" />
+                <ScalarProperty Name="PhoneNumber" ColumnName="PhoneNumber" />
+                <ScalarProperty Name="HomePhoneNumber" ColumnName="HomePhoneNumber" />
+                <ScalarProperty Name="StudentMail" ColumnName="StudentMail" />
+                <ScalarProperty Name="StudentPicture" ColumnName="StudentPicture" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="View_1">
+            <EntityTypeMapping TypeName="DbEducationModel.View_1">
+              <MappingFragment StoreEntitySet="View_1">
+                <ScalarProperty Name="Average" ColumnName="Average" />
+                <ScalarProperty Name="DepartmentName" ColumnName="DepartmentName" />
+                <ScalarProperty Name="StudentSurname" ColumnName="StudentSurname" />
+                <ScalarProperty Name="StudentName" ColumnName="StudentName" />
+                <ScalarProperty Name="LessonName" ColumnName="LessonName" />
+                <ScalarProperty Name="FinalExam" ColumnName="FinalExam" />
+                <ScalarProperty Name="MidtermExam" ColumnName="MidtermExam" />
+                <ScalarProperty Name="NoteID" ColumnName="NoteID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="View_2">
+            <EntityTypeMapping TypeName="DbEducationModel.View_2">
+              <MappingFragment StoreEntitySet="View_2">
+                <ScalarProperty Name="StudentName" ColumnName="StudentName" />
+                <ScalarProperty Name="LessonID" ColumnName="LessonID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="false" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="true" />
+        <DesignerProperty Name="UseLegacyProvider" Value="false" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="None" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams></Diagrams>
+  </Designer>
+</edmx:Edmx>
