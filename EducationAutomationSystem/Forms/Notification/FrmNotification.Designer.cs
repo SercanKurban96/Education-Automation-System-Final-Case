@@ -41,6 +41,7 @@
             this.PctDeleteNotification = new System.Windows.Forms.PictureBox();
             this.lblduyuruduzenle = new System.Windows.Forms.Label();
             this.lblduyuruolustur = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.PctEditNotification)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.PctAddNotification)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.PctBack)).BeginInit();
@@ -193,6 +194,17 @@
             this.lblduyuruolustur.TabIndex = 21;
             this.lblduyuruolustur.Text = "Duyuru Oluştur";
             // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Georgia", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.label1.Location = new System.Drawing.Point(72, 37);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(49, 18);
+            this.label1.TabIndex = 136;
+            this.label1.Text = "label1";
+            this.label1.Visible = false;
+            // 
             // FrmNotification
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 18F);
@@ -200,6 +212,7 @@
             this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
             this.ClientSize = new System.Drawing.Size(940, 522);
+            this.Controls.Add(this.label1);
             this.Controls.Add(this.lblduyuruara);
             this.Controls.Add(this.PctSearchNotification);
             this.Controls.Add(this.lblduyurulistesi);
@@ -245,5 +258,6 @@
         private System.Windows.Forms.PictureBox PctDeleteNotification;
         private System.Windows.Forms.Label lblduyuruduzenle;
         private System.Windows.Forms.Label lblduyuruolustur;
+        private System.Windows.Forms.Label label1;
     }
 }

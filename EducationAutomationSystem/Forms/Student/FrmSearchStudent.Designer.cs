@@ -40,6 +40,7 @@
             this.TxtNumberSearch = new System.Windows.Forms.TextBox();
             this.lblogrencinoara = new System.Windows.Forms.Label();
             this.lblogrencisayisi = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.DtgStudent)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.PctBack)).BeginInit();
@@ -158,6 +159,17 @@
             this.lblogrencisayisi.TabIndex = 122;
             this.lblogrencisayisi.Text = "Öğrenci Sayısı:";
             // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Georgia", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.label1.Location = new System.Drawing.Point(507, 38);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(49, 18);
+            this.label1.TabIndex = 136;
+            this.label1.Text = "label1";
+            this.label1.Visible = false;
+            // 
             // FrmSearchStudent
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 18F);
@@ -165,6 +177,7 @@
             this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
             this.ClientSize = new System.Drawing.Size(711, 478);
+            this.Controls.Add(this.label1);
             this.Controls.Add(this.lblogrencisayisi);
             this.Controls.Add(this.TxtNumberSearch);
             this.Controls.Add(this.lblogrencinoara);
@@ -205,5 +218,6 @@
         private System.Windows.Forms.TextBox TxtNumberSearch;
         private System.Windows.Forms.Label lblogrencinoara;
         private System.Windows.Forms.Label lblogrencisayisi;
+        private System.Windows.Forms.Label label1;
     }
 }

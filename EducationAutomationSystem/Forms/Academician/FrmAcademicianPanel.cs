@@ -92,7 +92,7 @@ namespace EducationAutomationSystem.Academician
             dialogResult = MessageBox.Show(String.Format(Localization.akademisyencikis), String.Format(Localization.uyari), MessageBoxButtons.YesNo, MessageBoxIcon.Question);
             if (dialogResult == DialogResult.Yes)
             {
-                FrmLanguage fr = new FrmLanguage();
+                FrmLoading fr = new FrmLoading();
                 fr.Show();
                 this.Hide();
                 notifyIcon2.Visible = false;
@@ -136,6 +136,8 @@ namespace EducationAutomationSystem.Academician
             FrmAcademicianNotes fr = new FrmAcademicianNotes();
             fr.number = number;
             fr.Show();
+            this.Hide();
+            notifyIcon2.Visible = false;
         }
 
         private void PctSettings_Click(object sender, EventArgs e)
@@ -143,6 +145,8 @@ namespace EducationAutomationSystem.Academician
             FrmAcademicianApplication fr = new FrmAcademicianApplication();
             fr.number = number;
             fr.Show();
+            this.Hide();
+            notifyIcon2.Visible = false;
         }
 
         private void PctExit_MouseHover(object sender, EventArgs e)
@@ -174,6 +178,8 @@ namespace EducationAutomationSystem.Academician
             FrmLesson fr = new FrmLesson();
             fr.number = number;
             fr.Show();
+            this.Hide();
+            notifyIcon2.Visible = false;
         }
 
         private void PctLesson_MouseHover(object sender, EventArgs e)
@@ -185,7 +191,10 @@ namespace EducationAutomationSystem.Academician
         private void PctNotification_Click(object sender, EventArgs e)
         {
             FrmAcademicianNotification fr = new FrmAcademicianNotification();
+            fr.number = number;
             fr.Show();
+            this.Hide();
+            notifyIcon2.Visible = false;
         }
 
         private void PctNotification_MouseHover(object sender, EventArgs e)
@@ -212,7 +221,7 @@ namespace EducationAutomationSystem.Academician
             dialogResult = MessageBox.Show(String.Format(Localization.akademisyencikis), String.Format(Localization.uyari), MessageBoxButtons.YesNo, MessageBoxIcon.Question);
             if (dialogResult == DialogResult.Yes)
             {
-                FrmLanguage fr = new FrmLanguage();
+                FrmLoading fr = new FrmLoading();
                 fr.Show();
                 this.Hide();
                 notifyIcon2.Visible = false;

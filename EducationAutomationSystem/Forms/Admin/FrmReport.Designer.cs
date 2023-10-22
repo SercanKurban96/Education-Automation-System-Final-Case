@@ -64,6 +64,7 @@
             this.lblson3derskayit = new System.Windows.Forms.Label();
             this.PctBack = new System.Windows.Forms.PictureBox();
             this.DtgReport = new System.Windows.Forms.DataGridView();
+            this.label1 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.PctOgrenciSirala)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.PctOgrenciSiralaTers)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.PctAkademisyenSirala)).BeginInit();
@@ -506,6 +507,17 @@
             this.DtgReport.Size = new System.Drawing.Size(876, 160);
             this.DtgReport.TabIndex = 195;
             // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Georgia", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.label1.Location = new System.Drawing.Point(24, 20);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(49, 18);
+            this.label1.TabIndex = 196;
+            this.label1.Text = "label1";
+            this.label1.Visible = false;
+            // 
             // FrmReport
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 18F);
@@ -514,6 +526,7 @@
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(876, 530);
+            this.Controls.Add(this.label1);
             this.Controls.Add(this.DtgReport);
             this.Controls.Add(this.PctBack);
             this.Controls.Add(this.PctSon3DersKayit);
@@ -618,5 +631,6 @@
         private System.Windows.Forms.Label lblson3derskayit;
         private System.Windows.Forms.PictureBox PctBack;
         private System.Windows.Forms.DataGridView DtgReport;
+        private System.Windows.Forms.Label label1;
     }
 }

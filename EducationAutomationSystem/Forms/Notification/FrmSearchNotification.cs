@@ -19,7 +19,9 @@ namespace EducationAutomationSystem.Notification
             InitializeComponent();
         }
         sqlconnection conn = new sqlconnection();
-
+        DbEducationEntities4 db = new DbEducationEntities4();
+        public string number, username;
+        public int adminid;
         void verilerigoster(string veriler)
         {
             DataSet ds = new DataSet();
@@ -29,6 +31,10 @@ namespace EducationAutomationSystem.Notification
         }
         void kayitsayisi()
         {
+            adminid = db.TBLADMINLOGIN.Where(x => x.AdminTRNumber == number).Select(y => y.AdminID).FirstOrDefault();
+
+            label1.Text = adminid.ToString();
+
             SqlCommand komut = new SqlCommand("select count(*) from TBLNOTIFICATION", conn.connection());
             SqlDataReader dr = komut.ExecuteReader();
             while (dr.Read())
@@ -41,6 +47,7 @@ namespace EducationAutomationSystem.Notification
         private void PctBack_Click(object sender, EventArgs e)
         {
             FrmNotification fr = new FrmNotification();
+            fr.number = number;
             fr.Show();
             this.Hide();
         }
@@ -57,11 +64,19 @@ namespace EducationAutomationSystem.Notification
 
         private void TxtNotificationSearch_TextChanged(object sender, EventArgs e)
         {
+            adminid = db.TBLADMINLOGIN.Where(x => x.AdminTRNumber == number).Select(y => y.AdminID).FirstOrDefault();
+
+            label1.Text = adminid.ToString();
+
             verilerigoster("select NotificationID as 'Duyuru ID', NotificationDate as 'Duyuru Tarihi', NotificationTitle as 'Duyuru Başlığı',NotificationDescription as 'Duyuru İçeriği' from TBLNOTIFICATION where NotificationTitle like '%" + TxtNotificationSearch.Text + "%'");
         }
 
         private void FrmSearchNotification_Load(object sender, EventArgs e)
         {
+            adminid = db.TBLADMINLOGIN.Where(x => x.AdminTRNumber == number).Select(y => y.AdminID).FirstOrDefault();
+
+            label1.Text = adminid.ToString();
+
             verilerigoster("select NotificationID as 'Duyuru ID', NotificationDate as 'Duyuru Tarihi', NotificationTitle as 'Duyuru Başlığı',NotificationDescription as 'Duyuru İçeriği' from TBLNOTIFICATION");
             kayitsayisi();
 

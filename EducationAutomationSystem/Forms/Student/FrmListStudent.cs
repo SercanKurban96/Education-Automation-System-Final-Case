@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Data.SqlClient;
+using EducationAutomationSystem.Entity;
 
 namespace EducationAutomationSystem.Student
 {
@@ -18,6 +19,9 @@ namespace EducationAutomationSystem.Student
             InitializeComponent();
         }
         sqlconnection conn = new sqlconnection();
+        DbEducationEntities4 db = new DbEducationEntities4();
+        public string number, username;
+        public int adminid;
         void verilerigoster(string veriler)
         {
             DataSet ds = new DataSet();
@@ -38,6 +42,10 @@ namespace EducationAutomationSystem.Student
         }
         void kayitsayisi()
         {
+            adminid = db.TBLADMINLOGIN.Where(x => x.AdminTRNumber == number).Select(y => y.AdminID).FirstOrDefault();
+
+            label1.Text = adminid.ToString();
+
             SqlCommand komut = new SqlCommand("select count(*) from TBLSTUDENT", conn.connection());
             SqlDataReader dr = komut.ExecuteReader();
             while (dr.Read())
@@ -63,6 +71,10 @@ namespace EducationAutomationSystem.Student
 
         private void FrmListStudent_Load(object sender, EventArgs e)
         {
+            adminid = db.TBLADMINLOGIN.Where(x => x.AdminTRNumber == number).Select(y => y.AdminID).FirstOrDefault();
+
+            label1.Text = adminid.ToString();
+
             verilerigoster("select StudentID as 'ID', StudentTRNumber as 'TC Kimlik Numarası', StudentName as 'Adı', StudentSurname as 'Soyadı', StudentNumber as 'Okul Numarası', StudentBirthDate as 'Doğum Tarihi', StudentBirthPlace as 'Doğum Yeri', StudentGender as 'Cinsiyet', MothersName as 'Anne Adı', FathersName as 'Baba Adı', DepartmentName as 'Bölüm', sehiradi as 'Şehir', District as 'İlçe', Neighborhood as 'Mahalle', PostalCode as 'Posta Kodu', Address as 'Adres', PhoneNumber as 'Telefon Numarası', HomePhoneNumber as 'Ev Telefonu', StudentMail as 'Mail Adresi', StudentPicture as 'Fotoğraf' from TBLSTUDENT inner join TBLDEPARTMENT on TBLSTUDENT.Department = TBLDEPARTMENT.DepartmentID inner join iller on TBLSTUDENT.City = iller.id");
             kayitsayisi();
 

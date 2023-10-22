@@ -75,6 +75,7 @@
             this.BtnPicture = new System.Windows.Forms.Button();
             this.lblphoto = new System.Windows.Forms.Label();
             this.TxtPicture = new System.Windows.Forms.TextBox();
+            this.label1 = new System.Windows.Forms.Label();
             this.groupBox4.SuspendLayout();
             this.groupBox2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.PctBack)).BeginInit();
@@ -533,6 +534,17 @@
             this.TxtPicture.TabIndex = 129;
             this.TxtPicture.Visible = false;
             // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Georgia", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.label1.Location = new System.Drawing.Point(37, 9);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(49, 18);
+            this.label1.TabIndex = 136;
+            this.label1.Text = "label1";
+            this.label1.Visible = false;
+            // 
             // FrmAddAcademician
             // 
             this.AcceptButton = this.BtnAdd;
@@ -542,6 +554,7 @@
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
             this.CancelButton = this.BtnCancel;
             this.ClientSize = new System.Drawing.Size(1113, 429);
+            this.Controls.Add(this.label1);
             this.Controls.Add(this.lblakademisyensayisi);
             this.Controls.Add(this.groupBox4);
             this.Controls.Add(this.groupBox2);
@@ -625,5 +638,6 @@
         private System.Windows.Forms.Label lblpassword;
         private System.Windows.Forms.CheckBox ChkConfirmPassword;
         private System.Windows.Forms.CheckBox ChkPassword;
+        private System.Windows.Forms.Label label1;
     }
 }

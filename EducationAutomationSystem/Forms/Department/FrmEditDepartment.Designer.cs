@@ -40,6 +40,7 @@
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.lblbolumsayisi = new System.Windows.Forms.Label();
             this.lblbolumadi = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.PctBack)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.DtgDepartment)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -166,6 +167,17 @@
             this.lblbolumadi.TabIndex = 34;
             this.lblbolumadi.Text = "Bölüm Adı:";
             // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Georgia", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.label1.Location = new System.Drawing.Point(12, 37);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(49, 18);
+            this.label1.TabIndex = 133;
+            this.label1.Text = "label1";
+            this.label1.Visible = false;
+            // 
             // FrmEditDepartment
             // 
             this.AcceptButton = this.BtnEdit;
@@ -175,6 +187,7 @@
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(128)))));
             this.CancelButton = this.BtnCancel;
             this.ClientSize = new System.Drawing.Size(711, 465);
+            this.Controls.Add(this.label1);
             this.Controls.Add(this.lblbolumsayisi);
             this.Controls.Add(this.lblbolumadi);
             this.Controls.Add(this.pictureBox1);
@@ -215,5 +228,6 @@
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Label lblbolumsayisi;
         private System.Windows.Forms.Label lblbolumadi;
+        private System.Windows.Forms.Label label1;
     }
 }

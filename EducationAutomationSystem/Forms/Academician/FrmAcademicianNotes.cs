@@ -4,6 +4,7 @@ using System.Data.SqlClient;
 using System.Drawing;
 using System.Linq;
 using System.Windows.Forms;
+using EducationAutomationSystem.Academician;
 using EducationAutomationSystem.Entity;
 using static System.Windows.Forms.VisualStyles.VisualStyleElement;
 
@@ -30,6 +31,13 @@ namespace EducationAutomationSystem.Forms.Academician
 
         private void FrmAcademicianNotes_Load(object sender, EventArgs e)
         {
+            academicianid = db.TBLACADEMICIAN.Where(x => x.AcademicianTRNumber == number).Select(y => y.AcademicianID).FirstOrDefault();
+
+            departmentid = db.TBLACADEMICIAN.Where(x => x.AcademicianTRNumber == number).Select(y => y.TBLDEPARTMENT.DepartmentID).FirstOrDefault();
+
+            label1.Text = academicianid.ToString();
+            label2.Text = departmentid.ToString();
+
             studentid = db.TBLSTUDENT.Where(x => x.StudentNumber == number).Select(y => y.StudentID).FirstOrDefault();
 
             TxtAverage.Text = "0";
@@ -162,6 +170,16 @@ namespace EducationAutomationSystem.Forms.Academician
             }
         }
 
+        private void PctBack_MouseHover(object sender, EventArgs e)
+        {
+            PctBack.BackColor = Color.Green;
+        }
+
+        private void PctBack_MouseLeave(object sender, EventArgs e)
+        {
+            PctBack.BackColor = Color.Transparent;
+        }
+
         private void TxtID_TextChanged(object sender, EventArgs e)
         {
             
@@ -172,6 +190,14 @@ namespace EducationAutomationSystem.Forms.Academician
             FrmStudentIDList fr = new FrmStudentIDList();
             fr.number = number;
             fr.Show();
+        }
+
+        private void PctBack_Click(object sender, EventArgs e)
+        {
+            FrmAcademicianPanel fr = new FrmAcademicianPanel();
+            fr.number = number;
+            fr.Show();
+            this.Hide();
         }
 
         private void TxtStudentID_TextChanged(object sender, EventArgs e)
@@ -210,21 +236,6 @@ namespace EducationAutomationSystem.Forms.Academician
             DtgStudentNotes.Columns["ID"].Visible = false;
             DtgStudentNotes.Columns["Öğrenci"].Visible = false;
             DtgStudentNotes.Columns["Akademisyen"].Visible = false;
-        }
-
-        private void PctExit_MouseHover(object sender, EventArgs e)
-        {
-            PctExit.BackColor = Color.Red;
-        }
-
-        private void PctExit_MouseLeave(object sender, EventArgs e)
-        {
-            PctExit.BackColor = Color.Transparent;
-        }
-
-        private void PctExit_Click(object sender, EventArgs e)
-        {
-            this.Close();
         }
     }
 }

@@ -1,4 +1,5 @@
-﻿using System;
+﻿using EducationAutomationSystem.Entity;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -18,6 +19,9 @@ namespace EducationAutomationSystem.Department
             InitializeComponent();
         }
         sqlconnection conn = new sqlconnection();
+        DbEducationEntities4 db = new DbEducationEntities4();
+        public string number, username;
+        public int adminid;
         void verilerigoster(string veriler)
         {
             DataSet ds = new DataSet();
@@ -27,6 +31,10 @@ namespace EducationAutomationSystem.Department
         }
         void kayitsayisi()
         {
+            adminid = db.TBLADMINLOGIN.Where(x => x.AdminTRNumber == number).Select(y => y.AdminID).FirstOrDefault();
+
+            label1.Text = adminid.ToString();
+
             SqlCommand komut = new SqlCommand("select count(*) from TBLDEPARTMENT", conn.connection());
             SqlDataReader dr = komut.ExecuteReader();
             while (dr.Read())
@@ -38,6 +46,10 @@ namespace EducationAutomationSystem.Department
 
         private void FrmListDepartment_Load(object sender, EventArgs e)
         {
+            adminid = db.TBLADMINLOGIN.Where(x => x.AdminTRNumber == number).Select(y => y.AdminID).FirstOrDefault();
+
+            label1.Text = adminid.ToString();
+
             verilerigoster("select DepartmentID as 'Bölüm ID', DepartmentName as 'Bölüm Adı' from TBLDEPARTMENT");
             kayitsayisi();
             lbllistdepartmentmenu.Text = Localization.lbllistdepartmentmenu;

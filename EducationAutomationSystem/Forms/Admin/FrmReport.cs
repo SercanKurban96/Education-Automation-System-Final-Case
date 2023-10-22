@@ -18,10 +18,12 @@ namespace EducationAutomationSystem.Forms.Admin
             InitializeComponent();
         }
         DbEducationEntities4 db = new DbEducationEntities4();
-
+        public string number, username;
+        public int adminid;
         private void PctBack_Click(object sender, EventArgs e)
         {
             FrmAdminPanel fr = new FrmAdminPanel();
+            fr.number = number;
             fr.Show();
             this.Hide();
         }
@@ -205,6 +207,10 @@ namespace EducationAutomationSystem.Forms.Admin
 
         private void FrmReport_Load(object sender, EventArgs e)
         {
+            adminid = db.TBLADMINLOGIN.Where(x => x.AdminTRNumber == number).Select(y => y.AdminID).FirstOrDefault();
+
+            label1.Text = adminid.ToString();
+
             lblakademisyensirala.Text = Localization.lblakademisyensirala;
             lblakademisyensiralaters.Text = Localization.lblakademisyensiralaters;
             lblbolumsirala.Text = Localization.lblbolumsirala;

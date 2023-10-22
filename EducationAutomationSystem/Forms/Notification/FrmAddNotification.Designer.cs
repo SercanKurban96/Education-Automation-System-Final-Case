@@ -43,6 +43,7 @@
             this.LblNotificationCount = new System.Windows.Forms.Label();
             this.lblduyurusayisi = new System.Windows.Forms.Label();
             this.DtpNotificationDate = new System.Windows.Forms.DateTimePicker();
+            this.label1 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.PctBack)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
@@ -190,6 +191,17 @@
             this.DtpNotificationDate.TabIndex = 36;
             this.DtpNotificationDate.Visible = false;
             // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Georgia", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.label1.Location = new System.Drawing.Point(150, 38);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(49, 18);
+            this.label1.TabIndex = 137;
+            this.label1.Text = "label1";
+            this.label1.Visible = false;
+            // 
             // FrmAddNotification
             // 
             this.AcceptButton = this.BtnAdd;
@@ -199,6 +211,7 @@
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
             this.CancelButton = this.BtnCancel;
             this.ClientSize = new System.Drawing.Size(810, 378);
+            this.Controls.Add(this.label1);
             this.Controls.Add(this.DtpNotificationDate);
             this.Controls.Add(this.LblNotificationCount);
             this.Controls.Add(this.lblduyurusayisi);
@@ -245,5 +258,6 @@
         private System.Windows.Forms.Label LblNotificationCount;
         private System.Windows.Forms.Label lblduyurusayisi;
         private System.Windows.Forms.DateTimePicker DtpNotificationDate;
+        private System.Windows.Forms.Label label1;
     }
 }

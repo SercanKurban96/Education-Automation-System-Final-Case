@@ -1,4 +1,5 @@
 ﻿using EducationAutomationSystem.Applications;
+using EducationAutomationSystem.Entity;
 using EducationAutomationSystem.Forms.Applications;
 using System;
 using System.Collections.Generic;
@@ -18,10 +19,13 @@ namespace EducationAutomationSystem.Admin
         {
             InitializeComponent();
         }
-
+        DbEducationEntities4 db = new DbEducationEntities4();
+        public string number, username;
+        public int adminid;
         private void PctChangePassword_Click(object sender, EventArgs e)
         {
             FrmChangePassword fr = new FrmChangePassword();
+            fr.number = number;
             fr.Show();
             this.Hide();
         }
@@ -30,14 +34,12 @@ namespace EducationAutomationSystem.Admin
         {
             FrmRadio fr = new FrmRadio();
             fr.Show();
-            //this.Hide();
         }
 
         private void PctNewspaper_Click(object sender, EventArgs e)
         {
             FrmNewspaper fr = new FrmNewspaper();
             fr.Show();
-            //this.Hide();
         }
 
         private void PctCalculator_Click(object sender, EventArgs e)
@@ -49,12 +51,12 @@ namespace EducationAutomationSystem.Admin
         {
             FrmMusic fr = new FrmMusic();
             fr.Show();
-            //this.Hide();
         }
 
         private void PctBack_Click(object sender, EventArgs e)
         {
             FrmAdminPanel fr = new FrmAdminPanel();
+            fr.number = number;
             fr.Show();
             this.Hide();
         }
@@ -71,6 +73,10 @@ namespace EducationAutomationSystem.Admin
 
         private void FrmSettings_Load(object sender, EventArgs e)
         {
+            adminid = db.TBLADMINLOGIN.Where(x => x.AdminTRNumber == number).Select(y => y.AdminID).FirstOrDefault();
+
+            label1.Text = adminid.ToString();
+
             lblgazeteler.Text = Localization.lblgazeteler;
             lblhesapmakinesi.Text = Localization.lblhesapmakinesi;
             lblmuzikdinle.Text = Localization.lblmuzikdinle;
@@ -83,6 +89,7 @@ namespace EducationAutomationSystem.Admin
         private void PctChangeLanguage_Click(object sender, EventArgs e)
         {
             FrmChangeLanguage fr = new FrmChangeLanguage();
+            fr.number = number;
             fr.Show();
             this.Hide();
         }

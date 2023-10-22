@@ -44,6 +44,7 @@
             this.lblduyurusayisi = new System.Windows.Forms.Label();
             this.lblduyuruicerik = new System.Windows.Forms.Label();
             this.lblduyurubasligi = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.DtgNotification)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -207,6 +208,17 @@
             this.lblduyurubasligi.TabIndex = 49;
             this.lblduyurubasligi.Text = "Duyuru Başlığı:";
             // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Georgia", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.label1.Location = new System.Drawing.Point(143, 37);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(49, 18);
+            this.label1.TabIndex = 137;
+            this.label1.Text = "label1";
+            this.label1.Visible = false;
+            // 
             // FrmDeleteNotification
             // 
             this.AcceptButton = this.BtnDelete;
@@ -216,6 +228,7 @@
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
             this.CancelButton = this.BtnCancel;
             this.ClientSize = new System.Drawing.Size(810, 532);
+            this.Controls.Add(this.label1);
             this.Controls.Add(this.lblduyurusayisi);
             this.Controls.Add(this.lblduyuruicerik);
             this.Controls.Add(this.lblduyurubasligi);
@@ -265,5 +278,6 @@
         private System.Windows.Forms.Label lblduyurusayisi;
         private System.Windows.Forms.Label lblduyuruicerik;
         private System.Windows.Forms.Label lblduyurubasligi;
+        private System.Windows.Forms.Label label1;
     }
 }

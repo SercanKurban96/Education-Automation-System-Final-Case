@@ -30,12 +30,12 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmStudentNotes));
             this.DtgStudentNotes = new System.Windows.Forms.DataGridView();
-            this.PctExit = new System.Windows.Forms.PictureBox();
             this.lblnotlarim = new System.Windows.Forms.Label();
             this.lblogrencino = new System.Windows.Forms.Label();
             this.LblNumber = new System.Windows.Forms.Label();
             this.groupBox5 = new System.Windows.Forms.GroupBox();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.TxtDepartment = new System.Windows.Forms.TextBox();
             this.lblcinsiyet = new System.Windows.Forms.Label();
             this.lblmail = new System.Windows.Forms.Label();
             this.TxtMail = new System.Windows.Forms.TextBox();
@@ -53,11 +53,11 @@
             this.TxtStudentName = new System.Windows.Forms.TextBox();
             this.TxtStudentSurname = new System.Windows.Forms.TextBox();
             this.DtpBirthDate = new System.Windows.Forms.DateTimePicker();
-            this.TxtDepartment = new System.Windows.Forms.TextBox();
+            this.PctBack = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.DtgStudentNotes)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.PctExit)).BeginInit();
             this.groupBox5.SuspendLayout();
             this.groupBox1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.PctBack)).BeginInit();
             this.SuspendLayout();
             // 
             // DtgStudentNotes
@@ -69,21 +69,6 @@
             this.DtgStudentNotes.Name = "DtgStudentNotes";
             this.DtgStudentNotes.Size = new System.Drawing.Size(474, 306);
             this.DtgStudentNotes.TabIndex = 0;
-            // 
-            // PctExit
-            // 
-            this.PctExit.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.PctExit.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.PctExit.Image = ((System.Drawing.Image)(resources.GetObject("PctExit.Image")));
-            this.PctExit.Location = new System.Drawing.Point(841, 1);
-            this.PctExit.Name = "PctExit";
-            this.PctExit.Size = new System.Drawing.Size(58, 53);
-            this.PctExit.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.PctExit.TabIndex = 38;
-            this.PctExit.TabStop = false;
-            this.PctExit.Click += new System.EventHandler(this.PctExit_Click);
-            this.PctExit.MouseLeave += new System.EventHandler(this.PctExit_MouseLeave);
-            this.PctExit.MouseHover += new System.EventHandler(this.PctExit_MouseHover);
             // 
             // lblnotlarim
             // 
@@ -153,6 +138,14 @@
             this.groupBox1.TabIndex = 120;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Öğrenci Bilgileri";
+            // 
+            // TxtDepartment
+            // 
+            this.TxtDepartment.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
+            this.TxtDepartment.Location = new System.Drawing.Point(145, 230);
+            this.TxtDepartment.Name = "TxtDepartment";
+            this.TxtDepartment.Size = new System.Drawing.Size(255, 26);
+            this.TxtDepartment.TabIndex = 82;
             // 
             // lblcinsiyet
             // 
@@ -299,13 +292,20 @@
             this.DtpBirthDate.Size = new System.Drawing.Size(255, 26);
             this.DtpBirthDate.TabIndex = 5;
             // 
-            // TxtDepartment
+            // PctBack
             // 
-            this.TxtDepartment.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
-            this.TxtDepartment.Location = new System.Drawing.Point(145, 230);
-            this.TxtDepartment.Name = "TxtDepartment";
-            this.TxtDepartment.Size = new System.Drawing.Size(255, 26);
-            this.TxtDepartment.TabIndex = 82;
+            this.PctBack.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.PctBack.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.PctBack.Image = ((System.Drawing.Image)(resources.GetObject("PctBack.Image")));
+            this.PctBack.Location = new System.Drawing.Point(842, 1);
+            this.PctBack.Name = "PctBack";
+            this.PctBack.Size = new System.Drawing.Size(58, 53);
+            this.PctBack.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.PctBack.TabIndex = 121;
+            this.PctBack.TabStop = false;
+            this.PctBack.Click += new System.EventHandler(this.PctBack_Click);
+            this.PctBack.MouseLeave += new System.EventHandler(this.PctBack_MouseLeave);
+            this.PctBack.MouseHover += new System.EventHandler(this.PctBack_MouseHover);
             // 
             // FrmStudentNotes
             // 
@@ -314,12 +314,12 @@
             this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
             this.ClientSize = new System.Drawing.Size(901, 392);
+            this.Controls.Add(this.PctBack);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.groupBox5);
             this.Controls.Add(this.lblogrencino);
             this.Controls.Add(this.LblNumber);
             this.Controls.Add(this.lblnotlarim);
-            this.Controls.Add(this.PctExit);
             this.Font = new System.Drawing.Font("Georgia", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
@@ -329,10 +329,10 @@
             this.Text = "FrmStudentNotes";
             this.Load += new System.EventHandler(this.FrmStudentNotes_Load);
             ((System.ComponentModel.ISupportInitialize)(this.DtgStudentNotes)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.PctExit)).EndInit();
             this.groupBox5.ResumeLayout(false);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.PctBack)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -341,7 +341,6 @@
         #endregion
 
         private System.Windows.Forms.DataGridView DtgStudentNotes;
-        private System.Windows.Forms.PictureBox PctExit;
         private System.Windows.Forms.Label lblnotlarim;
         private System.Windows.Forms.Label lblogrencino;
         private System.Windows.Forms.Label LblNumber;
@@ -365,5 +364,6 @@
         private System.Windows.Forms.TextBox TxtMail;
         private System.Windows.Forms.Label lblcinsiyet;
         private System.Windows.Forms.TextBox TxtDepartment;
+        private System.Windows.Forms.PictureBox PctBack;
     }
 }

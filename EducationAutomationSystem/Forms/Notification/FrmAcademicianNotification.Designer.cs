@@ -44,6 +44,8 @@
             this.TxtNotificationTitle = new System.Windows.Forms.TextBox();
             this.lblduyurubasligi = new System.Windows.Forms.Label();
             this.BtnNotificationList = new System.Windows.Forms.Button();
+            this.label2 = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.PctBack)).BeginInit();
@@ -203,6 +205,27 @@
             this.BtnNotificationList.UseVisualStyleBackColor = false;
             this.BtnNotificationList.Click += new System.EventHandler(this.BtnNotificationList_Click);
             // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(566, 53);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(50, 18);
+            this.label2.TabIndex = 133;
+            this.label2.Text = "label2";
+            this.label2.Visible = false;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Georgia", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.label1.Location = new System.Drawing.Point(566, 14);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(49, 18);
+            this.label1.TabIndex = 132;
+            this.label1.Text = "label1";
+            this.label1.Visible = false;
+            // 
             // FrmAcademicianNotification
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 18F);
@@ -210,6 +233,8 @@
             this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
             this.ClientSize = new System.Drawing.Size(808, 388);
+            this.Controls.Add(this.label2);
+            this.Controls.Add(this.label1);
             this.Controls.Add(this.BtnNotificationList);
             this.Controls.Add(this.DtpNotificationDate);
             this.Controls.Add(this.LblNotificationCount);
@@ -258,5 +283,7 @@
         private System.Windows.Forms.TextBox TxtNotificationTitle;
         private System.Windows.Forms.Label lblduyurubasligi;
         private System.Windows.Forms.Button BtnNotificationList;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label label1;
     }
 }

@@ -40,7 +40,6 @@
             this.lblfinalsinavi = new System.Windows.Forms.Label();
             this.TxtAverage = new System.Windows.Forms.TextBox();
             this.lblortalama = new System.Windows.Forms.Label();
-            this.PctExit = new System.Windows.Forms.PictureBox();
             this.lblnotislemleri = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
             this.TxtStudentID = new System.Windows.Forms.TextBox();
@@ -49,10 +48,13 @@
             this.DtgStudentNotes = new System.Windows.Forms.DataGridView();
             this.TxtMidtermExam = new System.Windows.Forms.TextBox();
             this.TxtFinalExam = new System.Windows.Forms.TextBox();
-            this.label1 = new System.Windows.Forms.Label();
+            this.lbldersid = new System.Windows.Forms.Label();
             this.BtnNumbers = new System.Windows.Forms.Button();
-            ((System.ComponentModel.ISupportInitialize)(this.PctExit)).BeginInit();
+            this.label2 = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
+            this.PctBack = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.DtgStudentNotes)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.PctBack)).BeginInit();
             this.SuspendLayout();
             // 
             // BtnCancel
@@ -91,7 +93,6 @@
             this.CmbLesson.Name = "CmbLesson";
             this.CmbLesson.Size = new System.Drawing.Size(240, 26);
             this.CmbLesson.TabIndex = 128;
-            //this.CmbLesson.SelectedIndexChanged += new System.EventHandler(this.CmbLesson_SelectedIndexChanged);
             // 
             // lblderssec
             // 
@@ -168,21 +169,6 @@
             this.lblortalama.Size = new System.Drawing.Size(80, 18);
             this.lblortalama.TabIndex = 140;
             this.lblortalama.Text = "Ortalama:";
-            // 
-            // PctExit
-            // 
-            this.PctExit.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.PctExit.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.PctExit.Image = ((System.Drawing.Image)(resources.GetObject("PctExit.Image")));
-            this.PctExit.Location = new System.Drawing.Point(668, 1);
-            this.PctExit.Name = "PctExit";
-            this.PctExit.Size = new System.Drawing.Size(58, 53);
-            this.PctExit.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.PctExit.TabIndex = 141;
-            this.PctExit.TabStop = false;
-            this.PctExit.Click += new System.EventHandler(this.PctExit_Click);
-            this.PctExit.MouseLeave += new System.EventHandler(this.PctExit_MouseLeave);
-            this.PctExit.MouseHover += new System.EventHandler(this.PctExit_MouseHover);
             // 
             // lblnotislemleri
             // 
@@ -262,15 +248,15 @@
             this.TxtFinalExam.Size = new System.Drawing.Size(90, 26);
             this.TxtFinalExam.TabIndex = 149;
             // 
-            // label1
+            // lbldersid
             // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(6, 78);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(68, 18);
-            this.label1.TabIndex = 150;
-            this.label1.Text = "Ders ID:";
-            this.label1.Visible = false;
+            this.lbldersid.AutoSize = true;
+            this.lbldersid.Location = new System.Drawing.Point(6, 78);
+            this.lbldersid.Name = "lbldersid";
+            this.lbldersid.Size = new System.Drawing.Size(68, 18);
+            this.lbldersid.TabIndex = 150;
+            this.lbldersid.Text = "Ders ID:";
+            this.lbldersid.Visible = false;
             // 
             // BtnNumbers
             // 
@@ -282,6 +268,42 @@
             this.BtnNumbers.UseVisualStyleBackColor = true;
             this.BtnNumbers.Click += new System.EventHandler(this.BtnNumbers_Click);
             // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(567, 48);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(50, 18);
+            this.label2.TabIndex = 153;
+            this.label2.Text = "label2";
+            this.label2.Visible = false;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Georgia", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.label1.Location = new System.Drawing.Point(567, 9);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(49, 18);
+            this.label1.TabIndex = 152;
+            this.label1.Text = "label1";
+            this.label1.Visible = false;
+            // 
+            // PctBack
+            // 
+            this.PctBack.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.PctBack.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.PctBack.Image = ((System.Drawing.Image)(resources.GetObject("PctBack.Image")));
+            this.PctBack.Location = new System.Drawing.Point(668, 1);
+            this.PctBack.Name = "PctBack";
+            this.PctBack.Size = new System.Drawing.Size(58, 53);
+            this.PctBack.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.PctBack.TabIndex = 154;
+            this.PctBack.TabStop = false;
+            this.PctBack.Click += new System.EventHandler(this.PctBack_Click);
+            this.PctBack.MouseLeave += new System.EventHandler(this.PctBack_MouseLeave);
+            this.PctBack.MouseHover += new System.EventHandler(this.PctBack_MouseHover);
+            // 
             // FrmAcademicianNotes
             // 
             this.AcceptButton = this.BtnAdd;
@@ -291,8 +313,11 @@
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
             this.CancelButton = this.BtnCancel;
             this.ClientSize = new System.Drawing.Size(727, 527);
-            this.Controls.Add(this.BtnNumbers);
+            this.Controls.Add(this.PctBack);
+            this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
+            this.Controls.Add(this.BtnNumbers);
+            this.Controls.Add(this.lbldersid);
             this.Controls.Add(this.TxtFinalExam);
             this.Controls.Add(this.TxtMidtermExam);
             this.Controls.Add(this.DtgStudentNotes);
@@ -301,7 +326,6 @@
             this.Controls.Add(this.TxtStudentID);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.lblnotislemleri);
-            this.Controls.Add(this.PctExit);
             this.Controls.Add(this.lblortalama);
             this.Controls.Add(this.TxtAverage);
             this.Controls.Add(this.lblfinalsinavi);
@@ -315,13 +339,14 @@
             this.Controls.Add(this.BtnAdd);
             this.Font = new System.Drawing.Font("Georgia", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "FrmAcademicianNotes";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "FrmAcademicianNotes";
             this.Load += new System.EventHandler(this.FrmAcademicianNotes_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.PctExit)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.DtgStudentNotes)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.PctBack)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -340,7 +365,6 @@
         private System.Windows.Forms.Label lblfinalsinavi;
         private System.Windows.Forms.TextBox TxtAverage;
         private System.Windows.Forms.Label lblortalama;
-        private System.Windows.Forms.PictureBox PctExit;
         private System.Windows.Forms.Label lblnotislemleri;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.TextBox TxtStudentID;
@@ -349,7 +373,10 @@
         private System.Windows.Forms.DataGridView DtgStudentNotes;
         private System.Windows.Forms.TextBox TxtMidtermExam;
         private System.Windows.Forms.TextBox TxtFinalExam;
-        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label lbldersid;
         private System.Windows.Forms.Button BtnNumbers;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.PictureBox PctBack;
     }
 }

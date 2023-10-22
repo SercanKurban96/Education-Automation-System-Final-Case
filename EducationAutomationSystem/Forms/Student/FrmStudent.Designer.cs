@@ -41,6 +41,7 @@
             this.lblsearchstudent = new System.Windows.Forms.Label();
             this.lblliststudent = new System.Windows.Forms.Label();
             this.PctListStudent = new System.Windows.Forms.PictureBox();
+            this.label1 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.PctAddStudent)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.PctEditStudent)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.PctBack)).BeginInit();
@@ -197,6 +198,17 @@
             this.PctListStudent.TabStop = false;
             this.PctListStudent.Click += new System.EventHandler(this.PctListStudent_Click);
             // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Georgia", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.label1.Location = new System.Drawing.Point(26, 18);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(49, 18);
+            this.label1.TabIndex = 134;
+            this.label1.Text = "label1";
+            this.label1.Visible = false;
+            // 
             // FrmStudent
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 18F);
@@ -204,6 +216,7 @@
             this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
             this.ClientSize = new System.Drawing.Size(973, 522);
+            this.Controls.Add(this.label1);
             this.Controls.Add(this.PctListStudent);
             this.Controls.Add(this.lblliststudent);
             this.Controls.Add(this.lblsearchstudent);
@@ -249,5 +262,6 @@
         private System.Windows.Forms.Label lblsearchstudent;
         private System.Windows.Forms.Label lblliststudent;
         private System.Windows.Forms.PictureBox PctListStudent;
+        private System.Windows.Forms.Label label1;
     }
 }

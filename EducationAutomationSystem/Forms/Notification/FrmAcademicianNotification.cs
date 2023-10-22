@@ -1,4 +1,6 @@
-﻿using EducationAutomationSystem.Notification;
+﻿using EducationAutomationSystem.Academician;
+using EducationAutomationSystem.Entity;
+using EducationAutomationSystem.Notification;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -19,6 +21,9 @@ namespace EducationAutomationSystem.Forms.Notification
             InitializeComponent();
         }
         sqlconnection conn = new sqlconnection();
+        DbEducationEntities4 db = new DbEducationEntities4();
+        public string number, namesurname, picture;
+        public int academicianid, departmentid;
         void kayitsayisi()
         {
             SqlCommand komut = new SqlCommand("select count(*) from TBLNOTIFICATION", conn.connection());
@@ -37,13 +42,23 @@ namespace EducationAutomationSystem.Forms.Notification
         }
         private void PctBack_Click(object sender, EventArgs e)
         {
-            this.Close();
+            FrmAcademicianPanel fr = new FrmAcademicianPanel();
+            fr.number = number;
+            fr.Show();
+            this.Hide();
         }
 
         private void FrmAcademicianNotification_Load(object sender, EventArgs e)
         {
             TxtNotificationTitle.Focus();
             kayitsayisi();
+
+            academicianid = db.TBLACADEMICIAN.Where(x => x.AcademicianTRNumber == number).Select(y => y.AcademicianID).FirstOrDefault();
+
+            departmentid = db.TBLACADEMICIAN.Where(x => x.AcademicianTRNumber == number).Select(y => y.TBLDEPARTMENT.DepartmentID).FirstOrDefault();
+
+            label1.Text = academicianid.ToString();
+            label2.Text = departmentid.ToString();
 
             lblduyurubasligi.Text = Localization.lblduyurubasligi;
             lblduyuruicerik.Text = Localization.lblduyuruicerik;

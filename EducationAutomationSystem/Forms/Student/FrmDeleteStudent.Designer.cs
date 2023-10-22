@@ -84,6 +84,7 @@
             this.TxtPicture = new System.Windows.Forms.TextBox();
             this.lblogrencisayisi = new System.Windows.Forms.Label();
             this.lblphoto = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.PctBack)).BeginInit();
@@ -626,6 +627,17 @@
             this.lblphoto.TabIndex = 134;
             this.lblphoto.Text = "Fotoğraf:";
             // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Georgia", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.label1.Location = new System.Drawing.Point(27, 8);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(49, 18);
+            this.label1.TabIndex = 136;
+            this.label1.Text = "label1";
+            this.label1.Visible = false;
+            // 
             // FrmDeleteStudent
             // 
             this.AcceptButton = this.BtnDelete;
@@ -635,6 +647,7 @@
             this.BackColor = System.Drawing.Color.LightCoral;
             this.CancelButton = this.BtnCancel;
             this.ClientSize = new System.Drawing.Size(1119, 697);
+            this.Controls.Add(this.label1);
             this.Controls.Add(this.lblphoto);
             this.Controls.Add(this.lblogrencisayisi);
             this.Controls.Add(this.groupBox1);
@@ -728,5 +741,6 @@
         private System.Windows.Forms.Label lblmail;
         private System.Windows.Forms.Label lblogrencisayisi;
         private System.Windows.Forms.Label lblphoto;
+        private System.Windows.Forms.Label label1;
     }
 }

@@ -34,6 +34,7 @@
             this.LblAcademicianCount = new System.Windows.Forms.Label();
             this.DtgAcademician = new System.Windows.Forms.DataGridView();
             this.lblakademisyensayisi = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.PctBack)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.DtgAcademician)).BeginInit();
             this.SuspendLayout();
@@ -93,6 +94,17 @@
             this.lblakademisyensayisi.TabIndex = 151;
             this.lblakademisyensayisi.Text = "Akademisyen Sayısı:";
             // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Georgia", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.label1.Location = new System.Drawing.Point(729, 24);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(49, 18);
+            this.label1.TabIndex = 152;
+            this.label1.Text = "label1";
+            this.label1.Visible = false;
+            // 
             // FrmListAcademician
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 18F);
@@ -100,6 +112,7 @@
             this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
             this.ClientSize = new System.Drawing.Size(926, 523);
+            this.Controls.Add(this.label1);
             this.Controls.Add(this.lblakademisyensayisi);
             this.Controls.Add(this.DtgAcademician);
             this.Controls.Add(this.LblAcademicianCount);
@@ -127,5 +140,6 @@
         private System.Windows.Forms.Label LblAcademicianCount;
         private System.Windows.Forms.DataGridView DtgAcademician;
         private System.Windows.Forms.Label lblakademisyensayisi;
+        private System.Windows.Forms.Label label1;
     }
 }

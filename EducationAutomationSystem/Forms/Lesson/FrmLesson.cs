@@ -1,4 +1,5 @@
-﻿using EducationAutomationSystem.Entity;
+﻿using EducationAutomationSystem.Academician;
+using EducationAutomationSystem.Entity;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -40,7 +41,10 @@ namespace EducationAutomationSystem.Lesson
 
         private void PctBack_Click(object sender, EventArgs e)
         {
-            this.Close();
+            FrmAcademicianPanel fr = new FrmAcademicianPanel();
+            fr.number = number;
+            fr.Show();
+            this.Hide();
         }
 
         private void PctBack_MouseHover(object sender, EventArgs e)
@@ -58,6 +62,7 @@ namespace EducationAutomationSystem.Lesson
             FrmAddLesson fr = new FrmAddLesson();
             fr.number = number;
             fr.Show();
+            this.Hide();
         }
 
         private void PctEditLesson_Click(object sender, EventArgs e)
@@ -65,6 +70,7 @@ namespace EducationAutomationSystem.Lesson
             FrmEditLesson fr = new FrmEditLesson();
             fr.number = number;
             fr.Show();
+            this.Hide();
         }
 
         private void PctSearchLesson_Click(object sender, EventArgs e)
@@ -72,6 +78,7 @@ namespace EducationAutomationSystem.Lesson
             FrmSearchLesson fr = new FrmSearchLesson();
             fr.number = number;
             fr.Show();
+            this.Hide();
         }
 
         private void PctDeleteLesson_Click(object sender, EventArgs e)
@@ -79,6 +86,7 @@ namespace EducationAutomationSystem.Lesson
             FrmDeleteLesson fr = new FrmDeleteLesson();
             fr.number = number;
             fr.Show();
+            this.Hide();
         }
 
         private void PctListLesson_Click(object sender, EventArgs e)
@@ -86,6 +94,7 @@ namespace EducationAutomationSystem.Lesson
             FrmListLesson fr = new FrmListLesson();
             fr.number = number;
             fr.Show();
+            this.Hide();
         }
     }
 }

@@ -35,6 +35,8 @@ namespace EducationAutomationSystem.Forms.Student
             FrmStudentNotes fr = new FrmStudentNotes();
             fr.number = number;
             fr.Show();
+            this.Hide();
+            notifyIcon3.Visible = false;
         }
 
         private void FrmStudentPanel_Load(object sender, EventArgs e)
@@ -93,7 +95,7 @@ namespace EducationAutomationSystem.Forms.Student
             dialogResult = MessageBox.Show(String.Format(Localization.ogrencicikis), String.Format(Localization.uyari), MessageBoxButtons.YesNo, MessageBoxIcon.Question);
             if (dialogResult == DialogResult.Yes)
             {
-                FrmLanguage fr = new FrmLanguage();
+                FrmLoading fr = new FrmLoading();
                 fr.Show();
                 this.Hide();
                 notifyIcon3.Visible = false;
@@ -139,7 +141,7 @@ namespace EducationAutomationSystem.Forms.Student
             dialogResult = MessageBox.Show(String.Format(Localization.ogrencicikis), String.Format(Localization.uyari), MessageBoxButtons.YesNo, MessageBoxIcon.Question);
             if (dialogResult == DialogResult.Yes)
             {
-                FrmLanguage fr = new FrmLanguage();
+                FrmLoading fr = new FrmLoading();
                 fr.Show();
                 this.Hide();
                 notifyIcon3.Visible = false;
@@ -149,14 +151,19 @@ namespace EducationAutomationSystem.Forms.Student
         private void PctNotification_Click(object sender, EventArgs e)
         {
             FrmStudentNotification fr = new FrmStudentNotification();
+            fr.number = number;
             fr.Show();
+            this.Hide();
+            notifyIcon3.Visible = false;
         }
 
         private void PctSettings_Click(object sender, EventArgs e)
         {
             FrmStudentApplication fr = new FrmStudentApplication();
+            fr.number = number;
             fr.Show();
-            //this.Hide();
+            this.Hide();
+            notifyIcon3.Visible = false;
         }
 
         private void PctSettings_MouseHover(object sender, EventArgs e)

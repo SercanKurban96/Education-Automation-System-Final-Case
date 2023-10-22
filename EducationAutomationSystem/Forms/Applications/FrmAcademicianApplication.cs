@@ -1,4 +1,5 @@
-﻿using EducationAutomationSystem.Applications;
+﻿using EducationAutomationSystem.Academician;
+using EducationAutomationSystem.Applications;
 using EducationAutomationSystem.Entity;
 using System;
 using System.Collections.Generic;
@@ -21,7 +22,8 @@ namespace EducationAutomationSystem.Forms.Applications
         }
 
         DbEducationEntities4 db = new DbEducationEntities4();
-
+        public string number, namesurname, picture;
+        public int academicianid, departmentid;
         private void PctExit_Click(object sender, EventArgs e)
         {
             this.Close();
@@ -50,14 +52,22 @@ namespace EducationAutomationSystem.Forms.Applications
             fr.Show();
         }
 
-        private void PctExit_MouseHover(object sender, EventArgs e)
+        private void PctBack_Click(object sender, EventArgs e)
         {
-            PctExit.BackColor = Color.Red;
+            FrmAcademicianPanel fr = new FrmAcademicianPanel();
+            fr.number = number;
+            fr.Show();
+            this.Hide();
         }
 
-        private void PctExit_MouseLeave(object sender, EventArgs e)
+        private void PctBack_MouseHover(object sender, EventArgs e)
         {
-            PctExit.BackColor = Color.Transparent;
+            PctBack.BackColor = Color.Green;
+        }
+
+        private void PctBack_MouseLeave(object sender, EventArgs e)
+        {
+            PctBack.BackColor = Color.Transparent;
         }
 
         private void PctChangePassword_Click(object sender, EventArgs e)
@@ -65,15 +75,26 @@ namespace EducationAutomationSystem.Forms.Applications
             FrmChangeAcademicianPassword fr = new FrmChangeAcademicianPassword();
             fr.number = number;
             fr.Show();
+            this.Hide();
         }
-        public string number, namesurname, picture;
+        
 
-        public int academicianid;
+        private void PctChangeLanguage_Click(object sender, EventArgs e)
+        {
+            FrmChangeAcademicianLanguage fr = new FrmChangeAcademicianLanguage();
+            fr.number = number;
+            fr.Show();
+            this.Hide();
+        }
+
         private void FrmAcademicianApplication_Load(object sender, EventArgs e)
         {
             academicianid = db.TBLACADEMICIAN.Where(x => x.AcademicianTRNumber == number).Select(y => y.AcademicianID).FirstOrDefault();
 
+            departmentid = db.TBLACADEMICIAN.Where(x => x.AcademicianTRNumber == number).Select(y => y.TBLDEPARTMENT.DepartmentID).FirstOrDefault();
+
             label1.Text = academicianid.ToString();
+            label2.Text = departmentid.ToString();
 
             lblgazeteler.Text = Localization.lblgazeteler;
             lblhesapmakinesi.Text = Localization.lblhesapmakinesi;
@@ -81,6 +102,7 @@ namespace EducationAutomationSystem.Forms.Applications
             lblradyo.Text = Localization.lblradyo;
             lblsifredegistir.Text = Localization.lblsifredegistir;
             lbluygulamalarformu.Text = Localization.lbluygulamalarformu;
+            lbldildegistir.Text = Localization.lbldildegistir;
         }
     }
 }

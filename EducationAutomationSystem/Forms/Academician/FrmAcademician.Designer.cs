@@ -41,6 +41,7 @@
             this.lblakademisyenpanel = new System.Windows.Forms.Label();
             this.PctEditAcademician = new System.Windows.Forms.PictureBox();
             this.PctAddAcademician = new System.Windows.Forms.PictureBox();
+            this.label1 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.PctListAcademician)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.PctSearchAcademician)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.PctDeleteAcademician)).BeginInit();
@@ -197,6 +198,17 @@
             this.PctAddAcademician.TabStop = false;
             this.PctAddAcademician.Click += new System.EventHandler(this.PctAddAcademician_Click);
             // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Georgia", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.label1.Location = new System.Drawing.Point(12, 9);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(49, 18);
+            this.label1.TabIndex = 136;
+            this.label1.Text = "label1";
+            this.label1.Visible = false;
+            // 
             // FrmAcademician
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 18F);
@@ -204,6 +216,7 @@
             this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
             this.ClientSize = new System.Drawing.Size(973, 522);
+            this.Controls.Add(this.label1);
             this.Controls.Add(this.PctListAcademician);
             this.Controls.Add(this.lblakademisyenlistesi);
             this.Controls.Add(this.lblakademisyenara);
@@ -248,5 +261,6 @@
         private System.Windows.Forms.Label lblakademisyenpanel;
         private System.Windows.Forms.PictureBox PctEditAcademician;
         private System.Windows.Forms.PictureBox PctAddAcademician;
+        private System.Windows.Forms.Label label1;
     }
 }

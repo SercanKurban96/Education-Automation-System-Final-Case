@@ -9,6 +9,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Data.SqlClient;
+using EducationAutomationSystem.Entity;
 
 namespace EducationAutomationSystem
 {
@@ -20,16 +21,23 @@ namespace EducationAutomationSystem
         }
 
         sqlconnection conn = new sqlconnection();
-
+        DbEducationEntities4 db = new DbEducationEntities4();
+        public string number, username;
+        public int adminid;
         private void PctBack_Click(object sender, EventArgs e)
         {
             FrmDepartment fr = new FrmDepartment();
+            fr.number = number;
             fr.Show();
             this.Hide();
         }
 
         void kayitsayisi()
         {
+            adminid = db.TBLADMINLOGIN.Where(x => x.AdminTRNumber == number).Select(y => y.AdminID).FirstOrDefault();
+
+            label1.Text = adminid.ToString();
+
             SqlCommand komut = new SqlCommand("select count(*) from TBLDEPARTMENT", conn.connection());
             SqlDataReader dr = komut.ExecuteReader();
             while (dr.Read())
@@ -106,6 +114,10 @@ namespace EducationAutomationSystem
         {
             TxtDepartmentName.Focus();
             kayitsayisi();
+
+            adminid = db.TBLADMINLOGIN.Where(x => x.AdminTRNumber == number).Select(y => y.AdminID).FirstOrDefault();
+
+            label1.Text = adminid.ToString();
 
             lblbolumadi.Text = Localization.lblbolumadi;
             lblbolumeklemenu.Text = Localization.lblbolumeklemenu;

@@ -55,10 +55,6 @@ namespace EducationAutomationSystem.Lesson
             TxtID.Clear();
             TxtLessonName.Clear();
         }
-        private void CmbDepartment_SelectedIndexChanged(object sender, EventArgs e)
-        {
-
-        }
 
         private void FrmAddLesson_Load(object sender, EventArgs e)
         {
@@ -120,7 +116,10 @@ namespace EducationAutomationSystem.Lesson
 
         private void PctBack_Click(object sender, EventArgs e)
         {
-            this.Close();
+            FrmLesson fr = new FrmLesson();
+            fr.number = number;
+            fr.Show();
+            this.Hide();
         }
 
         private void PctBack_MouseHover(object sender, EventArgs e)

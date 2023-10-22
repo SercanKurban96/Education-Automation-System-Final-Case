@@ -128,7 +128,7 @@
             this.PctExit.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.PctExit.Cursor = System.Windows.Forms.Cursors.Hand;
             this.PctExit.Image = ((System.Drawing.Image)(resources.GetObject("PctExit.Image")));
-            this.PctExit.Location = new System.Drawing.Point(414, 1);
+            this.PctExit.Location = new System.Drawing.Point(415, 1);
             this.PctExit.Name = "PctExit";
             this.PctExit.Size = new System.Drawing.Size(58, 53);
             this.PctExit.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;

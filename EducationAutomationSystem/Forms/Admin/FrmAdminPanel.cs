@@ -1,5 +1,6 @@
 ﻿using EducationAutomationSystem.Admin;
 using EducationAutomationSystem.Department;
+using EducationAutomationSystem.Entity;
 using EducationAutomationSystem.Forms.Admin;
 using EducationAutomationSystem.Lesson;
 using EducationAutomationSystem.Notification;
@@ -9,6 +10,7 @@ using System.ComponentModel;
 using System.Data;
 using System.Drawing;
 using System.Linq;
+using System.Reflection.Emit;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
@@ -22,10 +24,13 @@ namespace EducationAutomationSystem
         {
             InitializeComponent();
         }
-
+        DbEducationEntities4 db = new DbEducationEntities4();
+        public string number, username;
+        public int adminid;
         private void PctDepartment_Click(object sender, EventArgs e)
         {
             FrmDepartment fr = new FrmDepartment();
+            fr.number = number;
             fr.Show();
             this.Hide();
             notifyIcon1.Visible = false;
@@ -37,7 +42,7 @@ namespace EducationAutomationSystem
             dialogResult = MessageBox.Show(String.Format(Localization.yoneticicikis), String.Format(Localization.uyari), MessageBoxButtons.YesNo, MessageBoxIcon.Question);
             if (dialogResult == DialogResult.Yes)
             {
-                FrmLanguage fr = new FrmLanguage();
+                FrmLoading fr = new FrmLoading();
                 fr.Show();
                 this.Hide();
                 notifyIcon1.Visible = false;
@@ -58,6 +63,7 @@ namespace EducationAutomationSystem
         private void PctStudent_Click(object sender, EventArgs e)
         {
             FrmStudent fr = new FrmStudent();
+            fr.number = number;
             fr.Show();
             this.Hide();
             notifyIcon1.Visible = false;
@@ -66,14 +72,21 @@ namespace EducationAutomationSystem
         private void PctNotification_Click(object sender, EventArgs e)
         {
             FrmNotification fr = new FrmNotification();
+            fr.number = number;
             fr.Show();
             this.Hide();
             notifyIcon1.Visible = false;
         }
-        public string username;
         private void FrmAdminPanel_Load(object sender, EventArgs e)
         {
             timer1.Start();
+
+            LblAdmin.Text = db.TBLADMINLOGIN.Where(x => x.AdminTRNumber == number).Select(y => y.AdminUsername).FirstOrDefault();
+
+            adminid = db.TBLADMINLOGIN.Where(x => x.AdminTRNumber == number).Select(y => y.AdminID).FirstOrDefault();
+
+            label1.Text = adminid.ToString();
+
             lblyoneticipaneli.Text = Localization.lblyoneticipaneli;
             lblbolumler.Text = Localization.lblbolumler;
             lblogrenciler.Text = Localization.lblogrenciler;
@@ -81,12 +94,14 @@ namespace EducationAutomationSystem
             lblraporlar.Text = Localization.lblraporlar;
             lblduyurular.Text = Localization.lblduyurular;
             lbluygulamalar.Text = Localization.lbluygulamalar;
+            lblyoneticibasligi.Text = Localization.lblyoneticibasligi;
             hideshowexit();
         }
 
         private void PctSettings_Click(object sender, EventArgs e)
         {
             FrmSettings fr = new FrmSettings();
+            fr.number = number;
             fr.Show();
             this.Hide();
             notifyIcon1.Visible = false;
@@ -130,7 +145,7 @@ namespace EducationAutomationSystem
             dialogResult = MessageBox.Show(String.Format(Localization.yoneticicikis), String.Format(Localization.uyari), MessageBoxButtons.YesNo, MessageBoxIcon.Question);
             if (dialogResult == DialogResult.Yes)
             {
-                FrmLanguage fr = new FrmLanguage();
+                FrmLoading fr = new FrmLoading();
                 fr.Show();
                 this.Hide();
                 notifyIcon1.Visible = false;
@@ -173,14 +188,7 @@ namespace EducationAutomationSystem
         private void PctAcademician_Click(object sender, EventArgs e)
         {
             FrmAcademician fr = new FrmAcademician();
-            fr.Show();
-            this.Hide();
-            notifyIcon1.Visible = false;
-        }
-
-        private void PctLesson_Click(object sender, EventArgs e)
-        {
-            FrmLesson fr = new FrmLesson();
+            fr.number = number;
             fr.Show();
             this.Hide();
             notifyIcon1.Visible = false;
@@ -230,6 +238,7 @@ namespace EducationAutomationSystem
         private void PctReport_Click(object sender, EventArgs e)
         {
             FrmReport fr = new FrmReport();
+            fr.number = number;
             fr.Show();
             this.Hide();
             notifyIcon1.Visible = false;

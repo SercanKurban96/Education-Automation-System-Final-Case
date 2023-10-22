@@ -44,6 +44,7 @@
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.PctBack = new System.Windows.Forms.PictureBox();
             this.lblsifredegisikligi = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.PctBack)).BeginInit();
             this.SuspendLayout();
@@ -209,6 +210,17 @@
             this.lblsifredegisikligi.TabIndex = 37;
             this.lblsifredegisikligi.Text = "ŞİFRE DEĞİŞİKLİĞİ";
             // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Georgia", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.label1.Location = new System.Drawing.Point(34, 59);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(49, 18);
+            this.label1.TabIndex = 133;
+            this.label1.Text = "label1";
+            this.label1.Visible = false;
+            // 
             // FrmChangePassword
             // 
             this.AcceptButton = this.BtnChange;
@@ -218,6 +230,7 @@
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
             this.CancelButton = this.BtnCancel;
             this.ClientSize = new System.Drawing.Size(562, 316);
+            this.Controls.Add(this.label1);
             this.Controls.Add(this.lblsifredegisikligi);
             this.Controls.Add(this.PctBack);
             this.Controls.Add(this.pictureBox1);
@@ -265,5 +278,6 @@
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.PictureBox PctBack;
         private System.Windows.Forms.Label lblsifredegisikligi;
+        private System.Windows.Forms.Label label1;
     }
 }

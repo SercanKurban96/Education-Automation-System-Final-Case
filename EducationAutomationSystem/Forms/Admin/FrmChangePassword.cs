@@ -9,6 +9,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Data.SqlClient;
 using System.Configuration;
+using EducationAutomationSystem.Entity;
 
 namespace EducationAutomationSystem.Admin
 {
@@ -20,7 +21,9 @@ namespace EducationAutomationSystem.Admin
         }
 
         sqlconnection conn = new sqlconnection();
-
+        DbEducationEntities4 db = new DbEducationEntities4();
+        public string number, username;
+        public int adminid;
         private void ChkCurrentPassword_CheckedChanged(object sender, EventArgs e)
         {
             if (TxtCurrentPassword.UseSystemPasswordChar)
@@ -110,6 +113,7 @@ namespace EducationAutomationSystem.Admin
         private void PctBack_Click(object sender, EventArgs e)
         {
             FrmSettings fr = new FrmSettings();
+            fr.number = number;
             fr.Show();
             this.Hide();
         }
@@ -134,6 +138,10 @@ namespace EducationAutomationSystem.Admin
 
         private void FrmChangePassword_Load(object sender, EventArgs e)
         {
+            adminid = db.TBLADMINLOGIN.Where(x => x.AdminTRNumber == number).Select(y => y.AdminID).FirstOrDefault();
+
+            label1.Text = adminid.ToString();
+
             lblsifredegisikligi.Text = Localization.lblsifredegisikliği;
             lblcurrentpassword.Text = Localization.lblcurrentpassword;
             lblnewpassword.Text = Localization.lblnewpassword;

@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Data.SqlClient;
+using EducationAutomationSystem.Entity;
 
 namespace EducationAutomationSystem.Notification
 {
@@ -19,6 +20,9 @@ namespace EducationAutomationSystem.Notification
         }
 
         sqlconnection conn = new sqlconnection();
+        DbEducationEntities4 db = new DbEducationEntities4();
+        public string number, username;
+        public int adminid;
 
         void verilerigoster(string veriler)
         {
@@ -29,6 +33,10 @@ namespace EducationAutomationSystem.Notification
         }
         void kayitsayisi()
         {
+            adminid = db.TBLADMINLOGIN.Where(x => x.AdminTRNumber == number).Select(y => y.AdminID).FirstOrDefault();
+
+            label1.Text = adminid.ToString();
+
             SqlCommand komut = new SqlCommand("select count(*) from TBLNOTIFICATION", conn.connection());
             SqlDataReader dr = komut.ExecuteReader();
             while (dr.Read())
@@ -54,6 +62,10 @@ namespace EducationAutomationSystem.Notification
 
         private void FrmNotificationList_Load(object sender, EventArgs e)
         {
+            adminid = db.TBLADMINLOGIN.Where(x => x.AdminTRNumber == number).Select(y => y.AdminID).FirstOrDefault();
+
+            label1.Text = adminid.ToString();
+
             verilerigoster("select NotificationID as 'Duyuru ID', NotificationDate as 'Duyuru Tarihi', NotificationTitle as 'Duyuru Başlığı',NotificationDescription as 'Duyuru İçeriği' from TBLNOTIFICATION");
             kayitsayisi();
 

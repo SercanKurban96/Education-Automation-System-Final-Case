@@ -1,4 +1,5 @@
 ﻿using EducationAutomationSystem.Admin;
+using EducationAutomationSystem.Entity;
 using System;
 using System.Drawing;
 using System.Globalization;
@@ -12,13 +13,16 @@ namespace EducationAutomationSystem.Forms.Applications
         {
             InitializeComponent();
         }
-
+        DbEducationEntities4 db = new DbEducationEntities4();
+        public string number, username;
+        public int adminid;
         private void BtnChange_Click(object sender, EventArgs e)
         {
             if (rdbturkce.Checked)
             {
                 Localization.Culture = new CultureInfo("");
                 FrmSettings fr = new FrmSettings();
+                fr.number = number;
                 fr.Show();
                 this.Hide();
             }
@@ -26,6 +30,7 @@ namespace EducationAutomationSystem.Forms.Applications
             {
                 Localization.Culture = new CultureInfo("en-US");
                 FrmSettings fr = new FrmSettings();
+                fr.number = number;
                 fr.Show();
                 this.Hide();
             }
@@ -34,6 +39,7 @@ namespace EducationAutomationSystem.Forms.Applications
         private void PctBack_Click(object sender, EventArgs e)
         {
             FrmSettings fr = new FrmSettings();
+            fr.number = number;
             fr.Show();
             this.Hide();
         }
@@ -60,7 +66,9 @@ namespace EducationAutomationSystem.Forms.Applications
 
         private void FrmChangeLanguage_Load(object sender, EventArgs e)
         {
+            //adminid = db.TBLADMINLOGIN.Where(x => x.AdminTRNumber == number).Select(y => y.AdminID).FirstOrDefault();
 
+            //label1.Text = adminid.ToString();
         }
     }
 }

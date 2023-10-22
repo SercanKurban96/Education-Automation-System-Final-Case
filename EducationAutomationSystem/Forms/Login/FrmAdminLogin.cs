@@ -98,7 +98,7 @@ namespace EducationAutomationSystem
                 {
                     MessageBox.Show(String.Format(Localization.metin2), String.Format(Localization.hosgeldiniz), MessageBoxButtons.OK, MessageBoxIcon.Information);
                     FrmAdminPanel fr = new FrmAdminPanel();
-                    fr.username = TxtUsername.Text;
+                    fr.number = MskTRNumber.Text;
                     fr.Show();
                     this.Hide();
                 }

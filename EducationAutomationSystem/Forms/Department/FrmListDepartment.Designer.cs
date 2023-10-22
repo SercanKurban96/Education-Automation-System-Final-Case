@@ -35,6 +35,7 @@
             this.PctBack = new System.Windows.Forms.PictureBox();
             this.LblDepartmentCount = new System.Windows.Forms.Label();
             this.lblbolumsayisi = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.DtgDepartment)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.PctBack)).BeginInit();
             this.SuspendLayout();
@@ -102,6 +103,17 @@
             this.lblbolumsayisi.TabIndex = 49;
             this.lblbolumsayisi.Text = "Bölüm Sayısı:";
             // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Georgia", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.label1.Location = new System.Drawing.Point(612, 26);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(49, 18);
+            this.label1.TabIndex = 133;
+            this.label1.Text = "label1";
+            this.label1.Visible = false;
+            // 
             // FrmListDepartment
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 18F);
@@ -109,6 +121,7 @@
             this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
             this.ClientSize = new System.Drawing.Size(819, 394);
+            this.Controls.Add(this.label1);
             this.Controls.Add(this.lblbolumsayisi);
             this.Controls.Add(this.LblDepartmentCount);
             this.Controls.Add(this.TxtDepartmentID);
@@ -137,5 +150,6 @@
         private System.Windows.Forms.PictureBox PctBack;
         private System.Windows.Forms.Label LblDepartmentCount;
         private System.Windows.Forms.Label lblbolumsayisi;
+        private System.Windows.Forms.Label label1;
     }
 }

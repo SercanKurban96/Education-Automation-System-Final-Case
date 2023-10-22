@@ -31,7 +31,7 @@ namespace EducationAutomationSystem.Lesson
             label1.Text = academicianid.ToString();
             label2.Text = departmentid.ToString();
 
-            string query = "select LessonID as 'Ders ID',LessonName as 'Ders Adı', DepartmentName as 'Bölüm', AcademicianName + ' ' + AcademicianSurname as 'Akademisyen' from TBLDEPARTMENT inner join TBLLESSON on TBLDEPARTMENT.DepartmentID = TBLLESSON.Department inner join TBLACADEMICIAN on TBLLESSON.Academician = TBLACADEMICIAN.AcademicianID WHERE Academician = @AkademisyenID";
+            string query = "select LessonID as 'Ders ID',LessonName as 'Ders Adı' from TBLDEPARTMENT inner join TBLLESSON on TBLDEPARTMENT.DepartmentID = TBLLESSON.Department inner join TBLACADEMICIAN on TBLLESSON.Academician = TBLACADEMICIAN.AcademicianID WHERE Academician = @AkademisyenID";
             using (SqlCommand command = new SqlCommand(query, conn.connection()))
             {
                 command.Parameters.AddWithValue("@AkademisyenID", academicianid);
@@ -126,7 +126,10 @@ namespace EducationAutomationSystem.Lesson
 
         private void PctBack_Click(object sender, EventArgs e)
         {
-            this.Close();
+            FrmLesson fr = new FrmLesson();
+            fr.number = number;
+            fr.Show();
+            this.Hide();
         }
 
         private void PctBack_MouseHover(object sender, EventArgs e)

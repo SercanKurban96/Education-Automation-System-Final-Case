@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Data.SqlClient;
+using EducationAutomationSystem.Entity;
 
 namespace EducationAutomationSystem.Student
 {
@@ -19,6 +20,9 @@ namespace EducationAutomationSystem.Student
         }
 
         sqlconnection conn = new sqlconnection();
+        DbEducationEntities4 db = new DbEducationEntities4();
+        public string number, username;
+        public int adminid;
 
         public int varMi(string aranan)
         {
@@ -51,6 +55,10 @@ namespace EducationAutomationSystem.Student
         }
         void kayitsayisi()
         {
+            adminid = db.TBLADMINLOGIN.Where(x => x.AdminTRNumber == number).Select(y => y.AdminID).FirstOrDefault();
+
+            label1.Text = adminid.ToString();
+
             SqlCommand komut = new SqlCommand("select count(*) from TBLSTUDENT", conn.connection());
             SqlDataReader dr = komut.ExecuteReader();
             while (dr.Read())
@@ -84,6 +92,7 @@ namespace EducationAutomationSystem.Student
         private void PctBack_Click(object sender, EventArgs e)
         {
             FrmStudent fr = new FrmStudent();
+            fr.number = number;
             fr.Show();
             this.Hide();
         }
@@ -298,6 +307,10 @@ namespace EducationAutomationSystem.Student
 
         private void FrmEditStudent_Load(object sender, EventArgs e)
         {
+            adminid = db.TBLADMINLOGIN.Where(x => x.AdminTRNumber == number).Select(y => y.AdminID).FirstOrDefault();
+
+            label1.Text = adminid.ToString();
+
             SqlCommand cmd = new SqlCommand("select * from TBLDEPARTMENT", conn.connection());
             SqlDataAdapter da = new SqlDataAdapter(cmd);
             DataTable dt = new DataTable();

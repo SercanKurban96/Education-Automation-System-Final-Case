@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Data.SqlClient;
+using EducationAutomationSystem.Entity;
 
 namespace EducationAutomationSystem.Academician
 {
@@ -18,6 +19,9 @@ namespace EducationAutomationSystem.Academician
             InitializeComponent();
         }
         sqlconnection conn = new sqlconnection();
+        DbEducationEntities4 db = new DbEducationEntities4();
+        public string number, username;
+        public int adminid;
         void verilerigoster(string veriler)
         {
             DataSet ds = new DataSet();
@@ -35,6 +39,10 @@ namespace EducationAutomationSystem.Academician
 
         void kayitsayisi()
         {
+            adminid = db.TBLADMINLOGIN.Where(x => x.AdminTRNumber == number).Select(y => y.AdminID).FirstOrDefault();
+
+            label1.Text = adminid.ToString();
+
             SqlCommand komut = new SqlCommand("select count(*) from TBLACADEMICIAN", conn.connection());
             SqlDataReader dr = komut.ExecuteReader();
             while (dr.Read())
@@ -45,6 +53,10 @@ namespace EducationAutomationSystem.Academician
         }
         private void FrmListAcademician_Load(object sender, EventArgs e)
         {
+            adminid = db.TBLADMINLOGIN.Where(x => x.AdminTRNumber == number).Select(y => y.AdminID).FirstOrDefault();
+
+            label1.Text = adminid.ToString();
+
             verilerigoster("select AcademicianID as 'ID', AcademicianTRNumber as 'TC Kimlik Numarası', AcademicianName as 'Adı', AcademicianSurname as 'Soyadı', AcademicianBirthDate as 'Doğum Tarihi', AcademicianGender as 'Cinsiyet', AcademicianPassword as 'Parola', AcademicianConfirmPassword AS 'Parola Tekrar', DepartmentName as 'Bölüm', sehiradi as 'Şehir', AcademicianDistrict as 'İlçe', AcademicianAddress as 'Adres', AcademicianPhoneNumber as 'Telefon Numarası', AcademicianMail as 'Mail Adresi', AcademicianImage as 'Fotoğraf' from TBLACADEMICIAN inner join TBLDEPARTMENT on TBLACADEMICIAN.Department = TBLDEPARTMENT.DepartmentID inner join iller on TBLACADEMICIAN.AcademicianCity = iller.id");
             kayitsayisi();
 

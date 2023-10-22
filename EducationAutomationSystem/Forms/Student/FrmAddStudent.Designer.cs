@@ -84,6 +84,7 @@
             this.lblogrencisayisi = new System.Windows.Forms.Label();
             this.TxtID = new System.Windows.Forms.TextBox();
             this.label22 = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.PctStudentImage)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.PctBack)).BeginInit();
             this.groupBox1.SuspendLayout();
@@ -140,7 +141,6 @@
             this.MskTRNumber.Size = new System.Drawing.Size(255, 26);
             this.MskTRNumber.TabIndex = 1;
             this.MskTRNumber.ValidatingType = typeof(int);
-            //this.MskTRNumber.MaskInputRejected += new System.Windows.Forms.MaskInputRejectedEventHandler(this.MskTRNumber_MaskInputRejected);
             this.MskTRNumber.TextChanged += new System.EventHandler(this.MskTRNumber_TextChanged);
             // 
             // lblstudentsurname
@@ -321,7 +321,6 @@
             this.CmbDepartment.Name = "CmbDepartment";
             this.CmbDepartment.Size = new System.Drawing.Size(255, 26);
             this.CmbDepartment.TabIndex = 11;
-            //this.CmbDepartment.SelectedIndexChanged += new System.EventHandler(this.CmbDepartment_SelectedIndexChanged);
             // 
             // lblstudentregistrationform
             // 
@@ -629,6 +628,17 @@
             this.label22.Text = "label22";
             this.label22.Visible = false;
             // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Georgia", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.label1.Location = new System.Drawing.Point(19, 9);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(49, 18);
+            this.label1.TabIndex = 135;
+            this.label1.Text = "label1";
+            this.label1.Visible = false;
+            // 
             // FrmAddStudent
             // 
             this.AcceptButton = this.BtnAdd;
@@ -638,6 +648,7 @@
             this.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.CancelButton = this.BtnCancel;
             this.ClientSize = new System.Drawing.Size(1119, 518);
+            this.Controls.Add(this.label1);
             this.Controls.Add(this.label22);
             this.Controls.Add(this.TxtID);
             this.Controls.Add(this.LblStudentCount);
@@ -731,5 +742,6 @@
         private System.Windows.Forms.Label lblogrencisayisi;
         private System.Windows.Forms.TextBox TxtID;
         private System.Windows.Forms.Label label22;
+        private System.Windows.Forms.Label label1;
     }
 }

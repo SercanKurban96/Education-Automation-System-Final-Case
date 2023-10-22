@@ -62,6 +62,9 @@
             this.toolTip11 = new System.Windows.Forms.ToolTip(this.components);
             this.toolTip12 = new System.Windows.Forms.ToolTip(this.components);
             this.toolTip13 = new System.Windows.Forms.ToolTip(this.components);
+            this.lblyoneticibasligi = new System.Windows.Forms.Label();
+            this.LblAdmin = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.PctDepartment)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.PctExit)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.PctStudent)).BeginInit();
@@ -78,7 +81,7 @@
             this.PctDepartment.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.PctDepartment.Cursor = System.Windows.Forms.Cursors.Hand;
             this.PctDepartment.Image = ((System.Drawing.Image)(resources.GetObject("PctDepartment.Image")));
-            this.PctDepartment.Location = new System.Drawing.Point(31, 150);
+            this.PctDepartment.Location = new System.Drawing.Point(31, 170);
             this.PctDepartment.Name = "PctDepartment";
             this.PctDepartment.Size = new System.Drawing.Size(154, 110);
             this.PctDepartment.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -93,7 +96,7 @@
             this.lblbolumler.AutoSize = true;
             this.lblbolumler.Font = new System.Drawing.Font("Georgia", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.lblbolumler.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(64)))), ((int)(((byte)(0)))));
-            this.lblbolumler.Location = new System.Drawing.Point(35, 274);
+            this.lblbolumler.Location = new System.Drawing.Point(35, 294);
             this.lblbolumler.Name = "lblbolumler";
             this.lblbolumler.Size = new System.Drawing.Size(113, 25);
             this.lblbolumler.TabIndex = 2;
@@ -120,7 +123,7 @@
             this.lblogrenciler.AutoSize = true;
             this.lblogrenciler.Font = new System.Drawing.Font("Georgia", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.lblogrenciler.ForeColor = System.Drawing.Color.Red;
-            this.lblogrenciler.Location = new System.Drawing.Point(405, 274);
+            this.lblogrenciler.Location = new System.Drawing.Point(405, 294);
             this.lblogrenciler.Name = "lblogrenciler";
             this.lblogrenciler.Size = new System.Drawing.Size(127, 25);
             this.lblogrenciler.TabIndex = 10;
@@ -131,7 +134,7 @@
             this.PctStudent.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.PctStudent.Cursor = System.Windows.Forms.Cursors.Hand;
             this.PctStudent.Image = ((System.Drawing.Image)(resources.GetObject("PctStudent.Image")));
-            this.PctStudent.Location = new System.Drawing.Point(385, 150);
+            this.PctStudent.Location = new System.Drawing.Point(385, 170);
             this.PctStudent.Name = "PctStudent";
             this.PctStudent.Size = new System.Drawing.Size(154, 110);
             this.PctStudent.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -146,7 +149,7 @@
             this.lblakademisyenler.AutoSize = true;
             this.lblakademisyenler.Font = new System.Drawing.Font("Georgia", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.lblakademisyenler.ForeColor = System.Drawing.Color.Green;
-            this.lblakademisyenler.Location = new System.Drawing.Point(726, 274);
+            this.lblakademisyenler.Location = new System.Drawing.Point(726, 294);
             this.lblakademisyenler.Name = "lblakademisyenler";
             this.lblakademisyenler.Size = new System.Drawing.Size(188, 25);
             this.lblakademisyenler.TabIndex = 12;
@@ -157,7 +160,7 @@
             this.PctAcademician.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.PctAcademician.Cursor = System.Windows.Forms.Cursors.Hand;
             this.PctAcademician.Image = ((System.Drawing.Image)(resources.GetObject("PctAcademician.Image")));
-            this.PctAcademician.Location = new System.Drawing.Point(735, 150);
+            this.PctAcademician.Location = new System.Drawing.Point(735, 170);
             this.PctAcademician.Name = "PctAcademician";
             this.PctAcademician.Size = new System.Drawing.Size(154, 110);
             this.PctAcademician.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -171,7 +174,7 @@
             // 
             this.lblraporlar.AutoSize = true;
             this.lblraporlar.Font = new System.Drawing.Font("Georgia", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.lblraporlar.Location = new System.Drawing.Point(757, 461);
+            this.lblraporlar.Location = new System.Drawing.Point(757, 481);
             this.lblraporlar.Name = "lblraporlar";
             this.lblraporlar.Size = new System.Drawing.Size(111, 25);
             this.lblraporlar.TabIndex = 14;
@@ -182,7 +185,7 @@
             this.lblduyurular.AutoSize = true;
             this.lblduyurular.Font = new System.Drawing.Font("Georgia", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.lblduyurular.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
-            this.lblduyurular.Location = new System.Drawing.Point(39, 461);
+            this.lblduyurular.Location = new System.Drawing.Point(39, 481);
             this.lblduyurular.Name = "lblduyurular";
             this.lblduyurular.Size = new System.Drawing.Size(126, 25);
             this.lblduyurular.TabIndex = 16;
@@ -193,7 +196,7 @@
             this.PctNotification.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.PctNotification.Cursor = System.Windows.Forms.Cursors.Hand;
             this.PctNotification.Image = ((System.Drawing.Image)(resources.GetObject("PctNotification.Image")));
-            this.PctNotification.Location = new System.Drawing.Point(31, 339);
+            this.PctNotification.Location = new System.Drawing.Point(31, 359);
             this.PctNotification.Name = "PctNotification";
             this.PctNotification.Size = new System.Drawing.Size(154, 110);
             this.PctNotification.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -208,7 +211,7 @@
             this.lbluygulamalar.AutoSize = true;
             this.lbluygulamalar.Font = new System.Drawing.Font("Georgia", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.lbluygulamalar.ForeColor = System.Drawing.Color.Yellow;
-            this.lbluygulamalar.Location = new System.Drawing.Point(389, 461);
+            this.lbluygulamalar.Location = new System.Drawing.Point(389, 481);
             this.lbluygulamalar.Name = "lbluygulamalar";
             this.lbluygulamalar.Size = new System.Drawing.Size(153, 25);
             this.lbluygulamalar.TabIndex = 18;
@@ -219,7 +222,7 @@
             this.PctSettings.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.PctSettings.Cursor = System.Windows.Forms.Cursors.Hand;
             this.PctSettings.Image = ((System.Drawing.Image)(resources.GetObject("PctSettings.Image")));
-            this.PctSettings.Location = new System.Drawing.Point(385, 339);
+            this.PctSettings.Location = new System.Drawing.Point(385, 359);
             this.PctSettings.Name = "PctSettings";
             this.PctSettings.Size = new System.Drawing.Size(154, 110);
             this.PctSettings.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -243,7 +246,7 @@
             // 
             this.label10.AutoSize = true;
             this.label10.Font = new System.Drawing.Font("Georgia", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.label10.Location = new System.Drawing.Point(8, 65);
+            this.label10.Location = new System.Drawing.Point(8, 97);
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(81, 27);
             this.label10.TabIndex = 23;
@@ -253,7 +256,7 @@
             // 
             this.label11.AutoSize = true;
             this.label11.Font = new System.Drawing.Font("Georgia", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.label11.Location = new System.Drawing.Point(10, 103);
+            this.label11.Location = new System.Drawing.Point(10, 135);
             this.label11.Name = "label11";
             this.label11.Size = new System.Drawing.Size(76, 27);
             this.label11.TabIndex = 24;
@@ -361,7 +364,7 @@
             this.PctReport.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.PctReport.Cursor = System.Windows.Forms.Cursors.Hand;
             this.PctReport.Image = ((System.Drawing.Image)(resources.GetObject("PctReport.Image")));
-            this.PctReport.Location = new System.Drawing.Point(735, 339);
+            this.PctReport.Location = new System.Drawing.Point(735, 359);
             this.PctReport.Name = "PctReport";
             this.PctReport.Size = new System.Drawing.Size(154, 110);
             this.PctReport.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -376,13 +379,47 @@
             this.toolTip11.ToolTipIcon = System.Windows.Forms.ToolTipIcon.Info;
             this.toolTip11.ToolTipTitle = "Raporlar";
             // 
+            // lblyoneticibasligi
+            // 
+            this.lblyoneticibasligi.AutoSize = true;
+            this.lblyoneticibasligi.Font = new System.Drawing.Font("Georgia", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.lblyoneticibasligi.Location = new System.Drawing.Point(8, 59);
+            this.lblyoneticibasligi.Name = "lblyoneticibasligi";
+            this.lblyoneticibasligi.Size = new System.Drawing.Size(99, 27);
+            this.lblyoneticibasligi.TabIndex = 27;
+            this.lblyoneticibasligi.Text = "Yönetici:";
+            // 
+            // LblAdmin
+            // 
+            this.LblAdmin.AutoSize = true;
+            this.LblAdmin.Font = new System.Drawing.Font("Georgia", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.LblAdmin.Location = new System.Drawing.Point(113, 59);
+            this.LblAdmin.Name = "LblAdmin";
+            this.LblAdmin.Size = new System.Drawing.Size(67, 27);
+            this.LblAdmin.TabIndex = 28;
+            this.LblAdmin.Text = "label1";
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Georgia", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.label1.Location = new System.Drawing.Point(28, 9);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(49, 18);
+            this.label1.TabIndex = 131;
+            this.label1.Text = "label1";
+            this.label1.Visible = false;
+            // 
             // FrmAdminPanel
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 18F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.ClientSize = new System.Drawing.Size(921, 497);
+            this.ClientSize = new System.Drawing.Size(921, 515);
+            this.Controls.Add(this.label1);
+            this.Controls.Add(this.LblAdmin);
+            this.Controls.Add(this.lblyoneticibasligi);
             this.Controls.Add(this.PctReport);
             this.Controls.Add(this.PctMinimize);
             this.Controls.Add(this.label11);
@@ -455,5 +492,8 @@
         private System.Windows.Forms.ToolTip toolTip11;
         private System.Windows.Forms.ToolTip toolTip13;
         private System.Windows.Forms.ToolTip toolTip12;
+        private System.Windows.Forms.Label lblyoneticibasligi;
+        private System.Windows.Forms.Label LblAdmin;
+        private System.Windows.Forms.Label label1;
     }
 }

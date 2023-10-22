@@ -2167,6 +2167,15 @@ namespace EducationAutomationSystem {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Yönetici:.
+        /// </summary>
+        internal static string lblyoneticibasligi {
+            get {
+                return ResourceManager.GetString("lblyoneticibasligi", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to YÖNETİCİ GİRİŞ PANELİ.
         /// </summary>
         internal static string lblyoneticigirispaneli {

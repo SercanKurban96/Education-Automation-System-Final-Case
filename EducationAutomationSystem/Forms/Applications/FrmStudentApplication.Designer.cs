@@ -38,12 +38,16 @@
             this.PctRadio = new System.Windows.Forms.PictureBox();
             this.lblgazeteler = new System.Windows.Forms.Label();
             this.PctNewspaper = new System.Windows.Forms.PictureBox();
-            this.PctExit = new System.Windows.Forms.PictureBox();
+            this.lbldildegistir = new System.Windows.Forms.Label();
+            this.PctChangeLanguage = new System.Windows.Forms.PictureBox();
+            this.label1 = new System.Windows.Forms.Label();
+            this.PctBack = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.PctCalculator)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.PctMusic)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.PctRadio)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.PctNewspaper)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.PctExit)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.PctChangeLanguage)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.PctBack)).BeginInit();
             this.SuspendLayout();
             // 
             // lbluygulamalarformu
@@ -151,20 +155,55 @@
             this.PctNewspaper.TabStop = false;
             this.PctNewspaper.Click += new System.EventHandler(this.PctNewspaper_Click);
             // 
-            // PctExit
+            // lbldildegistir
             // 
-            this.PctExit.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.PctExit.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.PctExit.Image = ((System.Drawing.Image)(resources.GetObject("PctExit.Image")));
-            this.PctExit.Location = new System.Drawing.Point(785, 1);
-            this.PctExit.Name = "PctExit";
-            this.PctExit.Size = new System.Drawing.Size(58, 53);
-            this.PctExit.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.PctExit.TabIndex = 41;
-            this.PctExit.TabStop = false;
-            this.PctExit.Click += new System.EventHandler(this.PctExit_Click);
-            this.PctExit.MouseLeave += new System.EventHandler(this.PctExit_MouseLeave);
-            this.PctExit.MouseHover += new System.EventHandler(this.PctExit_MouseHover);
+            this.lbldildegistir.AutoSize = true;
+            this.lbldildegistir.Font = new System.Drawing.Font("Georgia", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.lbldildegistir.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.lbldildegistir.Location = new System.Drawing.Point(309, 371);
+            this.lbldildegistir.Name = "lbldildegistir";
+            this.lbldildegistir.Size = new System.Drawing.Size(153, 29);
+            this.lbldildegistir.TabIndex = 43;
+            this.lbldildegistir.Text = "Dil Değiştir";
+            // 
+            // PctChangeLanguage
+            // 
+            this.PctChangeLanguage.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.PctChangeLanguage.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.PctChangeLanguage.Image = ((System.Drawing.Image)(resources.GetObject("PctChangeLanguage.Image")));
+            this.PctChangeLanguage.Location = new System.Drawing.Point(323, 214);
+            this.PctChangeLanguage.Name = "PctChangeLanguage";
+            this.PctChangeLanguage.Size = new System.Drawing.Size(184, 139);
+            this.PctChangeLanguage.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.PctChangeLanguage.TabIndex = 42;
+            this.PctChangeLanguage.TabStop = false;
+            this.PctChangeLanguage.Click += new System.EventHandler(this.PctChangeLanguage_Click);
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Georgia", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.label1.Location = new System.Drawing.Point(33, 9);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(49, 18);
+            this.label1.TabIndex = 51;
+            this.label1.Text = "label1";
+            this.label1.Visible = false;
+            // 
+            // PctBack
+            // 
+            this.PctBack.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.PctBack.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.PctBack.Image = ((System.Drawing.Image)(resources.GetObject("PctBack.Image")));
+            this.PctBack.Location = new System.Drawing.Point(786, 1);
+            this.PctBack.Name = "PctBack";
+            this.PctBack.Size = new System.Drawing.Size(58, 53);
+            this.PctBack.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.PctBack.TabIndex = 52;
+            this.PctBack.TabStop = false;
+            this.PctBack.Click += new System.EventHandler(this.PctBack_Click);
+            this.PctBack.MouseLeave += new System.EventHandler(this.PctBack_MouseLeave);
+            this.PctBack.MouseHover += new System.EventHandler(this.PctBack_MouseHover);
             // 
             // FrmStudentApplication
             // 
@@ -173,7 +212,10 @@
             this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
             this.ClientSize = new System.Drawing.Size(845, 526);
-            this.Controls.Add(this.PctExit);
+            this.Controls.Add(this.PctBack);
+            this.Controls.Add(this.label1);
+            this.Controls.Add(this.lbldildegistir);
+            this.Controls.Add(this.PctChangeLanguage);
             this.Controls.Add(this.lbluygulamalarformu);
             this.Controls.Add(this.lblhesapmakinesi);
             this.Controls.Add(this.PctCalculator);
@@ -195,7 +237,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.PctMusic)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.PctRadio)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.PctNewspaper)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.PctExit)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.PctChangeLanguage)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.PctBack)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -212,6 +255,9 @@
         private System.Windows.Forms.PictureBox PctRadio;
         private System.Windows.Forms.Label lblgazeteler;
         private System.Windows.Forms.PictureBox PctNewspaper;
-        private System.Windows.Forms.PictureBox PctExit;
+        private System.Windows.Forms.Label lbldildegistir;
+        private System.Windows.Forms.PictureBox PctChangeLanguage;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.PictureBox PctBack;
     }
 }

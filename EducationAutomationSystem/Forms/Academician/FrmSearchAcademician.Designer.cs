@@ -38,6 +38,7 @@
             this.lblakademisyenaraformu = new System.Windows.Forms.Label();
             this.PctBack = new System.Windows.Forms.PictureBox();
             this.lblakademisyensayisi = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.DtgAcademician)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.PctBack)).BeginInit();
@@ -136,13 +137,25 @@
             this.lblakademisyensayisi.TabIndex = 132;
             this.lblakademisyensayisi.Text = "Akademisyen Sayısı:";
             // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Georgia", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.label1.Location = new System.Drawing.Point(85, 42);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(49, 18);
+            this.label1.TabIndex = 136;
+            this.label1.Text = "label1";
+            this.label1.Visible = false;
+            // 
             // FrmSearchAcademician
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 18F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.BackColor = System.Drawing.Color.LightGray;
             this.ClientSize = new System.Drawing.Size(711, 478);
+            this.Controls.Add(this.label1);
             this.Controls.Add(this.lblakademisyensayisi);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.DtgAcademician);
@@ -179,5 +192,6 @@
         private System.Windows.Forms.Label lblakademisyenaraformu;
         private System.Windows.Forms.PictureBox PctBack;
         private System.Windows.Forms.Label lblakademisyensayisi;
+        private System.Windows.Forms.Label label1;
     }
 }

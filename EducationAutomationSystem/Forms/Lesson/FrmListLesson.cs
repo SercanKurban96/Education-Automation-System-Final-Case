@@ -57,7 +57,10 @@ namespace EducationAutomationSystem.Lesson
 
         private void PctBack_Click(object sender, EventArgs e)
         {
-            this.Close();
+            FrmLesson fr = new FrmLesson();
+            fr.number = number;
+            fr.Show();
+            this.Hide();
         }
 
         private void PctBack_MouseHover(object sender, EventArgs e)

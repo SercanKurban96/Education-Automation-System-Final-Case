@@ -810,6 +810,9 @@
   <data name="lblyonetici" xml:space="preserve">
     <value>Admin</value>
   </data>
+  <data name="lblyoneticibasligi" xml:space="preserve">
+    <value>Admin:</value>
+  </data>
   <data name="lblyoneticigirispaneli" xml:space="preserve">
     <value>ADMIN LOGIN PANEL</value>
   </data>

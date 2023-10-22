@@ -810,6 +810,9 @@
   <data name="lblyonetici" xml:space="preserve">
     <value>Yönetici</value>
   </data>
+  <data name="lblyoneticibasligi" xml:space="preserve">
+    <value>Yönetici:</value>
+  </data>
   <data name="lblyoneticigirispaneli" xml:space="preserve">
     <value>YÖNETİCİ GİRİŞ PANELİ</value>
   </data>

@@ -5,6 +5,7 @@ using System.ComponentModel;
 using System.Data;
 using System.Drawing;
 using System.Linq;
+using System.Reflection.Emit;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
@@ -17,9 +18,26 @@ namespace EducationAutomationSystem.Forms.Student
         {
             InitializeComponent();
         }
-        DbEducationEntities4 db = new DbEducationEntities4();      
+        DbEducationEntities4 db = new DbEducationEntities4();
+        public string number, namesurname, picture;
+        int studentid;
+
+        private void PctBack_MouseHover(object sender, EventArgs e)
+        {
+            PctBack.BackColor = Color.Green;
+        }
+
+        private void PctBack_MouseLeave(object sender, EventArgs e)
+        {
+            PctBack.BackColor = Color.Transparent;
+        }
+
         private void FrmStudentNotification_Load(object sender, EventArgs e)
         {
+            studentid = db.TBLSTUDENT.Where(x => x.StudentNumber == number).Select(y => y.StudentID).FirstOrDefault();
+
+            label1.Text = studentid.ToString();
+
             var values = from x in db.TBLNOTIFICATION
                          select new
                          {
@@ -33,19 +51,12 @@ namespace EducationAutomationSystem.Forms.Student
             lblduyurularpanel.Text = Localization.lblduyurularpanel;
         }
 
-        private void PctExit_Click(object sender, EventArgs e)
+        private void PctBack_Click(object sender, EventArgs e)
         {
-            this.Close();
-        }
-
-        private void PctExit_MouseHover(object sender, EventArgs e)
-        {
-            PctExit.BackColor = Color.Red;
-        }
-
-        private void PctExit_MouseLeave(object sender, EventArgs e)
-        {
-            PctExit.BackColor = Color.Transparent;
+            FrmStudentPanel fr = new FrmStudentPanel();
+            fr.number = number;
+            fr.Show();
+            this.Hide();
         }
     }
 }

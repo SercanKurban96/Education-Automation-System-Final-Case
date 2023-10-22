@@ -41,6 +41,7 @@
             this.PctListDepartment = new System.Windows.Forms.PictureBox();
             this.PctSearchDepartment = new System.Windows.Forms.PictureBox();
             this.lblbolumara = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.PctAddDepartment)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.PctEditDepartment)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.PctBack)).BeginInit();
@@ -193,6 +194,17 @@
             this.lblbolumara.TabIndex = 18;
             this.lblbolumara.Text = "Bölüm Ara";
             // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Georgia", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.label1.Location = new System.Drawing.Point(39, 18);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(49, 18);
+            this.label1.TabIndex = 132;
+            this.label1.Text = "label1";
+            this.label1.Visible = false;
+            // 
             // FrmDepartment
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 18F);
@@ -200,6 +212,7 @@
             this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
             this.ClientSize = new System.Drawing.Size(973, 522);
+            this.Controls.Add(this.label1);
             this.Controls.Add(this.lblbolumara);
             this.Controls.Add(this.PctSearchDepartment);
             this.Controls.Add(this.lblbolumlistesi);
@@ -246,5 +259,6 @@
         private System.Windows.Forms.PictureBox PctListDepartment;
         private System.Windows.Forms.PictureBox PctSearchDepartment;
         private System.Windows.Forms.Label lblbolumara;
+        private System.Windows.Forms.Label label1;
     }
 }

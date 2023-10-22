@@ -32,11 +32,16 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmDeleteAcademician));
             this.PctBack = new System.Windows.Forms.PictureBox();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
+            this.lblphonenumber = new System.Windows.Forms.Label();
+            this.lblmail = new System.Windows.Forms.Label();
             this.MskPhoneNumber = new System.Windows.Forms.MaskedTextBox();
             this.TxtMail = new System.Windows.Forms.TextBox();
             this.errorProvider1 = new System.Windows.Forms.ErrorProvider(this.components);
             this.openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.lbladdress = new System.Windows.Forms.Label();
+            this.lbldistrict = new System.Windows.Forms.Label();
+            this.lblcity = new System.Windows.Forms.Label();
             this.RchAddress = new System.Windows.Forms.RichTextBox();
             this.CmbDistrict = new System.Windows.Forms.ComboBox();
             this.CmbCity = new System.Windows.Forms.ComboBox();
@@ -50,6 +55,14 @@
             this.BtnPicture = new System.Windows.Forms.Button();
             this.TxtPicture = new System.Windows.Forms.TextBox();
             this.groupBox4 = new System.Windows.Forms.GroupBox();
+            this.lblconfirmpassword = new System.Windows.Forms.Label();
+            this.lblpassword = new System.Windows.Forms.Label();
+            this.lblakademisyentcno = new System.Windows.Forms.Label();
+            this.lbldepartment = new System.Windows.Forms.Label();
+            this.lblgender = new System.Windows.Forms.Label();
+            this.lblakademisyenadi = new System.Windows.Forms.Label();
+            this.lblakademisyensoyadi = new System.Windows.Forms.Label();
+            this.lblbirthdate = new System.Windows.Forms.Label();
             this.ChkConfirmPassword = new System.Windows.Forms.CheckBox();
             this.ChkPassword = new System.Windows.Forms.CheckBox();
             this.TxtConfirmPassword = new System.Windows.Forms.TextBox();
@@ -61,21 +74,9 @@
             this.TxtAcademicianName = new System.Windows.Forms.TextBox();
             this.TxtAcademicianSurname = new System.Windows.Forms.TextBox();
             this.DtpBirthDate = new System.Windows.Forms.DateTimePicker();
-            this.lblconfirmpassword = new System.Windows.Forms.Label();
-            this.lblpassword = new System.Windows.Forms.Label();
-            this.lblakademisyentcno = new System.Windows.Forms.Label();
-            this.lbldepartment = new System.Windows.Forms.Label();
-            this.lblgender = new System.Windows.Forms.Label();
-            this.lblakademisyenadi = new System.Windows.Forms.Label();
-            this.lblakademisyensoyadi = new System.Windows.Forms.Label();
-            this.lblbirthdate = new System.Windows.Forms.Label();
-            this.lbladdress = new System.Windows.Forms.Label();
-            this.lbldistrict = new System.Windows.Forms.Label();
-            this.lblcity = new System.Windows.Forms.Label();
-            this.lblphonenumber = new System.Windows.Forms.Label();
-            this.lblmail = new System.Windows.Forms.Label();
             this.lblakademisyensayisi = new System.Windows.Forms.Label();
             this.lblphoto = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.PctBack)).BeginInit();
             this.groupBox3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).BeginInit();
@@ -113,6 +114,24 @@
             this.groupBox3.TabIndex = 136;
             this.groupBox3.TabStop = false;
             this.groupBox3.Text = "İletişim Bilgileri";
+            // 
+            // lblphonenumber
+            // 
+            this.lblphonenumber.AutoSize = true;
+            this.lblphonenumber.Location = new System.Drawing.Point(6, 36);
+            this.lblphonenumber.Name = "lblphonenumber";
+            this.lblphonenumber.Size = new System.Drawing.Size(106, 18);
+            this.lblphonenumber.TabIndex = 22;
+            this.lblphonenumber.Text = "Cep Telefonu:";
+            // 
+            // lblmail
+            // 
+            this.lblmail.AutoSize = true;
+            this.lblmail.Location = new System.Drawing.Point(6, 68);
+            this.lblmail.Name = "lblmail";
+            this.lblmail.Size = new System.Drawing.Size(94, 18);
+            this.lblmail.TabIndex = 23;
+            this.lblmail.Text = "Mail Adresi:";
             // 
             // MskPhoneNumber
             // 
@@ -152,6 +171,33 @@
             this.groupBox2.TabIndex = 135;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Adres Bilgileri";
+            // 
+            // lbladdress
+            // 
+            this.lbladdress.AutoSize = true;
+            this.lbladdress.Location = new System.Drawing.Point(5, 94);
+            this.lbladdress.Name = "lbladdress";
+            this.lbladdress.Size = new System.Drawing.Size(55, 18);
+            this.lbladdress.TabIndex = 72;
+            this.lbladdress.Text = "Adres:";
+            // 
+            // lbldistrict
+            // 
+            this.lbldistrict.AutoSize = true;
+            this.lbldistrict.Location = new System.Drawing.Point(5, 65);
+            this.lbldistrict.Name = "lbldistrict";
+            this.lbldistrict.Size = new System.Drawing.Size(39, 18);
+            this.lbldistrict.TabIndex = 73;
+            this.lbldistrict.Text = "İlçe:";
+            // 
+            // lblcity
+            // 
+            this.lblcity.AutoSize = true;
+            this.lblcity.Location = new System.Drawing.Point(5, 35);
+            this.lblcity.Name = "lblcity";
+            this.lblcity.Size = new System.Drawing.Size(24, 18);
+            this.lblcity.TabIndex = 71;
+            this.lblcity.Text = "İl:";
             // 
             // RchAddress
             // 
@@ -308,6 +354,78 @@
             this.groupBox4.TabStop = false;
             this.groupBox4.Text = "Akademisyen Bilgileri";
             // 
+            // lblconfirmpassword
+            // 
+            this.lblconfirmpassword.AutoSize = true;
+            this.lblconfirmpassword.Location = new System.Drawing.Point(6, 230);
+            this.lblconfirmpassword.Name = "lblconfirmpassword";
+            this.lblconfirmpassword.Size = new System.Drawing.Size(112, 18);
+            this.lblconfirmpassword.TabIndex = 79;
+            this.lblconfirmpassword.Text = "Parola Tekrar:";
+            // 
+            // lblpassword
+            // 
+            this.lblpassword.AutoSize = true;
+            this.lblpassword.Location = new System.Drawing.Point(6, 198);
+            this.lblpassword.Name = "lblpassword";
+            this.lblpassword.Size = new System.Drawing.Size(58, 18);
+            this.lblpassword.TabIndex = 78;
+            this.lblpassword.Text = "Parola:";
+            // 
+            // lblakademisyentcno
+            // 
+            this.lblakademisyentcno.AutoSize = true;
+            this.lblakademisyentcno.Location = new System.Drawing.Point(6, 39);
+            this.lblakademisyentcno.Name = "lblakademisyentcno";
+            this.lblakademisyentcno.Size = new System.Drawing.Size(66, 18);
+            this.lblakademisyentcno.TabIndex = 73;
+            this.lblakademisyentcno.Text = "T.C. No:";
+            // 
+            // lbldepartment
+            // 
+            this.lbldepartment.AutoSize = true;
+            this.lbldepartment.Location = new System.Drawing.Point(6, 262);
+            this.lbldepartment.Name = "lbldepartment";
+            this.lbldepartment.Size = new System.Drawing.Size(58, 18);
+            this.lbldepartment.TabIndex = 76;
+            this.lbldepartment.Text = "Bölüm:";
+            // 
+            // lblgender
+            // 
+            this.lblgender.AutoSize = true;
+            this.lblgender.Location = new System.Drawing.Point(6, 167);
+            this.lblgender.Name = "lblgender";
+            this.lblgender.Size = new System.Drawing.Size(70, 18);
+            this.lblgender.TabIndex = 77;
+            this.lblgender.Text = "Cinsiyet:";
+            // 
+            // lblakademisyenadi
+            // 
+            this.lblakademisyenadi.AutoSize = true;
+            this.lblakademisyenadi.Location = new System.Drawing.Point(6, 71);
+            this.lblakademisyenadi.Name = "lblakademisyenadi";
+            this.lblakademisyenadi.Size = new System.Drawing.Size(37, 18);
+            this.lblakademisyenadi.TabIndex = 72;
+            this.lblakademisyenadi.Text = "Adı:";
+            // 
+            // lblakademisyensoyadi
+            // 
+            this.lblakademisyensoyadi.AutoSize = true;
+            this.lblakademisyensoyadi.Location = new System.Drawing.Point(6, 103);
+            this.lblakademisyensoyadi.Name = "lblakademisyensoyadi";
+            this.lblakademisyensoyadi.Size = new System.Drawing.Size(60, 18);
+            this.lblakademisyensoyadi.TabIndex = 74;
+            this.lblakademisyensoyadi.Text = "Soyadı:";
+            // 
+            // lblbirthdate
+            // 
+            this.lblbirthdate.AutoSize = true;
+            this.lblbirthdate.Location = new System.Drawing.Point(6, 136);
+            this.lblbirthdate.Name = "lblbirthdate";
+            this.lblbirthdate.Size = new System.Drawing.Size(110, 18);
+            this.lblbirthdate.TabIndex = 75;
+            this.lblbirthdate.Text = "Doğum Tarihi:";
+            // 
             // ChkConfirmPassword
             // 
             this.ChkConfirmPassword.AutoSize = true;
@@ -409,123 +527,6 @@
             this.DtpBirthDate.Size = new System.Drawing.Size(240, 26);
             this.DtpBirthDate.TabIndex = 5;
             // 
-            // lblconfirmpassword
-            // 
-            this.lblconfirmpassword.AutoSize = true;
-            this.lblconfirmpassword.Location = new System.Drawing.Point(6, 230);
-            this.lblconfirmpassword.Name = "lblconfirmpassword";
-            this.lblconfirmpassword.Size = new System.Drawing.Size(112, 18);
-            this.lblconfirmpassword.TabIndex = 79;
-            this.lblconfirmpassword.Text = "Parola Tekrar:";
-            // 
-            // lblpassword
-            // 
-            this.lblpassword.AutoSize = true;
-            this.lblpassword.Location = new System.Drawing.Point(6, 198);
-            this.lblpassword.Name = "lblpassword";
-            this.lblpassword.Size = new System.Drawing.Size(58, 18);
-            this.lblpassword.TabIndex = 78;
-            this.lblpassword.Text = "Parola:";
-            // 
-            // lblakademisyentcno
-            // 
-            this.lblakademisyentcno.AutoSize = true;
-            this.lblakademisyentcno.Location = new System.Drawing.Point(6, 39);
-            this.lblakademisyentcno.Name = "lblakademisyentcno";
-            this.lblakademisyentcno.Size = new System.Drawing.Size(66, 18);
-            this.lblakademisyentcno.TabIndex = 73;
-            this.lblakademisyentcno.Text = "T.C. No:";
-            // 
-            // lbldepartment
-            // 
-            this.lbldepartment.AutoSize = true;
-            this.lbldepartment.Location = new System.Drawing.Point(6, 262);
-            this.lbldepartment.Name = "lbldepartment";
-            this.lbldepartment.Size = new System.Drawing.Size(58, 18);
-            this.lbldepartment.TabIndex = 76;
-            this.lbldepartment.Text = "Bölüm:";
-            // 
-            // lblgender
-            // 
-            this.lblgender.AutoSize = true;
-            this.lblgender.Location = new System.Drawing.Point(6, 167);
-            this.lblgender.Name = "lblgender";
-            this.lblgender.Size = new System.Drawing.Size(70, 18);
-            this.lblgender.TabIndex = 77;
-            this.lblgender.Text = "Cinsiyet:";
-            // 
-            // lblakademisyenadi
-            // 
-            this.lblakademisyenadi.AutoSize = true;
-            this.lblakademisyenadi.Location = new System.Drawing.Point(6, 71);
-            this.lblakademisyenadi.Name = "lblakademisyenadi";
-            this.lblakademisyenadi.Size = new System.Drawing.Size(37, 18);
-            this.lblakademisyenadi.TabIndex = 72;
-            this.lblakademisyenadi.Text = "Adı:";
-            // 
-            // lblakademisyensoyadi
-            // 
-            this.lblakademisyensoyadi.AutoSize = true;
-            this.lblakademisyensoyadi.Location = new System.Drawing.Point(6, 103);
-            this.lblakademisyensoyadi.Name = "lblakademisyensoyadi";
-            this.lblakademisyensoyadi.Size = new System.Drawing.Size(60, 18);
-            this.lblakademisyensoyadi.TabIndex = 74;
-            this.lblakademisyensoyadi.Text = "Soyadı:";
-            // 
-            // lblbirthdate
-            // 
-            this.lblbirthdate.AutoSize = true;
-            this.lblbirthdate.Location = new System.Drawing.Point(6, 136);
-            this.lblbirthdate.Name = "lblbirthdate";
-            this.lblbirthdate.Size = new System.Drawing.Size(110, 18);
-            this.lblbirthdate.TabIndex = 75;
-            this.lblbirthdate.Text = "Doğum Tarihi:";
-            // 
-            // lbladdress
-            // 
-            this.lbladdress.AutoSize = true;
-            this.lbladdress.Location = new System.Drawing.Point(5, 94);
-            this.lbladdress.Name = "lbladdress";
-            this.lbladdress.Size = new System.Drawing.Size(55, 18);
-            this.lbladdress.TabIndex = 72;
-            this.lbladdress.Text = "Adres:";
-            // 
-            // lbldistrict
-            // 
-            this.lbldistrict.AutoSize = true;
-            this.lbldistrict.Location = new System.Drawing.Point(5, 65);
-            this.lbldistrict.Name = "lbldistrict";
-            this.lbldistrict.Size = new System.Drawing.Size(39, 18);
-            this.lbldistrict.TabIndex = 73;
-            this.lbldistrict.Text = "İlçe:";
-            // 
-            // lblcity
-            // 
-            this.lblcity.AutoSize = true;
-            this.lblcity.Location = new System.Drawing.Point(5, 35);
-            this.lblcity.Name = "lblcity";
-            this.lblcity.Size = new System.Drawing.Size(24, 18);
-            this.lblcity.TabIndex = 71;
-            this.lblcity.Text = "İl:";
-            // 
-            // lblphonenumber
-            // 
-            this.lblphonenumber.AutoSize = true;
-            this.lblphonenumber.Location = new System.Drawing.Point(6, 36);
-            this.lblphonenumber.Name = "lblphonenumber";
-            this.lblphonenumber.Size = new System.Drawing.Size(106, 18);
-            this.lblphonenumber.TabIndex = 22;
-            this.lblphonenumber.Text = "Cep Telefonu:";
-            // 
-            // lblmail
-            // 
-            this.lblmail.AutoSize = true;
-            this.lblmail.Location = new System.Drawing.Point(6, 68);
-            this.lblmail.Name = "lblmail";
-            this.lblmail.Size = new System.Drawing.Size(94, 18);
-            this.lblmail.TabIndex = 23;
-            this.lblmail.Text = "Mail Adresi:";
-            // 
             // lblakademisyensayisi
             // 
             this.lblakademisyensayisi.AutoSize = true;
@@ -545,6 +546,17 @@
             this.lblphoto.TabIndex = 150;
             this.lblphoto.Text = "Fotoğraf:";
             // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Georgia", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.label1.Location = new System.Drawing.Point(78, 28);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(49, 18);
+            this.label1.TabIndex = 151;
+            this.label1.Text = "label1";
+            this.label1.Visible = false;
+            // 
             // FrmDeleteAcademician
             // 
             this.AcceptButton = this.BtnDelete;
@@ -554,6 +566,7 @@
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
             this.CancelButton = this.BtnCancel;
             this.ClientSize = new System.Drawing.Size(1113, 624);
+            this.Controls.Add(this.label1);
             this.Controls.Add(this.lblphoto);
             this.Controls.Add(this.lblakademisyensayisi);
             this.Controls.Add(this.PctBack);
@@ -639,5 +652,6 @@
         private System.Windows.Forms.Label lblmail;
         private System.Windows.Forms.Label lblakademisyensayisi;
         private System.Windows.Forms.Label lblphoto;
+        private System.Windows.Forms.Label label1;
     }
 }

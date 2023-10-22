@@ -76,6 +76,7 @@
             this.DtpBirthDate = new System.Windows.Forms.DateTimePicker();
             this.lblakademisyensayisi = new System.Windows.Forms.Label();
             this.lblphoto = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.PctBack)).BeginInit();
             this.groupBox3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).BeginInit();
@@ -551,6 +552,17 @@
             this.lblphoto.TabIndex = 150;
             this.lblphoto.Text = "Fotoğraf:";
             // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Georgia", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.label1.Location = new System.Drawing.Point(78, 28);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(49, 18);
+            this.label1.TabIndex = 151;
+            this.label1.Text = "label1";
+            this.label1.Visible = false;
+            // 
             // FrmEditAcademician
             // 
             this.AcceptButton = this.BtnEdit;
@@ -560,6 +572,7 @@
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(128)))));
             this.CancelButton = this.BtnCancel;
             this.ClientSize = new System.Drawing.Size(1113, 624);
+            this.Controls.Add(this.label1);
             this.Controls.Add(this.lblphoto);
             this.Controls.Add(this.lblakademisyensayisi);
             this.Controls.Add(this.PctBack);
@@ -645,5 +658,6 @@
         private System.Windows.Forms.Label lblmail;
         private System.Windows.Forms.Label lblakademisyensayisi;
         private System.Windows.Forms.Label lblphoto;
+        private System.Windows.Forms.Label label1;
     }
 }

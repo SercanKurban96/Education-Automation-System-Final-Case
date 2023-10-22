@@ -9,6 +9,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Data.SqlClient;
 using static System.Windows.Forms.VisualStyles.VisualStyleElement;
+using EducationAutomationSystem.Entity;
 
 namespace EducationAutomationSystem.Department
 {
@@ -20,10 +21,13 @@ namespace EducationAutomationSystem.Department
         }
 
         sqlconnection conn = new sqlconnection();
-
+        DbEducationEntities4 db = new DbEducationEntities4();
+        public string number, username;
+        public int adminid;
         private void PctBack_Click(object sender, EventArgs e)
         {
             FrmDepartment fr = new FrmDepartment();
+            fr.number = number;
             fr.Show();
             this.Hide();
         }
@@ -50,6 +54,10 @@ namespace EducationAutomationSystem.Department
         }
         void kayitsayisi()
         {
+            adminid = db.TBLADMINLOGIN.Where(x => x.AdminTRNumber == number).Select(y => y.AdminID).FirstOrDefault();
+
+            label1.Text = adminid.ToString();
+
             SqlCommand komut = new SqlCommand("select count(*) from TBLDEPARTMENT", conn.connection());
             SqlDataReader dr = komut.ExecuteReader();
             while (dr.Read())
@@ -90,6 +98,10 @@ namespace EducationAutomationSystem.Department
 
         private void FrmEditDepartment_Load(object sender, EventArgs e)
         {
+            adminid = db.TBLADMINLOGIN.Where(x => x.AdminTRNumber == number).Select(y => y.AdminID).FirstOrDefault();
+
+            label1.Text = adminid.ToString();
+
             TxtDepartmentName.Focus();
             kayitsayisi();
             verilerigoster("select DepartmentID as 'Bölüm ID', DepartmentName as 'Bölüm Adı' from TBLDEPARTMENT");

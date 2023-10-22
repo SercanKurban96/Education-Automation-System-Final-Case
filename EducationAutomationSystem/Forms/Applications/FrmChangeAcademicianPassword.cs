@@ -20,9 +20,14 @@ namespace EducationAutomationSystem.Forms.Applications
         }
         sqlconnection conn = new sqlconnection();
         DbEducationEntities4 db = new DbEducationEntities4();
+        public string number, namesurname, picture;
+        public int academicianid, departmentid;
         private void PctBack_Click(object sender, EventArgs e)
         {
-            this.Close();
+            FrmAcademicianApplication fr = new FrmAcademicianApplication();
+            fr.number = number;
+            fr.Show();
+            this.Hide();
         }
 
         private void ChkCurrentPassword_CheckedChanged(object sender, EventArgs e)
@@ -112,13 +117,15 @@ namespace EducationAutomationSystem.Forms.Applications
             TxtConfirmPassword.Clear();
             TxtCurrentPassword.Focus();
         }
-        int academicianid;
-        public string number;
+
         private void FrmChangeAcademicianPassword_Load(object sender, EventArgs e)
         {
             academicianid = db.TBLACADEMICIAN.Where(x => x.AcademicianTRNumber == number).Select(y => y.AcademicianID).FirstOrDefault();
 
+            departmentid = db.TBLACADEMICIAN.Where(x => x.AcademicianTRNumber == number).Select(y => y.TBLDEPARTMENT.DepartmentID).FirstOrDefault();
+
             label1.Text = academicianid.ToString();
+            label2.Text = departmentid.ToString();
 
             lblsifredegisikligi.Text = Localization.lblsifredegisikliği;
             lblcurrentpassword.Text = Localization.lblcurrentpassword;

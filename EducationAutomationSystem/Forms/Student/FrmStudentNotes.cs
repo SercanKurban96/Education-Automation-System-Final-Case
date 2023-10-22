@@ -68,19 +68,22 @@ namespace EducationAutomationSystem.Forms.Student
             lblphonenumber.Text = Localization.lblphonenumber;
         }
 
-        private void PctExit_Click(object sender, EventArgs e)
+        private void PctBack_Click(object sender, EventArgs e)
         {
-            this.Close();
+            FrmStudentPanel fr = new FrmStudentPanel();
+            fr.number = number;
+            fr.Show();
+            this.Hide();
         }
 
-        private void PctExit_MouseHover(object sender, EventArgs e)
+        private void PctBack_MouseHover(object sender, EventArgs e)
         {
-            PctExit.BackColor = Color.Red;
+            PctBack.BackColor = Color.Green;
         }
 
-        private void PctExit_MouseLeave(object sender, EventArgs e)
+        private void PctBack_MouseLeave(object sender, EventArgs e)
         {
-            PctExit.BackColor = Color.Transparent;
+            PctBack.BackColor = Color.Transparent;
         }
     }
 }

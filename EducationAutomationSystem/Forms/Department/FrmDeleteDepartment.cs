@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Data.SqlClient;
+using EducationAutomationSystem.Entity;
 
 namespace EducationAutomationSystem.Department
 {
@@ -18,6 +19,9 @@ namespace EducationAutomationSystem.Department
             InitializeComponent();
         }
         sqlconnection conn = new sqlconnection();
+        DbEducationEntities4 db = new DbEducationEntities4();
+        public string number, username;
+        public int adminid;
         void verilerigoster(string veriler)
         {
             DataSet ds = new DataSet();
@@ -27,6 +31,10 @@ namespace EducationAutomationSystem.Department
         }
         void kayitsayisi()
         {
+            adminid = db.TBLADMINLOGIN.Where(x => x.AdminTRNumber == number).Select(y => y.AdminID).FirstOrDefault();
+
+            label1.Text = adminid.ToString();
+
             SqlCommand komut = new SqlCommand("select count(*) from TBLDEPARTMENT", conn.connection());
             SqlDataReader dr = komut.ExecuteReader();
             while (dr.Read())
@@ -39,6 +47,7 @@ namespace EducationAutomationSystem.Department
         private void PctBack_Click(object sender, EventArgs e)
         {
             FrmDepartment fr = new FrmDepartment();
+            fr.number = number;
             fr.Show();
             this.Hide();
         }
@@ -82,6 +91,10 @@ namespace EducationAutomationSystem.Department
 
         private void FrmDeleteDepartment_Load(object sender, EventArgs e)
         {
+            adminid = db.TBLADMINLOGIN.Where(x => x.AdminTRNumber == number).Select(y => y.AdminID).FirstOrDefault();
+
+            label1.Text = adminid.ToString();
+
             verilerigoster("select DepartmentID as 'Bölüm ID', DepartmentName as 'Bölüm Adı' from TBLDEPARTMENT");
             kayitsayisi();
             lblbolumadi.Text = Localization.lblbolumadi;
@@ -89,11 +102,6 @@ namespace EducationAutomationSystem.Department
             lblbolumsayisi.Text = Localization.lblbolumsayisi;
             BtnDelete.Text = Localization.BtnDelete;
             BtnCancel.Text = Localization.BtnCancel;
-        }
-
-        private void DtgDepartment_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
-
         }
 
         private void DtgDepartment_CellClick(object sender, DataGridViewCellEventArgs e)

@@ -43,6 +43,7 @@
             this.lbluygulamalarformu = new System.Windows.Forms.Label();
             this.lbldildegistir = new System.Windows.Forms.Label();
             this.PctChangeLanguage = new System.Windows.Forms.PictureBox();
+            this.label1 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.PctBack)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.PctChangePassword)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.PctNewspaper)).BeginInit();
@@ -220,6 +221,17 @@
             this.PctChangeLanguage.TabStop = false;
             this.PctChangeLanguage.Click += new System.EventHandler(this.PctChangeLanguage_Click);
             // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Georgia", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.label1.Location = new System.Drawing.Point(37, 29);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(49, 18);
+            this.label1.TabIndex = 132;
+            this.label1.Text = "label1";
+            this.label1.Visible = false;
+            // 
             // FrmSettings
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 18F);
@@ -227,6 +239,7 @@
             this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(128)))));
             this.ClientSize = new System.Drawing.Size(919, 546);
+            this.Controls.Add(this.label1);
             this.Controls.Add(this.lbldildegistir);
             this.Controls.Add(this.PctChangeLanguage);
             this.Controls.Add(this.lbluygulamalarformu);
@@ -277,5 +290,6 @@
         private System.Windows.Forms.Label lbluygulamalarformu;
         private System.Windows.Forms.Label lbldildegistir;
         private System.Windows.Forms.PictureBox PctChangeLanguage;
+        private System.Windows.Forms.Label label1;
     }
 }

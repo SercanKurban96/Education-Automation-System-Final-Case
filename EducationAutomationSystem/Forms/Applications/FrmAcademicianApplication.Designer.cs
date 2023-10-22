@@ -40,14 +40,18 @@
             this.PctNewspaper = new System.Windows.Forms.PictureBox();
             this.lblsifredegistir = new System.Windows.Forms.Label();
             this.PctChangePassword = new System.Windows.Forms.PictureBox();
-            this.PctExit = new System.Windows.Forms.PictureBox();
             this.label1 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
+            this.lbldildegistir = new System.Windows.Forms.Label();
+            this.PctChangeLanguage = new System.Windows.Forms.PictureBox();
+            this.PctBack = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.PctCalculator)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.PctMusic)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.PctRadio)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.PctNewspaper)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.PctChangePassword)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.PctExit)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.PctChangeLanguage)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.PctBack)).BeginInit();
             this.SuspendLayout();
             // 
             // lbluygulamalarformu
@@ -136,7 +140,7 @@
             // 
             this.lblgazeteler.AutoSize = true;
             this.lblgazeteler.Font = new System.Drawing.Font("Georgia", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.lblgazeteler.Location = new System.Drawing.Point(352, 367);
+            this.lblgazeteler.Location = new System.Drawing.Point(357, 482);
             this.lblgazeteler.Name = "lblgazeteler";
             this.lblgazeteler.Size = new System.Drawing.Size(131, 29);
             this.lblgazeteler.TabIndex = 33;
@@ -147,7 +151,7 @@
             this.PctNewspaper.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.PctNewspaper.Cursor = System.Windows.Forms.Cursors.Hand;
             this.PctNewspaper.Image = ((System.Drawing.Image)(resources.GetObject("PctNewspaper.Image")));
-            this.PctNewspaper.Location = new System.Drawing.Point(348, 206);
+            this.PctNewspaper.Location = new System.Drawing.Point(353, 321);
             this.PctNewspaper.Name = "PctNewspaper";
             this.PctNewspaper.Size = new System.Drawing.Size(184, 139);
             this.PctNewspaper.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -179,21 +183,6 @@
             this.PctChangePassword.TabStop = false;
             this.PctChangePassword.Click += new System.EventHandler(this.PctChangePassword_Click);
             // 
-            // PctExit
-            // 
-            this.PctExit.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.PctExit.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.PctExit.Image = ((System.Drawing.Image)(resources.GetObject("PctExit.Image")));
-            this.PctExit.Location = new System.Drawing.Point(856, 1);
-            this.PctExit.Name = "PctExit";
-            this.PctExit.Size = new System.Drawing.Size(58, 53);
-            this.PctExit.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.PctExit.TabIndex = 42;
-            this.PctExit.TabStop = false;
-            this.PctExit.Click += new System.EventHandler(this.PctExit_Click);
-            this.PctExit.MouseLeave += new System.EventHandler(this.PctExit_MouseLeave);
-            this.PctExit.MouseHover += new System.EventHandler(this.PctExit_MouseHover);
-            // 
             // label1
             // 
             this.label1.AutoSize = true;
@@ -205,6 +194,56 @@
             this.label1.Text = "label1";
             this.label1.Visible = false;
             // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Georgia", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.label2.Location = new System.Drawing.Point(106, 29);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(50, 18);
+            this.label2.TabIndex = 132;
+            this.label2.Text = "label2";
+            this.label2.Visible = false;
+            // 
+            // lbldildegistir
+            // 
+            this.lbldildegistir.AutoSize = true;
+            this.lbldildegistir.Font = new System.Drawing.Font("Georgia", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.lbldildegistir.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.lbldildegistir.Location = new System.Drawing.Point(339, 257);
+            this.lbldildegistir.Name = "lbldildegistir";
+            this.lbldildegistir.Size = new System.Drawing.Size(153, 29);
+            this.lbldildegistir.TabIndex = 134;
+            this.lbldildegistir.Text = "Dil Değiştir";
+            // 
+            // PctChangeLanguage
+            // 
+            this.PctChangeLanguage.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.PctChangeLanguage.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.PctChangeLanguage.Image = ((System.Drawing.Image)(resources.GetObject("PctChangeLanguage.Image")));
+            this.PctChangeLanguage.Location = new System.Drawing.Point(353, 100);
+            this.PctChangeLanguage.Name = "PctChangeLanguage";
+            this.PctChangeLanguage.Size = new System.Drawing.Size(184, 139);
+            this.PctChangeLanguage.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.PctChangeLanguage.TabIndex = 133;
+            this.PctChangeLanguage.TabStop = false;
+            this.PctChangeLanguage.Click += new System.EventHandler(this.PctChangeLanguage_Click);
+            // 
+            // PctBack
+            // 
+            this.PctBack.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.PctBack.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.PctBack.Image = ((System.Drawing.Image)(resources.GetObject("PctBack.Image")));
+            this.PctBack.Location = new System.Drawing.Point(856, 1);
+            this.PctBack.Name = "PctBack";
+            this.PctBack.Size = new System.Drawing.Size(58, 53);
+            this.PctBack.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.PctBack.TabIndex = 135;
+            this.PctBack.TabStop = false;
+            this.PctBack.Click += new System.EventHandler(this.PctBack_Click);
+            this.PctBack.MouseLeave += new System.EventHandler(this.PctBack_MouseLeave);
+            this.PctBack.MouseHover += new System.EventHandler(this.PctBack_MouseHover);
+            // 
             // FrmAcademicianApplication
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 18F);
@@ -212,8 +251,11 @@
             this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
             this.ClientSize = new System.Drawing.Size(916, 540);
+            this.Controls.Add(this.PctBack);
+            this.Controls.Add(this.lbldildegistir);
+            this.Controls.Add(this.PctChangeLanguage);
+            this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.PctExit);
             this.Controls.Add(this.lbluygulamalarformu);
             this.Controls.Add(this.lblhesapmakinesi);
             this.Controls.Add(this.PctCalculator);
@@ -227,6 +269,7 @@
             this.Controls.Add(this.PctChangePassword);
             this.Font = new System.Drawing.Font("Georgia", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "FrmAcademicianApplication";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
@@ -237,7 +280,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.PctRadio)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.PctNewspaper)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.PctChangePassword)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.PctExit)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.PctChangeLanguage)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.PctBack)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -256,7 +300,10 @@
         private System.Windows.Forms.PictureBox PctNewspaper;
         private System.Windows.Forms.Label lblsifredegistir;
         private System.Windows.Forms.PictureBox PctChangePassword;
-        private System.Windows.Forms.PictureBox PctExit;
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label lbldildegistir;
+        private System.Windows.Forms.PictureBox PctChangeLanguage;
+        private System.Windows.Forms.PictureBox PctBack;
     }
 }

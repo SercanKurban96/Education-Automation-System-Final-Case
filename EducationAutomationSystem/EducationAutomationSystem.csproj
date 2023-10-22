@@ -148,6 +148,18 @@
     <Compile Include="Forms\Academician\FrmSearchAcademician.Designer.cs">
       <DependentUpon>FrmSearchAcademician.cs</DependentUpon>
     </Compile>
+    <Compile Include="Forms\Applications\FrmChangeStudentLanguage.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Applications\FrmChangeStudentLanguage.Designer.cs">
+      <DependentUpon>FrmChangeStudentLanguage.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Applications\FrmChangeAcademicianLanguage.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Applications\FrmChangeAcademicianLanguage.Designer.cs">
+      <DependentUpon>FrmChangeAcademicianLanguage.cs</DependentUpon>
+    </Compile>
     <Compile Include="Forms\Notification\FrmAcademicianNotification.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -466,6 +478,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\Academician\FrmSearchAcademician.resx">
       <DependentUpon>FrmSearchAcademician.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Applications\FrmChangeStudentLanguage.resx">
+      <DependentUpon>FrmChangeStudentLanguage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Applications\FrmChangeAcademicianLanguage.resx">
+      <DependentUpon>FrmChangeAcademicianLanguage.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\Notification\FrmAcademicianNotification.resx">
       <DependentUpon>FrmAcademicianNotification.cs</DependentUpon>

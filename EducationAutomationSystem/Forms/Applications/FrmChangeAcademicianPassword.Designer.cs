@@ -45,6 +45,7 @@
             this.lblcurrentpassword = new System.Windows.Forms.Label();
             this.TxtCurrentPassword = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.PctBack)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
@@ -221,6 +222,17 @@
             this.label1.Text = "label1";
             this.label1.Visible = false;
             // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Georgia", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.label2.Location = new System.Drawing.Point(95, 69);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(50, 18);
+            this.label2.TabIndex = 55;
+            this.label2.Text = "label2";
+            this.label2.Visible = false;
+            // 
             // FrmChangeAcademicianPassword
             // 
             this.AcceptButton = this.BtnChange;
@@ -230,6 +242,7 @@
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
             this.CancelButton = this.BtnCancel;
             this.ClientSize = new System.Drawing.Size(604, 309);
+            this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.lblsifredegisikligi);
             this.Controls.Add(this.PctBack);
@@ -248,6 +261,7 @@
             this.Controls.Add(this.TxtCurrentPassword);
             this.Font = new System.Drawing.Font("Georgia", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "FrmChangeAcademicianPassword";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
@@ -278,5 +292,6 @@
         private System.Windows.Forms.Label lblcurrentpassword;
         private System.Windows.Forms.TextBox TxtCurrentPassword;
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label label2;
     }
 }
