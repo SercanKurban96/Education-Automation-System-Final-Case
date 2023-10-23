@@ -12,19 +12,14 @@ namespace EducationAutomationSystem.Entity
     using System;
     using System.Collections.Generic;
     
-    public partial class TBLNOTE
+    public partial class TBLTODOLIST
     {
-        public int NoteID { get; set; }
-        public Nullable<byte> MidtermExam { get; set; }
-        public Nullable<byte> FinalExam { get; set; }
-        public Nullable<decimal> Average { get; set; }
-        public Nullable<int> Lesson { get; set; }
+        public int ToDoListID { get; set; }
+        public Nullable<System.DateTime> ToDoListDate { get; set; }
+        public string ToDoListTitle { get; set; }
+        public string ToDoListContent { get; set; }
         public Nullable<int> Student { get; set; }
-        public Nullable<int> Academician { get; set; }
-        public string LetterGrade { get; set; }
     
-        public virtual TBLACADEMICIAN TBLACADEMICIAN { get; set; }
-        public virtual TBLLESSON TBLLESSON { get; set; }
         public virtual TBLSTUDENT TBLSTUDENT { get; set; }
     }
 }

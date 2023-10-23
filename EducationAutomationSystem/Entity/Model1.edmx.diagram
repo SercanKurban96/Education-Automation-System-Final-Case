@@ -27,6 +27,8 @@
         <AssociationConnector Association="DbEducationModel.FK_TBLNOTE_TBLSTUDENT" ManuallyRouted="false" />
         <EntityTypeShape EntityType="DbEducationModel.View_1" Width="1.5" PointX="0.75" PointY="10.75" />
         <EntityTypeShape EntityType="DbEducationModel.View_2" Width="1.5" PointX="5.75" PointY="3.75" />
+        <EntityTypeShape EntityType="DbEducationModel.TBLTODOLIST" Width="1.5" PointX="5.25" PointY="12.5" />
+        <AssociationConnector Association="DbEducationModel.FK_TBLTODOLIST_TBLSTUDENT" />
       </Diagram>
     </edmx:Diagrams>
   </edmx:Designer>

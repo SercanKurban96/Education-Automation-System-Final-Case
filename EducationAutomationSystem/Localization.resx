@@ -159,6 +159,9 @@
   <data name="akademisyensoyadibos" xml:space="preserve">
     <value>Akademisyen Soyadı boş bırakılamaz.</value>
   </data>
+  <data name="akademisyenverilerkaydedildi" xml:space="preserve">
+    <value>Akademisyen listesindeki veriler kaydedildi.</value>
+  </data>
   <data name="alanlarbos" xml:space="preserve">
     <value>Alanlar boş geçilemez!</value>
   </data>
@@ -192,6 +195,9 @@
   <data name="bilgi" xml:space="preserve">
     <value>Bilgi</value>
   </data>
+  <data name="bilgilerhatali" xml:space="preserve">
+    <value>Hatalı T.C. numarası, mail adresi veya doğum tarihi!</value>
+  </data>
   <data name="bolum5karakterdenaz" xml:space="preserve">
     <value>Bölüm adı en az 5 karakterden oluşmalıdır.</value>
   </data>
@@ -216,6 +222,9 @@
   <data name="bolumsilmebos" xml:space="preserve">
     <value>Lütfen silmek istediğiniz bir bölüm ismi seçiniz.</value>
   </data>
+  <data name="bolumverilerikaydedildi" xml:space="preserve">
+    <value>Bölüm listesindeki veriler kaydedildi.</value>
+  </data>
   <data name="BtnAdd" xml:space="preserve">
     <value>Kaydet</value>
   </data>
@@ -228,6 +237,9 @@
   <data name="BtnChange" xml:space="preserve">
     <value>Değiştir</value>
   </data>
+  <data name="BtnCheck" xml:space="preserve">
+    <value>Kontrol Et</value>
+  </data>
   <data name="BtnChoose" xml:space="preserve">
     <value>SEÇİNİZ</value>
   </data>
@@ -236,6 +248,9 @@
   </data>
   <data name="BtnEdit" xml:space="preserve">
     <value>Düzenle</value>
+  </data>
+  <data name="BtnExcel" xml:space="preserve">
+    <value>Verileri Excel'e Aktar</value>
   </data>
   <data name="BtnNotificationList" xml:space="preserve">
     <value>Duyuru Listesi</value>
@@ -276,6 +291,9 @@
   <data name="derssilindi" xml:space="preserve">
     <value>{0} dersi başarılı bir şekilde silindi.</value>
   </data>
+  <data name="dersverilerkaydedildi" xml:space="preserve">
+    <value>Ders listesindeki veriler kaydedildi.</value>
+  </data>
   <data name="duyurubasligibos" xml:space="preserve">
     <value>Duyuru başlığı boş bırakılamaz.</value>
   </data>
@@ -297,6 +315,9 @@
   <data name="duyurusilindi" xml:space="preserve">
     <value>{0} adlı duyuru başarılı bir şekilde silindi.</value>
   </data>
+  <data name="duyuruverilerkaydedildi" xml:space="preserve">
+    <value>Duyuru listesindeki veriler kaydedildi.</value>
+  </data>
   <data name="errorprovidertc" xml:space="preserve">
     <value>TC Kimlik Numarası 11 Karakter Olmalıdır!</value>
   </data>
@@ -306,8 +327,35 @@
   <data name="eskiyenisifrelerayni" xml:space="preserve">
     <value>Eski şifre ile yeni şifre aynı olmamalıdır!</value>
   </data>
+  <data name="exceldosyasi" xml:space="preserve">
+    <value>Excel Dosyaları|*.xlsx</value>
+  </data>
+  <data name="exceldosyasinikaydet" xml:space="preserve">
+    <value>Excel Dosyasını Kaydet</value>
+  </data>
   <data name="gizleToolStripMenuItem" xml:space="preserve">
     <value>Gizle</value>
+  </data>
+  <data name="gorevbasligibos" xml:space="preserve">
+    <value>Görev başlığı boş bırakılamaz.</value>
+  </data>
+  <data name="gorevbaslikbos" xml:space="preserve">
+    <value>Lütfen silmek istediğiniz bir görev seçiniz.</value>
+  </data>
+  <data name="gorevguncellendi" xml:space="preserve">
+    <value>{0} adlı görev başarılı bir şekilde güncellendi.</value>
+  </data>
+  <data name="gorevicerigibos" xml:space="preserve">
+    <value>Görev içeriği boş bırakılamaz.</value>
+  </data>
+  <data name="gorevkaydedildi" xml:space="preserve">
+    <value>{0} adlı görev başarılı bir şekilde kaydedildi.</value>
+  </data>
+  <data name="gorevsil" xml:space="preserve">
+    <value>{0} adlı görevi silmek istiyor musunuz?</value>
+  </data>
+  <data name="gorevsilindi" xml:space="preserve">
+    <value>{0} adlı görev başarılı bir şekilde silindi.</value>
   </data>
   <data name="groupBox1" xml:space="preserve">
     <value>Öğrenci Bilgileri</value>
@@ -347,6 +395,9 @@
   </data>
   <data name="lbladdstudent" xml:space="preserve">
     <value>Öğrenci Kayıt</value>
+  </data>
+  <data name="lbladdtodolist" xml:space="preserve">
+    <value>GÖREV OLUŞTUR</value>
   </data>
   <data name="lbladsoyad" xml:space="preserve">
     <value>Ad Soyad:</value>
@@ -480,6 +531,9 @@
   <data name="lbldeletestudent" xml:space="preserve">
     <value>Öğrenci Sil</value>
   </data>
+  <data name="lbldeletetodolist" xml:space="preserve">
+    <value>GÖREV SİL</value>
+  </data>
   <data name="lbldepartment" xml:space="preserve">
     <value>Bölüm:</value>
   </data>
@@ -594,8 +648,17 @@
   <data name="lblduyurusilformu" xml:space="preserve">
     <value>DUYURU SİL</value>
   </data>
+  <data name="lblduyurusirala" xml:space="preserve">
+    <value>Duyuru Sırala (A-Z):</value>
+  </data>
+  <data name="lblduyurusiralaters" xml:space="preserve">
+    <value>Duyuru Sırala (Z-A):</value>
+  </data>
   <data name="lbleditstudent" xml:space="preserve">
     <value>Öğrenci Düzenle</value>
+  </data>
+  <data name="lbledittodolist" xml:space="preserve">
+    <value>GÖREV DÜZENLE</value>
   </data>
   <data name="lblegitimotomasyonsistemi" xml:space="preserve">
     <value>Eğitim Otomasyon Sistemi</value>
@@ -615,8 +678,35 @@
   <data name="lblgender" xml:space="preserve">
     <value>Cinsiyet:</value>
   </data>
+  <data name="lblgorevara" xml:space="preserve">
+    <value>Görev Ara</value>
+  </data>
+  <data name="lblgorevbasligi" xml:space="preserve">
+    <value>Görev Başlığı:</value>
+  </data>
+  <data name="lblgorevbaslikara" xml:space="preserve">
+    <value>Görev Ara:</value>
+  </data>
+  <data name="lblgorevduzenle" xml:space="preserve">
+    <value>Görev Düzenle</value>
+  </data>
+  <data name="lblgorevolustur" xml:space="preserve">
+    <value>Görev Oluştur</value>
+  </data>
+  <data name="lblgorevsayisi" xml:space="preserve">
+    <value>Görev Sayısı:</value>
+  </data>
+  <data name="lblgorevsil" xml:space="preserve">
+    <value>Görev Sil</value>
+  </data>
+  <data name="lblgorevtanimi" xml:space="preserve">
+    <value>Görev Tanımı:</value>
+  </data>
   <data name="lblguvenlikkodu" xml:space="preserve">
     <value>Güvenlik Kodu:</value>
+  </data>
+  <data name="lblharfnotu" xml:space="preserve">
+    <value>Harf Notu:</value>
   </data>
   <data name="lblhesapmakinesi" xml:space="preserve">
     <value>Hesap Makinesi</value>
@@ -653,6 +743,9 @@
   </data>
   <data name="lblnewpassword" xml:space="preserve">
     <value>Yeni Parola</value>
+  </data>
+  <data name="lblnewpasswordform" xml:space="preserve">
+    <value>YENİ PAROLA</value>
   </data>
   <data name="lblnotbilgileri" xml:space="preserve">
     <value>Not Bilgileri</value>
@@ -714,8 +807,14 @@
   <data name="lblparola" xml:space="preserve">
     <value>Parola:</value>
   </data>
+  <data name="lblparolamiunuttum" xml:space="preserve">
+    <value>Parolamı Unuttum</value>
+  </data>
   <data name="lblpassword" xml:space="preserve">
     <value>Parola:</value>
+  </data>
+  <data name="lblpasswordchangeform" xml:space="preserve">
+    <value>PAROLA DEĞİŞİKLİĞİ FORMU</value>
   </data>
   <data name="lblphonenumber" xml:space="preserve">
     <value>Cep Telefonu:</value>
@@ -741,6 +840,9 @@
   <data name="lblsearchstudent" xml:space="preserve">
     <value>Öğrenci Ara</value>
   </data>
+  <data name="lblsearchtodolist" xml:space="preserve">
+    <value>GÖREV ARA</value>
+  </data>
   <data name="lblsifredegisikliği" xml:space="preserve">
     <value>ŞİFRE DEĞİŞİKLİĞİ</value>
   </data>
@@ -755,6 +857,9 @@
   </data>
   <data name="lblson3derskayit" xml:space="preserve">
     <value>Son 3 Ders Kayıt:</value>
+  </data>
+  <data name="lblson3duyuru" xml:space="preserve">
+    <value>Son 3 Duyuru:</value>
   </data>
   <data name="lblson3ogrencikayit" xml:space="preserve">
     <value>Son 3 Öğrenci Kayıt:</value>
@@ -786,6 +891,12 @@
   <data name="lbltcnoara" xml:space="preserve">
     <value>T.C. No Ara:</value>
   </data>
+  <data name="lbltodolist" xml:space="preserve">
+    <value>YAPILACAKLAR</value>
+  </data>
+  <data name="lbltodolists" xml:space="preserve">
+    <value>YAPILACAKLAR LİSTESİ</value>
+  </data>
   <data name="lbltoplamakademisyensayisi" xml:space="preserve">
     <value>Toplam Akademisyen Sayısı:</value>
   </data>
@@ -794,6 +905,9 @@
   </data>
   <data name="lbltoplamderssayisi" xml:space="preserve">
     <value>Toplam Ders Sayısı:</value>
+  </data>
+  <data name="lbltoplamduyurusayisi" xml:space="preserve">
+    <value>Toplam Duyuru Sayısı:</value>
   </data>
   <data name="lbltoplamogrencisayisi" xml:space="preserve">
     <value>Toplam Öğrenci Sayısı:</value>
@@ -806,6 +920,12 @@
   </data>
   <data name="lblvizesinavi" xml:space="preserve">
     <value>Vize Sınavı:</value>
+  </data>
+  <data name="lblyapilacaklar" xml:space="preserve">
+    <value>Yapılacaklar</value>
+  </data>
+  <data name="lblyapilacaklarlistesi" xml:space="preserve">
+    <value>Yapılacaklar Listesi</value>
   </data>
   <data name="lblyonetici" xml:space="preserve">
     <value>Yönetici</value>
@@ -843,6 +963,9 @@
   <data name="metin4" xml:space="preserve">
     <value>Giriş başarılı, öğrenci paneline yönlendiriliyorsunuz.</value>
   </data>
+  <data name="metin5" xml:space="preserve">
+    <value>Bilgiler eşleşiyor, yeni parola paneline yönlendiriliyorsunuz.</value>
+  </data>
   <data name="notifyIcon1" xml:space="preserve">
     <value>Eğitim Otomasyon Sistemi Yönetici Paneli</value>
   </data>
@@ -866,6 +989,9 @@
   </data>
   <data name="notifyiconyoneticitext" xml:space="preserve">
     <value>Eğitim Otomasyon Sistemi Yönetici Paneli</value>
+  </data>
+  <data name="notverilerkaydedildi" xml:space="preserve">
+    <value>Not listesindeki veriler kaydedildi.</value>
   </data>
   <data name="ogrenciadi2karakterdenaz" xml:space="preserve">
     <value>Öğrenci adı en az 2 karakter olmalıdır.</value>
@@ -915,6 +1041,9 @@
   <data name="ogrenciuniversiteyasi" xml:space="preserve">
     <value>Öğrencinin üniversiteye kaydolması için yaşı 17 olmalıdır.</value>
   </data>
+  <data name="ogrenciverilerikaydedildi" xml:space="preserve">
+    <value>Öğrenci listesindeki veriler kaydedildi.</value>
+  </data>
   <data name="parolabos" xml:space="preserve">
     <value>Lütfen bir parola belirleyin.</value>
   </data>
@@ -927,6 +1056,18 @@
   <data name="postakodubos" xml:space="preserve">
     <value>Posta kodu boş bırakılamaz.</value>
   </data>
+  <data name="RdbAkademisyenListesi" xml:space="preserve">
+    <value>Akademisyen Listesi</value>
+  </data>
+  <data name="RdbBolumListesi" xml:space="preserve">
+    <value>Bölüm Listesi</value>
+  </data>
+  <data name="RdbDersListesi" xml:space="preserve">
+    <value>Ders Listesi</value>
+  </data>
+  <data name="RdbDuyuruListesi" xml:space="preserve">
+    <value>Duyuru Listesi</value>
+  </data>
   <data name="rdbenglish" xml:space="preserve">
     <value>İNGİLİZCE</value>
   </data>
@@ -936,6 +1077,12 @@
   <data name="RdbMale" xml:space="preserve">
     <value>Erkek</value>
   </data>
+  <data name="RdbNotListesi" xml:space="preserve">
+    <value>Not Listesi</value>
+  </data>
+  <data name="RdbOgrenciListesi" xml:space="preserve">
+    <value>Öğrenci Listesi</value>
+  </data>
   <data name="rdbturkce" xml:space="preserve">
     <value>TÜRKÇE</value>
   </data>
@@ -944,9 +1091,6 @@
   </data>
   <data name="semtbos" xml:space="preserve">
     <value>Semt boş bırakılamaz.</value>
-  </data>
-  <data name="String1" xml:space="preserve">
-    <value />
   </data>
   <data name="tcnobos" xml:space="preserve">
     <value>T.C. Kimlik Numarası boş bırakılamaz.</value>
@@ -983,6 +1127,12 @@
   </data>
   <data name="toolTip14.ToolTipTitle" xml:space="preserve">
     <value>Duyuru İşlemleri</value>
+  </data>
+  <data name="toolTip15.SetToolTip" xml:space="preserve">
+    <value>Görev ekleme, silme, güncelleme işlemleri için tıklayın.</value>
+  </data>
+  <data name="toolTip15.ToolTipTitle" xml:space="preserve">
+    <value>Yapılacaklar Listesi</value>
   </data>
   <data name="toolTip2.SetToolTip" xml:space="preserve">
     <value>Şifre değişikliği, radyo, müzik dinleme gibi araçlar için tıklayın.</value>
@@ -1034,6 +1184,9 @@
   </data>
   <data name="uyari" xml:space="preserve">
     <value>Uyarı</value>
+  </data>
+  <data name="verilerbos" xml:space="preserve">
+    <value>Lütfen bir veri seçiniz.</value>
   </data>
   <data name="yoneticicikis" xml:space="preserve">
     <value>Yönetici panelinden çıkmak istiyor musunuz?</value>

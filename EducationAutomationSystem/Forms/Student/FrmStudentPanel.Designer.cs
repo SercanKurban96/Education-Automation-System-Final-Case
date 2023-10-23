@@ -58,6 +58,9 @@
             this.label1 = new System.Windows.Forms.Label();
             this.toolTip13 = new System.Windows.Forms.ToolTip(this.components);
             this.toolTip12 = new System.Windows.Forms.ToolTip(this.components);
+            this.lblyapilacaklar = new System.Windows.Forms.Label();
+            this.PctToDoList = new System.Windows.Forms.PictureBox();
+            this.toolTip15 = new System.Windows.Forms.ToolTip(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.PctMinimize)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.PctExit)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.PctSettings)).BeginInit();
@@ -65,6 +68,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.PctNotes)).BeginInit();
             this.contextMenuStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.PctStudentImage)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.PctToDoList)).BeginInit();
             this.SuspendLayout();
             // 
             // PctMinimize
@@ -135,7 +139,7 @@
             this.lbluygulamalar.AutoSize = true;
             this.lbluygulamalar.Font = new System.Drawing.Font("Georgia", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.lbluygulamalar.ForeColor = System.Drawing.Color.Blue;
-            this.lbluygulamalar.Location = new System.Drawing.Point(538, 359);
+            this.lbluygulamalar.Location = new System.Drawing.Point(537, 359);
             this.lbluygulamalar.Name = "lbluygulamalar";
             this.lbluygulamalar.Size = new System.Drawing.Size(153, 25);
             this.lbluygulamalar.TabIndex = 36;
@@ -146,7 +150,7 @@
             this.PctSettings.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.PctSettings.Cursor = System.Windows.Forms.Cursors.Hand;
             this.PctSettings.Image = ((System.Drawing.Image)(resources.GetObject("PctSettings.Image")));
-            this.PctSettings.Location = new System.Drawing.Point(538, 237);
+            this.PctSettings.Location = new System.Drawing.Point(537, 237);
             this.PctSettings.Name = "PctSettings";
             this.PctSettings.Size = new System.Drawing.Size(154, 110);
             this.PctSettings.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -160,7 +164,7 @@
             this.lblduyurularogrenci.AutoSize = true;
             this.lblduyurularogrenci.Font = new System.Drawing.Font("Georgia", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.lblduyurularogrenci.ForeColor = System.Drawing.Color.Red;
-            this.lblduyurularogrenci.Location = new System.Drawing.Point(284, 359);
+            this.lblduyurularogrenci.Location = new System.Drawing.Point(536, 528);
             this.lblduyurularogrenci.Name = "lblduyurularogrenci";
             this.lblduyurularogrenci.Size = new System.Drawing.Size(126, 25);
             this.lblduyurularogrenci.TabIndex = 34;
@@ -171,7 +175,7 @@
             this.PctNotification.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.PctNotification.Cursor = System.Windows.Forms.Cursors.Hand;
             this.PctNotification.Image = ((System.Drawing.Image)(resources.GetObject("PctNotification.Image")));
-            this.PctNotification.Location = new System.Drawing.Point(285, 237);
+            this.PctNotification.Location = new System.Drawing.Point(537, 406);
             this.PctNotification.Name = "PctNotification";
             this.PctNotification.Size = new System.Drawing.Size(154, 110);
             this.PctNotification.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -245,7 +249,6 @@
             this.notifyIcon3.Text = "Eğitim Otomasyon Sistemi Öğrenci Paneli";
             this.notifyIcon3.Visible = true;
             this.notifyIcon3.DoubleClick += new System.EventHandler(this.notifyIcon1_DoubleClick);
-            this.notifyIcon3.MouseDoubleClick += new System.Windows.Forms.MouseEventHandler(this.notifyIcon1_MouseDoubleClick);
             // 
             // lbladsoyad
             // 
@@ -326,13 +329,45 @@
             this.label1.Text = "label1";
             this.label1.Visible = false;
             // 
+            // lblyapilacaklar
+            // 
+            this.lblyapilacaklar.AutoSize = true;
+            this.lblyapilacaklar.Font = new System.Drawing.Font("Georgia", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.lblyapilacaklar.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
+            this.lblyapilacaklar.Location = new System.Drawing.Point(49, 528);
+            this.lblyapilacaklar.Name = "lblyapilacaklar";
+            this.lblyapilacaklar.Size = new System.Drawing.Size(149, 25);
+            this.lblyapilacaklar.TabIndex = 52;
+            this.lblyapilacaklar.Text = "Yapılacaklar";
+            // 
+            // PctToDoList
+            // 
+            this.PctToDoList.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.PctToDoList.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.PctToDoList.Image = ((System.Drawing.Image)(resources.GetObject("PctToDoList.Image")));
+            this.PctToDoList.Location = new System.Drawing.Point(44, 406);
+            this.PctToDoList.Name = "PctToDoList";
+            this.PctToDoList.Size = new System.Drawing.Size(154, 110);
+            this.PctToDoList.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.PctToDoList.TabIndex = 51;
+            this.PctToDoList.TabStop = false;
+            this.PctToDoList.Click += new System.EventHandler(this.PctToDoList_Click);
+            this.PctToDoList.MouseHover += new System.EventHandler(this.PctToDoList_MouseHover);
+            // 
+            // toolTip15
+            // 
+            this.toolTip15.IsBalloon = true;
+            this.toolTip15.ToolTipIcon = System.Windows.Forms.ToolTipIcon.Info;
+            // 
             // FrmStudentPanel
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 18F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
-            this.ClientSize = new System.Drawing.Size(732, 403);
+            this.ClientSize = new System.Drawing.Size(732, 572);
+            this.Controls.Add(this.lblyapilacaklar);
+            this.Controls.Add(this.PctToDoList);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.lblogrencino);
             this.Controls.Add(this.LblNumber);
@@ -365,6 +400,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.PctNotes)).EndInit();
             this.contextMenuStrip1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.PctStudentImage)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.PctToDoList)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -400,5 +436,8 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.ToolTip toolTip12;
         private System.Windows.Forms.ToolTip toolTip13;
+        private System.Windows.Forms.Label lblyapilacaklar;
+        private System.Windows.Forms.PictureBox PctToDoList;
+        private System.Windows.Forms.ToolTip toolTip15;
     }
 }

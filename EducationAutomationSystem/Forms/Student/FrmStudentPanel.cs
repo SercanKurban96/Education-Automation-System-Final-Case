@@ -1,4 +1,5 @@
 ﻿using EducationAutomationSystem.Entity;
+using EducationAutomationSystem.Forms.ToDoList;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -19,7 +20,8 @@ namespace EducationAutomationSystem.Forms.Student
         }
         DbEducationEntities4 db = new DbEducationEntities4();
         public string number, namesurname, picture;
-        int studentid;
+        public int studentid;
+
         void NotifyIcon()
         {
             this.Hide();
@@ -60,6 +62,7 @@ namespace EducationAutomationSystem.Forms.Student
             lblduyurularogrenci.Text = Localization.lblduyurularogrenci;
             lbluygulamalar.Text = Localization.lbluygulamalar;
             lblogrencino.Text = Localization.lblogrencino;
+            lblyapilacaklar.Text = Localization.lblyapilacaklar;
         }
         public void hideshowexit()
         {
@@ -184,9 +187,18 @@ namespace EducationAutomationSystem.Forms.Student
             toolTip9.SetToolTip(PctNotification, Localization.toolTip9_SetToolTip);
         }
 
-        private void notifyIcon1_MouseDoubleClick(object sender, MouseEventArgs e)
+        private void PctToDoList_Click(object sender, EventArgs e)
         {
-
+            FrmToDoList fr = new FrmToDoList();
+            fr.number = number;
+            fr.Show();
+            this.Hide();
+            notifyIcon3.Visible = false;
+        }
+        private void PctToDoList_MouseHover(object sender, EventArgs e)
+        {
+            toolTip15.ToolTipTitle = Localization.toolTip15_ToolTipTitle;
+            toolTip15.SetToolTip(PctToDoList, Localization.toolTip15_SetToolTip);
         }
 
         private void timer1_Tick(object sender, EventArgs e)

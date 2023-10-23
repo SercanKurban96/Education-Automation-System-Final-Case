@@ -48,6 +48,7 @@ namespace EducationAutomationSystem.Forms.Student
                                  Vize = x.MidtermExam,
                                  Final = x.FinalExam,
                                  Ortalama = x.Average,
+                                 HarfNotu = x.LetterGrade,
                                  Öğrenci = x.Student
                              }).Where(y => y.Öğrenci == studentid).ToList();
             DtgStudentNotes.DataSource = examnotes;

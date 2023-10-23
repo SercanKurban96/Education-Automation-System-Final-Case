@@ -18,6 +18,7 @@ namespace EducationAutomationSystem.Entity
         public TBLSTUDENT()
         {
             this.TBLNOTE = new HashSet<TBLNOTE>();
+            this.TBLTODOLIST = new HashSet<TBLTODOLIST>();
         }
     
         public int StudentID { get; set; }
@@ -45,5 +46,7 @@ namespace EducationAutomationSystem.Entity
         public virtual TBLDEPARTMENT TBLDEPARTMENT { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<TBLNOTE> TBLNOTE { get; set; }
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+        public virtual ICollection<TBLTODOLIST> TBLTODOLIST { get; set; }
     }
 }

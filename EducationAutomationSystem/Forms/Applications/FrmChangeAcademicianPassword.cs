@@ -81,7 +81,7 @@ namespace EducationAutomationSystem.Forms.Applications
             {
                 if (TxtCurrentPassword.Text == TxtNewPassword.Text)
                 {
-                    MessageBox.Show(String.Format(Localization.eskiyenisifrelerayni), String.Format(Localization.uyari), MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    MessageBox.Show(String.Format(Localization.eskiyenisifrelerayni), String.Format(Localization.uyari), MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 }
                 else if (TxtNewPassword.Text == TxtConfirmPassword.Text)
                 {

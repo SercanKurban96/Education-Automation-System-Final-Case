@@ -37,5 +37,6 @@ namespace EducationAutomationSystem.Entity
         public virtual DbSet<TBLSTUDENT> TBLSTUDENT { get; set; }
         public virtual DbSet<View_1> View_1 { get; set; }
         public virtual DbSet<View_2> View_2 { get; set; }
+        public virtual DbSet<TBLTODOLIST> TBLTODOLIST { get; set; }
     }
 }

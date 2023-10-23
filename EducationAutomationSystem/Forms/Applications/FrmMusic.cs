@@ -166,6 +166,7 @@ namespace EducationAutomationSystem.Applications
             listBox1.Items.Clear();
             listBox2.Items.Clear();
             axWindowsMediaPlayer1.Ctlcontrols.stop();
+            BtnPause.Image = pictureBox2.Image;
             enabledFalse();
         }
 

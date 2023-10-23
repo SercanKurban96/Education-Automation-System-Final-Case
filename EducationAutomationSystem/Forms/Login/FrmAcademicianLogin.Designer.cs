@@ -44,6 +44,9 @@
             this.lbltcno = new System.Windows.Forms.Label();
             this.ChkShowHidePassword = new System.Windows.Forms.CheckBox();
             this.errorProvider1 = new System.Windows.Forms.ErrorProvider(this.components);
+            this.lblparolamiunuttum = new System.Windows.Forms.LinkLabel();
+            this.label2 = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.PctBack)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).BeginInit();
@@ -192,6 +195,38 @@
             // 
             this.errorProvider1.ContainerControl = this;
             // 
+            // lblparolamiunuttum
+            // 
+            this.lblparolamiunuttum.AutoSize = true;
+            this.lblparolamiunuttum.Location = new System.Drawing.Point(25, 285);
+            this.lblparolamiunuttum.Name = "lblparolamiunuttum";
+            this.lblparolamiunuttum.Size = new System.Drawing.Size(140, 18);
+            this.lblparolamiunuttum.TabIndex = 32;
+            this.lblparolamiunuttum.TabStop = true;
+            this.lblparolamiunuttum.Text = "Parolamı Unuttum";
+            this.lblparolamiunuttum.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.lblparolamiunuttum_LinkClicked);
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(12, 48);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(50, 18);
+            this.label2.TabIndex = 133;
+            this.label2.Text = "label2";
+            this.label2.Visible = false;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Georgia", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.label1.Location = new System.Drawing.Point(12, 9);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(49, 18);
+            this.label1.TabIndex = 132;
+            this.label1.Text = "label1";
+            this.label1.Visible = false;
+            // 
             // FrmAcademicianLogin
             // 
             this.AcceptButton = this.LnkLblLogin;
@@ -201,6 +236,9 @@
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(224)))), ((int)(((byte)(192)))));
             this.CancelButton = this.LnkLblClear;
             this.ClientSize = new System.Drawing.Size(571, 377);
+            this.Controls.Add(this.label2);
+            this.Controls.Add(this.label1);
+            this.Controls.Add(this.lblparolamiunuttum);
             this.Controls.Add(this.ChkShowHidePassword);
             this.Controls.Add(this.lblakademisyengirispaneli);
             this.Controls.Add(this.pictureBox1);
@@ -245,5 +283,8 @@
         private System.Windows.Forms.Label lbltcno;
         private System.Windows.Forms.CheckBox ChkShowHidePassword;
         private System.Windows.Forms.ErrorProvider errorProvider1;
+        private System.Windows.Forms.LinkLabel lblparolamiunuttum;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label label1;
     }
 }

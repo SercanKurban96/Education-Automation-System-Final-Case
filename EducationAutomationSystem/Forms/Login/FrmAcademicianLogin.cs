@@ -4,6 +4,8 @@ using System.Windows.Forms;
 using System.Data.SqlClient;
 using EducationAutomationSystem.Academician;
 using EducationAutomationSystem.Forms.Academician;
+using EducationAutomationSystem.Entity;
+using System.Linq;
 
 namespace EducationAutomationSystem
 {
@@ -15,7 +17,9 @@ namespace EducationAutomationSystem
         }
 
         sqlconnection conn = new sqlconnection();
-
+        DbEducationEntities4 db = new DbEducationEntities4();
+        public string number, namesurname, picture;
+        public int academicianid, departmentid;
         private void PctBack_Click(object sender, EventArgs e)
         {
             FrmLogin fr = new FrmLogin();
@@ -109,6 +113,13 @@ namespace EducationAutomationSystem
 
         private void FrmTeacherLogin_Load(object sender, EventArgs e)
         {
+            academicianid = db.TBLACADEMICIAN.Where(x => x.AcademicianTRNumber == number).Select(y => y.AcademicianID).FirstOrDefault();
+
+            departmentid = db.TBLACADEMICIAN.Where(x => x.AcademicianTRNumber == number).Select(y => y.TBLDEPARTMENT.DepartmentID).FirstOrDefault();
+
+            label1.Text = academicianid.ToString();
+            label2.Text = departmentid.ToString();
+
             CreateSecurityCode();
             lbltcno.Text = Localization.lbltcno;
             lblparola.Text = Localization.lblparola;
@@ -117,6 +128,7 @@ namespace EducationAutomationSystem
             LnkLblLogin.Text = Localization.LnkLblLogin;
             LnkLblClear.Text = Localization.LnkLblClear;
             lblakademisyengirispaneli.Text = Localization.lblakademisyengirispaneli;
+            lblparolamiunuttum.Text = Localization.lblparolamiunuttum;
         }
 
         private void LnkLblClear_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
@@ -151,6 +163,14 @@ namespace EducationAutomationSystem
             {
                 errorProvider1.Clear();
             }
+        }
+
+        private void lblparolamiunuttum_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            FrmPasswordChangeForm fr = new FrmPasswordChangeForm();
+            fr.number = number;
+            fr.Show();
+            this.Hide();
         }
     }
 }

@@ -53,9 +53,9 @@
             this.DtgDepartment.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.DtgDepartment.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.DtgDepartment.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.DtgDepartment.Location = new System.Drawing.Point(0, 59);
+            this.DtgDepartment.Location = new System.Drawing.Point(0, 61);
             this.DtgDepartment.Name = "DtgDepartment";
-            this.DtgDepartment.Size = new System.Drawing.Size(819, 335);
+            this.DtgDepartment.Size = new System.Drawing.Size(819, 333);
             this.DtgDepartment.TabIndex = 35;
             // 
             // lbllistdepartmentmenu
@@ -87,7 +87,7 @@
             // 
             this.LblDepartmentCount.AutoSize = true;
             this.LblDepartmentCount.Font = new System.Drawing.Font("Georgia", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.LblDepartmentCount.Location = new System.Drawing.Point(174, 18);
+            this.LblDepartmentCount.Location = new System.Drawing.Point(171, 18);
             this.LblDepartmentCount.Name = "LblDepartmentCount";
             this.LblDepartmentCount.Size = new System.Drawing.Size(22, 24);
             this.LblDepartmentCount.TabIndex = 48;
@@ -107,7 +107,7 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Georgia", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.label1.Location = new System.Drawing.Point(612, 26);
+            this.label1.Location = new System.Drawing.Point(632, 18);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(49, 18);
             this.label1.TabIndex = 133;

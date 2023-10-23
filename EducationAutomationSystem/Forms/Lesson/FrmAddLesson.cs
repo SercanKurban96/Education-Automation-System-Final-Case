@@ -87,24 +87,16 @@ namespace EducationAutomationSystem.Lesson
             }
             else
             {
-                if (varMi(TxtLessonName.Text) != 0)
-                {
-                    MessageBox.Show(String.Format(Localization.aynidersadi, TxtLessonName.Text), String.Format(Localization.hata), MessageBoxButtons.OK, MessageBoxIcon.Error);
-                    TxtLessonName.Focus();
-                }
-                else
-                {
-                    SqlCommand cmd = new SqlCommand("insert into TBLLESSON (LessonName,Department,Academician) values (@p1,@p2,@p3)", conn.connection());
-                    cmd.Parameters.AddWithValue("@p1", TxtLessonName.Text);
-                    cmd.Parameters.AddWithValue("@p2", label2.Text);
-                    cmd.Parameters.AddWithValue("@p3", label1.Text);
-                    cmd.ExecuteNonQuery();
-                    conn.connection().Close();
-                    MessageBox.Show(String.Format(Localization.derskaydedildi, TxtLessonName.Text), String.Format(Localization.bilgi), MessageBoxButtons.OK, MessageBoxIcon.Information);
-                    kayitsayisi();
-                    Temizle();
-                    TxtLessonName.Focus();
-                }
+                SqlCommand cmd = new SqlCommand("insert into TBLLESSON (LessonName,Department,Academician) values (@p1,@p2,@p3)", conn.connection());
+                cmd.Parameters.AddWithValue("@p1", TxtLessonName.Text);
+                cmd.Parameters.AddWithValue("@p2", label2.Text);
+                cmd.Parameters.AddWithValue("@p3", label1.Text);
+                cmd.ExecuteNonQuery();
+                conn.connection().Close();
+                MessageBox.Show(String.Format(Localization.derskaydedildi, TxtLessonName.Text), String.Format(Localization.bilgi), MessageBoxButtons.OK, MessageBoxIcon.Information);
+                kayitsayisi();
+                Temizle();
+                TxtLessonName.Focus();
             }
         }
 
@@ -134,7 +126,7 @@ namespace EducationAutomationSystem.Lesson
 
         private void CmbAcademician_SelectedIndexChanged(object sender, EventArgs e)
         {
-            
+
         }
     }
 }

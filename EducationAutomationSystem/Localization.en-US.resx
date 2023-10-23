@@ -159,6 +159,9 @@
   <data name="akademisyensoyadibos" xml:space="preserve">
     <value>Academician Surname cannot be left blank.</value>
   </data>
+  <data name="akademisyenverilerkaydedildi" xml:space="preserve">
+    <value>The data in the academician list has been saved.</value>
+  </data>
   <data name="alanlarbos" xml:space="preserve">
     <value>Fields cannot be left blank!</value>
   </data>
@@ -192,6 +195,9 @@
   <data name="bilgi" xml:space="preserve">
     <value>Info</value>
   </data>
+  <data name="bilgilerhatali" xml:space="preserve">
+    <value>Incorrect T.R. number, e-mail address or date of birth!</value>
+  </data>
   <data name="bolum5karakterdenaz" xml:space="preserve">
     <value>The department name must consist of at least 5 characters.</value>
   </data>
@@ -216,6 +222,9 @@
   <data name="bolumsilmebos" xml:space="preserve">
     <value>Please select a department name you want to delete.</value>
   </data>
+  <data name="bolumverilerikaydedildi" xml:space="preserve">
+    <value>The data in the department list has been saved.</value>
+  </data>
   <data name="BtnAdd" xml:space="preserve">
     <value>Save</value>
   </data>
@@ -228,6 +237,9 @@
   <data name="BtnChange" xml:space="preserve">
     <value>Change</value>
   </data>
+  <data name="BtnCheck" xml:space="preserve">
+    <value>Check It</value>
+  </data>
   <data name="BtnChoose" xml:space="preserve">
     <value>CHOOSE</value>
   </data>
@@ -236,6 +248,9 @@
   </data>
   <data name="BtnEdit" xml:space="preserve">
     <value>Edit</value>
+  </data>
+  <data name="BtnExcel" xml:space="preserve">
+    <value>Export Data to Excel</value>
   </data>
   <data name="BtnNotificationList" xml:space="preserve">
     <value>Notification List</value>
@@ -276,6 +291,9 @@
   <data name="derssilindi" xml:space="preserve">
     <value>The {0} course was successfully deleted.</value>
   </data>
+  <data name="dersverilerkaydedildi" xml:space="preserve">
+    <value>The data in the lesson list has been saved.</value>
+  </data>
   <data name="duyurubasligibos" xml:space="preserve">
     <value>Notification title cannot be left blank.</value>
   </data>
@@ -297,6 +315,9 @@
   <data name="duyurusilindi" xml:space="preserve">
     <value>The notification named {0} has been deleted successfully.</value>
   </data>
+  <data name="duyuruverilerkaydedildi" xml:space="preserve">
+    <value>The data in the notification list has been saved.</value>
+  </data>
   <data name="errorprovidertc" xml:space="preserve">
     <value>TR ID Number Must Be 11 Characters!</value>
   </data>
@@ -306,8 +327,35 @@
   <data name="eskiyenisifrelerayni" xml:space="preserve">
     <value>The old password and the new password should not be the same!</value>
   </data>
+  <data name="exceldosyasi" xml:space="preserve">
+    <value>Excel Files|*.xlsx</value>
+  </data>
+  <data name="exceldosyasinikaydet" xml:space="preserve">
+    <value>Save Excel File</value>
+  </data>
   <data name="gizleToolStripMenuItem" xml:space="preserve">
     <value>Hide</value>
+  </data>
+  <data name="gorevbasligibos" xml:space="preserve">
+    <value>Task title cannot be left blank.</value>
+  </data>
+  <data name="gorevbaslikbos" xml:space="preserve">
+    <value>Please select a task you want to delete.</value>
+  </data>
+  <data name="gorevguncellendi" xml:space="preserve">
+    <value>The task {0} has been successfully updated.</value>
+  </data>
+  <data name="gorevicerigibos" xml:space="preserve">
+    <value>Task description cannot be left blank.</value>
+  </data>
+  <data name="gorevkaydedildi" xml:space="preserve">
+    <value>The task {0} has been successfully added.</value>
+  </data>
+  <data name="gorevsil" xml:space="preserve">
+    <value>Do you want to delete task named {0}?</value>
+  </data>
+  <data name="gorevsilindi" xml:space="preserve">
+    <value>The task {0} has been successfully deleted.</value>
   </data>
   <data name="groupBox1" xml:space="preserve">
     <value>Student Informations</value>
@@ -347,6 +395,9 @@
   </data>
   <data name="lbladdstudent" xml:space="preserve">
     <value>Student Registration</value>
+  </data>
+  <data name="lbladdtodolist" xml:space="preserve">
+    <value>CREATE TASK</value>
   </data>
   <data name="lbladsoyad" xml:space="preserve">
     <value>Name Surname:</value>
@@ -480,6 +531,9 @@
   <data name="lbldeletestudent" xml:space="preserve">
     <value>Delete Student</value>
   </data>
+  <data name="lbldeletetodolist" xml:space="preserve">
+    <value>DELETE TASK</value>
+  </data>
   <data name="lbldepartment" xml:space="preserve">
     <value>Department:</value>
   </data>
@@ -594,8 +648,17 @@
   <data name="lblduyurusilformu" xml:space="preserve">
     <value>DELETE NOTIFICATION</value>
   </data>
+  <data name="lblduyurusirala" xml:space="preserve">
+    <value>Sort Notification (A-Z):</value>
+  </data>
+  <data name="lblduyurusiralaters" xml:space="preserve">
+    <value>Sort Notification (Z-A):</value>
+  </data>
   <data name="lbleditstudent" xml:space="preserve">
     <value>Edit Student</value>
+  </data>
+  <data name="lbledittodolist" xml:space="preserve">
+    <value>EDIT TASK</value>
   </data>
   <data name="lblegitimotomasyonsistemi" xml:space="preserve">
     <value>Education Automation System</value>
@@ -615,8 +678,35 @@
   <data name="lblgender" xml:space="preserve">
     <value>Gender:</value>
   </data>
+  <data name="lblgorevara" xml:space="preserve">
+    <value>Search Task</value>
+  </data>
+  <data name="lblgorevbasligi" xml:space="preserve">
+    <value>Task Title:</value>
+  </data>
+  <data name="lblgorevbaslikara" xml:space="preserve">
+    <value>Search Task:</value>
+  </data>
+  <data name="lblgorevduzenle" xml:space="preserve">
+    <value>Edit Task</value>
+  </data>
+  <data name="lblgorevolustur" xml:space="preserve">
+    <value>Create Task</value>
+  </data>
+  <data name="lblgorevsayisi" xml:space="preserve">
+    <value>Task Count:</value>
+  </data>
+  <data name="lblgorevsil" xml:space="preserve">
+    <value>Delete Task</value>
+  </data>
+  <data name="lblgorevtanimi" xml:space="preserve">
+    <value>Task Description:</value>
+  </data>
   <data name="lblguvenlikkodu" xml:space="preserve">
     <value>Security Code:</value>
+  </data>
+  <data name="lblharfnotu" xml:space="preserve">
+    <value>Letter Grade:</value>
   </data>
   <data name="lblhesapmakinesi" xml:space="preserve">
     <value>Calculator</value>
@@ -653,6 +743,9 @@
   </data>
   <data name="lblnewpassword" xml:space="preserve">
     <value>New Password:</value>
+  </data>
+  <data name="lblnewpasswordform" xml:space="preserve">
+    <value>NEW PASSWORD</value>
   </data>
   <data name="lblnotbilgileri" xml:space="preserve">
     <value>Note Info</value>
@@ -714,8 +807,14 @@
   <data name="lblparola" xml:space="preserve">
     <value>Password:</value>
   </data>
+  <data name="lblparolamiunuttum" xml:space="preserve">
+    <value>Forgot My Password</value>
+  </data>
   <data name="lblpassword" xml:space="preserve">
     <value>Password:</value>
+  </data>
+  <data name="lblpasswordchangeform" xml:space="preserve">
+    <value>PASSWORD CHANGE FORM</value>
   </data>
   <data name="lblphonenumber" xml:space="preserve">
     <value>Phone Number:</value>
@@ -741,6 +840,9 @@
   <data name="lblsearchstudent" xml:space="preserve">
     <value>Search Student</value>
   </data>
+  <data name="lblsearchtodolist" xml:space="preserve">
+    <value>SEARCH TASK</value>
+  </data>
   <data name="lblsifredegisikliği" xml:space="preserve">
     <value>PASSWORD CHANGE</value>
   </data>
@@ -755,6 +857,9 @@
   </data>
   <data name="lblson3derskayit" xml:space="preserve">
     <value>Last 3 Lesson Reg.:</value>
+  </data>
+  <data name="lblson3duyuru" xml:space="preserve">
+    <value>Last 3 Notification:</value>
   </data>
   <data name="lblson3ogrencikayit" xml:space="preserve">
     <value>Last 3 Student Reg.:</value>
@@ -786,6 +891,12 @@
   <data name="lbltcnoara" xml:space="preserve">
     <value>Search TR No:</value>
   </data>
+  <data name="lbltodolist" xml:space="preserve">
+    <value>TO DO LIST</value>
+  </data>
+  <data name="lbltodolists" xml:space="preserve">
+    <value>TO DO LISTS</value>
+  </data>
   <data name="lbltoplamakademisyensayisi" xml:space="preserve">
     <value>Total Academician Count:</value>
   </data>
@@ -794,6 +905,9 @@
   </data>
   <data name="lbltoplamderssayisi" xml:space="preserve">
     <value>Total Lesson Count:</value>
+  </data>
+  <data name="lbltoplamduyurusayisi" xml:space="preserve">
+    <value>Total Notification Count:</value>
   </data>
   <data name="lbltoplamogrencisayisi" xml:space="preserve">
     <value>Total Student Count:</value>
@@ -806,6 +920,12 @@
   </data>
   <data name="lblvizesinavi" xml:space="preserve">
     <value>Midterm Exam:</value>
+  </data>
+  <data name="lblyapilacaklar" xml:space="preserve">
+    <value>To Do List</value>
+  </data>
+  <data name="lblyapilacaklarlistesi" xml:space="preserve">
+    <value>To Do Lists</value>
   </data>
   <data name="lblyonetici" xml:space="preserve">
     <value>Admin</value>
@@ -843,6 +963,9 @@
   <data name="metin4" xml:space="preserve">
     <value>Login was successful, you are directed to the student panel.</value>
   </data>
+  <data name="metin5" xml:space="preserve">
+    <value>The information matches, you are directed to the new password panel.</value>
+  </data>
   <data name="notifyIcon1" xml:space="preserve">
     <value>Education Automation System Admin Panel</value>
   </data>
@@ -866,6 +989,9 @@
   </data>
   <data name="notifyiconyoneticitext" xml:space="preserve">
     <value>Education Automation System Admin Panel</value>
+  </data>
+  <data name="notverilerkaydedildi" xml:space="preserve">
+    <value>The data in the note list has been saved.</value>
   </data>
   <data name="ogrenciadi2karakterdenaz" xml:space="preserve">
     <value>Student Name must be at least 2 characters.</value>
@@ -915,6 +1041,9 @@
   <data name="ogrenciuniversiteyasi" xml:space="preserve">
     <value>The student must be 17 years of age to enroll in the university.</value>
   </data>
+  <data name="ogrenciverilerikaydedildi" xml:space="preserve">
+    <value>The data in the student list has been saved.</value>
+  </data>
   <data name="parolabos" xml:space="preserve">
     <value>Please set a password.</value>
   </data>
@@ -927,6 +1056,18 @@
   <data name="postakodubos" xml:space="preserve">
     <value>Postal Code cannot be left blank.</value>
   </data>
+  <data name="RdbAkademisyenListesi" xml:space="preserve">
+    <value>Academician List</value>
+  </data>
+  <data name="RdbBolumListesi" xml:space="preserve">
+    <value>Department List</value>
+  </data>
+  <data name="RdbDersListesi" xml:space="preserve">
+    <value>Lesson List</value>
+  </data>
+  <data name="RdbDuyuruListesi" xml:space="preserve">
+    <value>Notification List</value>
+  </data>
   <data name="rdbenglish" xml:space="preserve">
     <value>ENGLISH</value>
   </data>
@@ -935,6 +1076,12 @@
   </data>
   <data name="RdbMale" xml:space="preserve">
     <value>Male</value>
+  </data>
+  <data name="RdbNotListesi" xml:space="preserve">
+    <value>Note List</value>
+  </data>
+  <data name="RdbOgrenciListesi" xml:space="preserve">
+    <value>Student List</value>
   </data>
   <data name="rdbturkce" xml:space="preserve">
     <value>TURKISH</value>
@@ -980,6 +1127,12 @@
   </data>
   <data name="toolTip14.ToolTipTitle" xml:space="preserve">
     <value>Notification Operations</value>
+  </data>
+  <data name="toolTip15.SetToolTip" xml:space="preserve">
+    <value>Click to add, delete and update tasks.</value>
+  </data>
+  <data name="toolTip15.ToolTipTitle" xml:space="preserve">
+    <value>To Do Lists</value>
   </data>
   <data name="toolTip2.SetToolTip" xml:space="preserve">
     <value>Click for tools such as changing passwords, listening to radio and music.</value>
@@ -1031,6 +1184,9 @@
   </data>
   <data name="uyari" xml:space="preserve">
     <value>Warning</value>
+  </data>
+  <data name="verilerbos" xml:space="preserve">
+    <value>Please select a data.</value>
   </data>
   <data name="yoneticicikis" xml:space="preserve">
     <value>Do you want to exit the admin panel?</value>

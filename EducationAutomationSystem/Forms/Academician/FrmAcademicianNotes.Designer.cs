@@ -34,7 +34,6 @@
             this.CmbLesson = new System.Windows.Forms.ComboBox();
             this.lblderssec = new System.Windows.Forms.Label();
             this.lblogrenciid = new System.Windows.Forms.Label();
-            this.CmbStudent = new System.Windows.Forms.ComboBox();
             this.lblvizesinavi = new System.Windows.Forms.Label();
             this.BtnCalculate = new System.Windows.Forms.Button();
             this.lblfinalsinavi = new System.Windows.Forms.Label();
@@ -53,6 +52,8 @@
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.PctBack = new System.Windows.Forms.PictureBox();
+            this.lblharfnotu = new System.Windows.Forms.Label();
+            this.TxtLetterGrade = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.DtgStudentNotes)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.PctBack)).BeginInit();
             this.SuspendLayout();
@@ -64,7 +65,7 @@
             this.BtnCancel.DialogResult = System.Windows.Forms.DialogResult.Cancel;
             this.BtnCancel.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.BtnCancel.ForeColor = System.Drawing.Color.White;
-            this.BtnCancel.Location = new System.Drawing.Point(473, 281);
+            this.BtnCancel.Location = new System.Drawing.Point(473, 293);
             this.BtnCancel.Name = "BtnCancel";
             this.BtnCancel.Size = new System.Drawing.Size(116, 39);
             this.BtnCancel.TabIndex = 127;
@@ -77,7 +78,7 @@
             this.BtnAdd.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
             this.BtnAdd.Cursor = System.Windows.Forms.Cursors.Hand;
             this.BtnAdd.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.BtnAdd.Location = new System.Drawing.Point(123, 281);
+            this.BtnAdd.Location = new System.Drawing.Point(123, 293);
             this.BtnAdd.Name = "BtnAdd";
             this.BtnAdd.Size = new System.Drawing.Size(116, 39);
             this.BtnAdd.TabIndex = 126;
@@ -93,6 +94,7 @@
             this.CmbLesson.Name = "CmbLesson";
             this.CmbLesson.Size = new System.Drawing.Size(240, 26);
             this.CmbLesson.TabIndex = 128;
+            //this.CmbLesson.SelectedIndexChanged += new System.EventHandler(this.CmbLesson_SelectedIndexChanged);
             // 
             // lblderssec
             // 
@@ -112,20 +114,10 @@
             this.lblogrenciid.TabIndex = 131;
             this.lblogrenciid.Text = "Öğrenci ID:";
             // 
-            // CmbStudent
-            // 
-            this.CmbStudent.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.CmbStudent.FormattingEnabled = true;
-            this.CmbStudent.Location = new System.Drawing.Point(683, 271);
-            this.CmbStudent.Name = "CmbStudent";
-            this.CmbStudent.Size = new System.Drawing.Size(211, 26);
-            this.CmbStudent.TabIndex = 130;
-            this.CmbStudent.Visible = false;
-            // 
             // lblvizesinavi
             // 
             this.lblvizesinavi.AutoSize = true;
-            this.lblvizesinavi.Location = new System.Drawing.Point(443, 110);
+            this.lblvizesinavi.Location = new System.Drawing.Point(440, 110);
             this.lblvizesinavi.Name = "lblvizesinavi";
             this.lblvizesinavi.Size = new System.Drawing.Size(90, 18);
             this.lblvizesinavi.TabIndex = 133;
@@ -147,7 +139,7 @@
             // lblfinalsinavi
             // 
             this.lblfinalsinavi.AutoSize = true;
-            this.lblfinalsinavi.Location = new System.Drawing.Point(443, 142);
+            this.lblfinalsinavi.Location = new System.Drawing.Point(440, 142);
             this.lblfinalsinavi.Name = "lblfinalsinavi";
             this.lblfinalsinavi.Size = new System.Drawing.Size(95, 18);
             this.lblfinalsinavi.TabIndex = 136;
@@ -164,7 +156,7 @@
             // lblortalama
             // 
             this.lblortalama.AutoSize = true;
-            this.lblortalama.Location = new System.Drawing.Point(444, 215);
+            this.lblortalama.Location = new System.Drawing.Point(440, 215);
             this.lblortalama.Name = "lblortalama";
             this.lblortalama.Size = new System.Drawing.Size(80, 18);
             this.lblortalama.TabIndex = 140;
@@ -213,7 +205,7 @@
             this.BtnEdit.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
             this.BtnEdit.Cursor = System.Windows.Forms.Cursors.Hand;
             this.BtnEdit.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.BtnEdit.Location = new System.Drawing.Point(295, 281);
+            this.BtnEdit.Location = new System.Drawing.Point(295, 293);
             this.BtnEdit.Name = "BtnEdit";
             this.BtnEdit.Size = new System.Drawing.Size(116, 39);
             this.BtnEdit.TabIndex = 146;
@@ -304,6 +296,23 @@
             this.PctBack.MouseLeave += new System.EventHandler(this.PctBack_MouseLeave);
             this.PctBack.MouseHover += new System.EventHandler(this.PctBack_MouseHover);
             // 
+            // lblharfnotu
+            // 
+            this.lblharfnotu.AutoSize = true;
+            this.lblharfnotu.Location = new System.Drawing.Point(440, 247);
+            this.lblharfnotu.Name = "lblharfnotu";
+            this.lblharfnotu.Size = new System.Drawing.Size(84, 18);
+            this.lblharfnotu.TabIndex = 156;
+            this.lblharfnotu.Text = "Harf Notu:";
+            // 
+            // TxtLetterGrade
+            // 
+            this.TxtLetterGrade.Enabled = false;
+            this.TxtLetterGrade.Location = new System.Drawing.Point(571, 244);
+            this.TxtLetterGrade.Name = "TxtLetterGrade";
+            this.TxtLetterGrade.Size = new System.Drawing.Size(90, 26);
+            this.TxtLetterGrade.TabIndex = 155;
+            // 
             // FrmAcademicianNotes
             // 
             this.AcceptButton = this.BtnAdd;
@@ -313,6 +322,8 @@
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
             this.CancelButton = this.BtnCancel;
             this.ClientSize = new System.Drawing.Size(727, 527);
+            this.Controls.Add(this.lblharfnotu);
+            this.Controls.Add(this.TxtLetterGrade);
             this.Controls.Add(this.PctBack);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
@@ -332,7 +343,6 @@
             this.Controls.Add(this.BtnCalculate);
             this.Controls.Add(this.lblvizesinavi);
             this.Controls.Add(this.lblogrenciid);
-            this.Controls.Add(this.CmbStudent);
             this.Controls.Add(this.lblderssec);
             this.Controls.Add(this.CmbLesson);
             this.Controls.Add(this.BtnCancel);
@@ -359,7 +369,6 @@
         private System.Windows.Forms.ComboBox CmbLesson;
         private System.Windows.Forms.Label lblderssec;
         private System.Windows.Forms.Label lblogrenciid;
-        private System.Windows.Forms.ComboBox CmbStudent;
         private System.Windows.Forms.Label lblvizesinavi;
         private System.Windows.Forms.Button BtnCalculate;
         private System.Windows.Forms.Label lblfinalsinavi;
@@ -378,5 +387,7 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.PictureBox PctBack;
+        private System.Windows.Forms.Label lblharfnotu;
+        private System.Windows.Forms.TextBox TxtLetterGrade;
     }
 }

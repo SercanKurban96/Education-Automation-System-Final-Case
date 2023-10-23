@@ -187,6 +187,15 @@ namespace EducationAutomationSystem {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Akademisyen listesindeki veriler kaydedildi..
+        /// </summary>
+        internal static string akademisyenverilerkaydedildi {
+            get {
+                return ResourceManager.GetString("akademisyenverilerkaydedildi", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Alanlar boş geçilemez!.
         /// </summary>
         internal static string alanlarbos {
@@ -286,6 +295,15 @@ namespace EducationAutomationSystem {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Hatalı T.C. numarası, mail adresi veya doğum tarihi!.
+        /// </summary>
+        internal static string bilgilerhatali {
+            get {
+                return ResourceManager.GetString("bilgilerhatali", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Bölüm adı en az 5 karakterden oluşmalıdır..
         /// </summary>
         internal static string bolum5karakterdenaz {
@@ -358,6 +376,15 @@ namespace EducationAutomationSystem {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Bölüm listesindeki veriler kaydedildi..
+        /// </summary>
+        internal static string bolumverilerikaydedildi {
+            get {
+                return ResourceManager.GetString("bolumverilerikaydedildi", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Kaydet.
         /// </summary>
         internal static string BtnAdd {
@@ -394,6 +421,15 @@ namespace EducationAutomationSystem {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Kontrol Et.
+        /// </summary>
+        internal static string BtnCheck {
+            get {
+                return ResourceManager.GetString("BtnCheck", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to SEÇİNİZ.
         /// </summary>
         internal static string BtnChoose {
@@ -417,6 +453,15 @@ namespace EducationAutomationSystem {
         internal static string BtnEdit {
             get {
                 return ResourceManager.GetString("BtnEdit", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Verileri Excel&apos;e Aktar.
+        /// </summary>
+        internal static string BtnExcel {
+            get {
+                return ResourceManager.GetString("BtnExcel", resourceCulture);
             }
         }
         
@@ -565,6 +610,15 @@ namespace EducationAutomationSystem {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Ders listesindeki veriler kaydedildi..
+        /// </summary>
+        internal static string dersverilerkaydedildi {
+            get {
+                return ResourceManager.GetString("dersverilerkaydedildi", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Duyuru başlığı boş bırakılamaz..
         /// </summary>
         internal static string duyurubasligibos {
@@ -628,6 +682,15 @@ namespace EducationAutomationSystem {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Duyuru listesindeki veriler kaydedildi..
+        /// </summary>
+        internal static string duyuruverilerkaydedildi {
+            get {
+                return ResourceManager.GetString("duyuruverilerkaydedildi", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to TC Kimlik Numarası 11 Karakter Olmalıdır!.
         /// </summary>
         internal static string errorprovidertc {
@@ -655,11 +718,92 @@ namespace EducationAutomationSystem {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Excel Dosyaları|*.xlsx.
+        /// </summary>
+        internal static string exceldosyasi {
+            get {
+                return ResourceManager.GetString("exceldosyasi", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Excel Dosyasını Kaydet.
+        /// </summary>
+        internal static string exceldosyasinikaydet {
+            get {
+                return ResourceManager.GetString("exceldosyasinikaydet", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Gizle.
         /// </summary>
         internal static string gizleToolStripMenuItem {
             get {
                 return ResourceManager.GetString("gizleToolStripMenuItem", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Görev başlığı boş bırakılamaz..
+        /// </summary>
+        internal static string gorevbasligibos {
+            get {
+                return ResourceManager.GetString("gorevbasligibos", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Lütfen silmek istediğiniz bir görev seçiniz..
+        /// </summary>
+        internal static string gorevbaslikbos {
+            get {
+                return ResourceManager.GetString("gorevbaslikbos", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to {0} adlı görev başarılı bir şekilde güncellendi..
+        /// </summary>
+        internal static string gorevguncellendi {
+            get {
+                return ResourceManager.GetString("gorevguncellendi", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Görev içeriği boş bırakılamaz..
+        /// </summary>
+        internal static string gorevicerigibos {
+            get {
+                return ResourceManager.GetString("gorevicerigibos", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to {0} adlı görev başarılı bir şekilde kaydedildi..
+        /// </summary>
+        internal static string gorevkaydedildi {
+            get {
+                return ResourceManager.GetString("gorevkaydedildi", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to {0} adlı görevi silmek istiyor musunuz?.
+        /// </summary>
+        internal static string gorevsil {
+            get {
+                return ResourceManager.GetString("gorevsil", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to {0} adlı görev başarılı bir şekilde silindi..
+        /// </summary>
+        internal static string gorevsilindi {
+            get {
+                return ResourceManager.GetString("gorevsilindi", resourceCulture);
             }
         }
         
@@ -777,6 +921,15 @@ namespace EducationAutomationSystem {
         internal static string lbladdstudent {
             get {
                 return ResourceManager.GetString("lbladdstudent", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to GÖREV OLUŞTUR.
+        /// </summary>
+        internal static string lbladdtodolist {
+            get {
+                return ResourceManager.GetString("lbladdtodolist", resourceCulture);
             }
         }
         
@@ -1177,6 +1330,15 @@ namespace EducationAutomationSystem {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to GÖREV SİL.
+        /// </summary>
+        internal static string lbldeletetodolist {
+            get {
+                return ResourceManager.GetString("lbldeletetodolist", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Bölüm:.
         /// </summary>
         internal static string lbldepartment {
@@ -1519,11 +1681,38 @@ namespace EducationAutomationSystem {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Duyuru Sırala (A-Z):.
+        /// </summary>
+        internal static string lblduyurusirala {
+            get {
+                return ResourceManager.GetString("lblduyurusirala", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Duyuru Sırala (Z-A):.
+        /// </summary>
+        internal static string lblduyurusiralaters {
+            get {
+                return ResourceManager.GetString("lblduyurusiralaters", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Öğrenci Düzenle.
         /// </summary>
         internal static string lbleditstudent {
             get {
                 return ResourceManager.GetString("lbleditstudent", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to GÖREV DÜZENLE.
+        /// </summary>
+        internal static string lbledittodolist {
+            get {
+                return ResourceManager.GetString("lbledittodolist", resourceCulture);
             }
         }
         
@@ -1582,11 +1771,92 @@ namespace EducationAutomationSystem {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Görev Ara.
+        /// </summary>
+        internal static string lblgorevara {
+            get {
+                return ResourceManager.GetString("lblgorevara", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Görev Başlığı:.
+        /// </summary>
+        internal static string lblgorevbasligi {
+            get {
+                return ResourceManager.GetString("lblgorevbasligi", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Görev Ara:.
+        /// </summary>
+        internal static string lblgorevbaslikara {
+            get {
+                return ResourceManager.GetString("lblgorevbaslikara", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Görev Düzenle.
+        /// </summary>
+        internal static string lblgorevduzenle {
+            get {
+                return ResourceManager.GetString("lblgorevduzenle", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Görev Oluştur.
+        /// </summary>
+        internal static string lblgorevolustur {
+            get {
+                return ResourceManager.GetString("lblgorevolustur", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Görev Sayısı:.
+        /// </summary>
+        internal static string lblgorevsayisi {
+            get {
+                return ResourceManager.GetString("lblgorevsayisi", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Görev Sil.
+        /// </summary>
+        internal static string lblgorevsil {
+            get {
+                return ResourceManager.GetString("lblgorevsil", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Görev Tanımı:.
+        /// </summary>
+        internal static string lblgorevtanimi {
+            get {
+                return ResourceManager.GetString("lblgorevtanimi", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Güvenlik Kodu:.
         /// </summary>
         internal static string lblguvenlikkodu {
             get {
                 return ResourceManager.GetString("lblguvenlikkodu", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Harf Notu:.
+        /// </summary>
+        internal static string lblharfnotu {
+            get {
+                return ResourceManager.GetString("lblharfnotu", resourceCulture);
             }
         }
         
@@ -1695,6 +1965,15 @@ namespace EducationAutomationSystem {
         internal static string lblnewpassword {
             get {
                 return ResourceManager.GetString("lblnewpassword", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to YENİ PAROLA.
+        /// </summary>
+        internal static string lblnewpasswordform {
+            get {
+                return ResourceManager.GetString("lblnewpasswordform", resourceCulture);
             }
         }
         
@@ -1879,11 +2158,29 @@ namespace EducationAutomationSystem {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Parolamı Unuttum.
+        /// </summary>
+        internal static string lblparolamiunuttum {
+            get {
+                return ResourceManager.GetString("lblparolamiunuttum", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Parola:.
         /// </summary>
         internal static string lblpassword {
             get {
                 return ResourceManager.GetString("lblpassword", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to PAROLA DEĞİŞİKLİĞİ FORMU.
+        /// </summary>
+        internal static string lblpasswordchangeform {
+            get {
+                return ResourceManager.GetString("lblpasswordchangeform", resourceCulture);
             }
         }
         
@@ -1960,6 +2257,15 @@ namespace EducationAutomationSystem {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to GÖREV ARA.
+        /// </summary>
+        internal static string lblsearchtodolist {
+            get {
+                return ResourceManager.GetString("lblsearchtodolist", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to ŞİFRE DEĞİŞİKLİĞİ.
         /// </summary>
         internal static string lblsifredegisikliği {
@@ -2001,6 +2307,15 @@ namespace EducationAutomationSystem {
         internal static string lblson3derskayit {
             get {
                 return ResourceManager.GetString("lblson3derskayit", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Son 3 Duyuru:.
+        /// </summary>
+        internal static string lblson3duyuru {
+            get {
+                return ResourceManager.GetString("lblson3duyuru", resourceCulture);
             }
         }
         
@@ -2095,6 +2410,24 @@ namespace EducationAutomationSystem {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to YAPILACAKLAR.
+        /// </summary>
+        internal static string lbltodolist {
+            get {
+                return ResourceManager.GetString("lbltodolist", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to YAPILACAKLAR LİSTESİ.
+        /// </summary>
+        internal static string lbltodolists {
+            get {
+                return ResourceManager.GetString("lbltodolists", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Toplam Akademisyen Sayısı:.
         /// </summary>
         internal static string lbltoplamakademisyensayisi {
@@ -2118,6 +2451,15 @@ namespace EducationAutomationSystem {
         internal static string lbltoplamderssayisi {
             get {
                 return ResourceManager.GetString("lbltoplamderssayisi", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Toplam Duyuru Sayısı:.
+        /// </summary>
+        internal static string lbltoplamduyurusayisi {
+            get {
+                return ResourceManager.GetString("lbltoplamduyurusayisi", resourceCulture);
             }
         }
         
@@ -2154,6 +2496,24 @@ namespace EducationAutomationSystem {
         internal static string lblvizesinavi {
             get {
                 return ResourceManager.GetString("lblvizesinavi", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Yapılacaklar.
+        /// </summary>
+        internal static string lblyapilacaklar {
+            get {
+                return ResourceManager.GetString("lblyapilacaklar", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Yapılacaklar Listesi.
+        /// </summary>
+        internal static string lblyapilacaklarlistesi {
+            get {
+                return ResourceManager.GetString("lblyapilacaklarlistesi", resourceCulture);
             }
         }
         
@@ -2266,6 +2626,15 @@ namespace EducationAutomationSystem {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Bilgiler eşleşiyor, yeni parola paneline yönlendiriliyorsunuz..
+        /// </summary>
+        internal static string metin5 {
+            get {
+                return ResourceManager.GetString("metin5", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Eğitim Otomasyon Sistemi Yönetici Paneli.
         /// </summary>
         internal static string notifyIcon1 {
@@ -2334,6 +2703,15 @@ namespace EducationAutomationSystem {
         internal static string notifyiconyoneticitext {
             get {
                 return ResourceManager.GetString("notifyiconyoneticitext", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Not listesindeki veriler kaydedildi..
+        /// </summary>
+        internal static string notverilerkaydedildi {
+            get {
+                return ResourceManager.GetString("notverilerkaydedildi", resourceCulture);
             }
         }
         
@@ -2482,6 +2860,15 @@ namespace EducationAutomationSystem {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Öğrenci listesindeki veriler kaydedildi..
+        /// </summary>
+        internal static string ogrenciverilerikaydedildi {
+            get {
+                return ResourceManager.GetString("ogrenciverilerikaydedildi", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Lütfen bir parola belirleyin..
         /// </summary>
         internal static string parolabos {
@@ -2518,6 +2905,42 @@ namespace EducationAutomationSystem {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Akademisyen Listesi.
+        /// </summary>
+        internal static string RdbAkademisyenListesi {
+            get {
+                return ResourceManager.GetString("RdbAkademisyenListesi", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Bölüm Listesi.
+        /// </summary>
+        internal static string RdbBolumListesi {
+            get {
+                return ResourceManager.GetString("RdbBolumListesi", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Ders Listesi.
+        /// </summary>
+        internal static string RdbDersListesi {
+            get {
+                return ResourceManager.GetString("RdbDersListesi", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Duyuru Listesi.
+        /// </summary>
+        internal static string RdbDuyuruListesi {
+            get {
+                return ResourceManager.GetString("RdbDuyuruListesi", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to İNGİLİZCE.
         /// </summary>
         internal static string rdbenglish {
@@ -2545,6 +2968,24 @@ namespace EducationAutomationSystem {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Not Listesi.
+        /// </summary>
+        internal static string RdbNotListesi {
+            get {
+                return ResourceManager.GetString("RdbNotListesi", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Öğrenci Listesi.
+        /// </summary>
+        internal static string RdbOgrenciListesi {
+            get {
+                return ResourceManager.GetString("RdbOgrenciListesi", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to TÜRKÇE.
         /// </summary>
         internal static string rdbturkce {
@@ -2568,15 +3009,6 @@ namespace EducationAutomationSystem {
         internal static string semtbos {
             get {
                 return ResourceManager.GetString("semtbos", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to .
-        /// </summary>
-        internal static string String1 {
-            get {
-                return ResourceManager.GetString("String1", resourceCulture);
             }
         }
         
@@ -2685,6 +3117,24 @@ namespace EducationAutomationSystem {
         internal static string toolTip14_ToolTipTitle {
             get {
                 return ResourceManager.GetString("toolTip14.ToolTipTitle", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Görev ekleme, silme, güncelleme işlemleri için tıklayın..
+        /// </summary>
+        internal static string toolTip15_SetToolTip {
+            get {
+                return ResourceManager.GetString("toolTip15.SetToolTip", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Yapılacaklar Listesi.
+        /// </summary>
+        internal static string toolTip15_ToolTipTitle {
+            get {
+                return ResourceManager.GetString("toolTip15.ToolTipTitle", resourceCulture);
             }
         }
         
@@ -2838,6 +3288,15 @@ namespace EducationAutomationSystem {
         internal static string uyari {
             get {
                 return ResourceManager.GetString("uyari", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Lütfen bir veri seçiniz..
+        /// </summary>
+        internal static string verilerbos {
+            get {
+                return ResourceManager.GetString("verilerbos", resourceCulture);
             }
         }
         

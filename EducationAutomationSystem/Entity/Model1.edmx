@@ -86,6 +86,7 @@
           <Property Name="Lesson" Type="int" />
           <Property Name="Student" Type="int" />
           <Property Name="Academician" Type="int" />
+          <Property Name="LetterGrade" Type="varchar" MaxLength="2" />
         </EntityType>
         <EntityType Name="TBLNOTIFICATION">
           <Key>
@@ -120,6 +121,16 @@
           <Property Name="HomePhoneNumber" Type="varchar" MaxLength="20" />
           <Property Name="StudentMail" Type="varchar" MaxLength="100" />
           <Property Name="StudentPicture" Type="varchar" MaxLength="500" />
+        </EntityType>
+        <EntityType Name="TBLTODOLIST">
+          <Key>
+            <PropertyRef Name="ToDoListID" />
+          </Key>
+          <Property Name="ToDoListID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="ToDoListDate" Type="date" />
+          <Property Name="ToDoListTitle" Type="varchar" MaxLength="100" />
+          <Property Name="ToDoListContent" Type="varchar(max)" />
+          <Property Name="Student" Type="int" />
         </EntityType>
         <!--Errors Found During Generation:
 warning 6002: The table/view 'DbEducation.dbo.View_1' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
@@ -269,6 +280,18 @@ warning 6002: The table/view 'DbEducation.dbo.View_2' does not have a primary ke
             </Dependent>
           </ReferentialConstraint>
         </Association>
+        <Association Name="FK_TBLTODOLIST_TBLSTUDENT">
+          <End Role="TBLSTUDENT" Type="Self.TBLSTUDENT" Multiplicity="0..1" />
+          <End Role="TBLTODOLIST" Type="Self.TBLTODOLIST" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="TBLSTUDENT">
+              <PropertyRef Name="StudentID" />
+            </Principal>
+            <Dependent Role="TBLTODOLIST">
+              <PropertyRef Name="Student" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
         <EntityContainer Name="DbEducationModelStoreContainer">
           <EntitySet Name="ilceler" EntityType="Self.ilceler" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="iller" EntityType="Self.iller" Schema="dbo" store:Type="Tables" />
@@ -280,6 +303,7 @@ warning 6002: The table/view 'DbEducation.dbo.View_2' does not have a primary ke
           <EntitySet Name="TBLNOTE" EntityType="Self.TBLNOTE" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="TBLNOTIFICATION" EntityType="Self.TBLNOTIFICATION" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="TBLSTUDENT" EntityType="Self.TBLSTUDENT" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="TBLTODOLIST" EntityType="Self.TBLTODOLIST" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="View_1" EntityType="Self.View_1" store:Type="Views" store:Schema="dbo">
             <DefiningQuery>SELECT 
     [View_1].[NoteID] AS [NoteID], 
@@ -337,6 +361,10 @@ warning 6002: The table/view 'DbEducation.dbo.View_2' does not have a primary ke
           <AssociationSet Name="FK_TBLSTUDENT_TBLDEPARTMENT" Association="Self.FK_TBLSTUDENT_TBLDEPARTMENT">
             <End Role="TBLDEPARTMENT" EntitySet="TBLDEPARTMENT" />
             <End Role="TBLSTUDENT" EntitySet="TBLSTUDENT" />
+          </AssociationSet>
+          <AssociationSet Name="FK_TBLTODOLIST_TBLSTUDENT" Association="Self.FK_TBLTODOLIST_TBLSTUDENT">
+            <End Role="TBLSTUDENT" EntitySet="TBLSTUDENT" />
+            <End Role="TBLTODOLIST" EntitySet="TBLTODOLIST" />
           </AssociationSet>
         </EntityContainer>
       </Schema></edmx:StorageModels>
@@ -441,6 +469,7 @@ warning 6002: The table/view 'DbEducation.dbo.View_2' does not have a primary ke
           <NavigationProperty Name="TBLACADEMICIAN" Relationship="Self.FK_TBLNOTE_TBLACADEMICIAN" FromRole="TBLNOTE" ToRole="TBLACADEMICIAN" />
           <NavigationProperty Name="TBLLESSON" Relationship="Self.FK_TBLNOTE_TBLLESSON" FromRole="TBLNOTE" ToRole="TBLLESSON" />
           <NavigationProperty Name="TBLSTUDENT" Relationship="Self.FK_TBLNOTE_TBLSTUDENT" FromRole="TBLNOTE" ToRole="TBLSTUDENT" />
+          <Property Name="LetterGrade" Type="String" MaxLength="2" FixedLength="false" Unicode="false" />
         </EntityType>
         <EntityType Name="TBLNOTIFICATION">
           <Key>
@@ -478,6 +507,7 @@ warning 6002: The table/view 'DbEducation.dbo.View_2' does not have a primary ke
           <NavigationProperty Name="iller" Relationship="Self.FK_TBLSTUDENT_iller1" FromRole="TBLSTUDENT" ToRole="iller" />
           <NavigationProperty Name="TBLDEPARTMENT" Relationship="Self.FK_TBLSTUDENT_TBLDEPARTMENT" FromRole="TBLSTUDENT" ToRole="TBLDEPARTMENT" />
           <NavigationProperty Name="TBLNOTE" Relationship="Self.FK_TBLNOTE_TBLSTUDENT" FromRole="TBLSTUDENT" ToRole="TBLNOTE" />
+          <NavigationProperty Name="TBLTODOLIST" Relationship="DbEducationModel.FK_TBLTODOLIST_TBLSTUDENT" FromRole="TBLSTUDENT" ToRole="TBLTODOLIST" />
         </EntityType>
         <Association Name="FK_ilceler_iller1">
           <End Role="iller" Type="Self.iller" Multiplicity="1" />
@@ -656,6 +686,11 @@ warning 6002: The table/view 'DbEducation.dbo.View_2' does not have a primary ke
           </AssociationSet>
           <EntitySet Name="View_1" EntityType="DbEducationModel.View_1" />
           <EntitySet Name="View_2" EntityType="DbEducationModel.View_2" />
+          <EntitySet Name="TBLTODOLIST" EntityType="DbEducationModel.TBLTODOLIST" />
+          <AssociationSet Name="FK_TBLTODOLIST_TBLSTUDENT" Association="DbEducationModel.FK_TBLTODOLIST_TBLSTUDENT">
+            <End Role="TBLSTUDENT" EntitySet="TBLSTUDENT" />
+            <End Role="TBLTODOLIST" EntitySet="TBLTODOLIST" />
+          </AssociationSet>
         </EntityContainer>
         <EntityType Name="View_1">
           <Key>
@@ -677,6 +712,29 @@ warning 6002: The table/view 'DbEducation.dbo.View_2' does not have a primary ke
           <Property Name="LessonID" Type="Int32" Nullable="false" />
           <Property Name="StudentName" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
         </EntityType>
+        <EntityType Name="TBLTODOLIST">
+          <Key>
+            <PropertyRef Name="ToDoListID" />
+          </Key>
+          <Property Name="ToDoListID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="ToDoListDate" Type="DateTime" Precision="0" />
+          <Property Name="ToDoListTitle" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Name="ToDoListContent" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+          <Property Name="Student" Type="Int32" />
+          <NavigationProperty Name="TBLSTUDENT" Relationship="DbEducationModel.FK_TBLTODOLIST_TBLSTUDENT" FromRole="TBLTODOLIST" ToRole="TBLSTUDENT" />
+        </EntityType>
+        <Association Name="FK_TBLTODOLIST_TBLSTUDENT">
+          <End Type="DbEducationModel.TBLSTUDENT" Role="TBLSTUDENT" Multiplicity="0..1" />
+          <End Type="DbEducationModel.TBLTODOLIST" Role="TBLTODOLIST" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="TBLSTUDENT">
+              <PropertyRef Name="StudentID" />
+            </Principal>
+            <Dependent Role="TBLTODOLIST">
+              <PropertyRef Name="Student" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
       </Schema>
     </edmx:ConceptualModels>
     <!-- C-S mapping content -->
@@ -763,6 +821,7 @@ warning 6002: The table/view 'DbEducation.dbo.View_2' does not have a primary ke
           <EntitySetMapping Name="TBLNOTE">
             <EntityTypeMapping TypeName="DbEducationModel.TBLNOTE">
               <MappingFragment StoreEntitySet="TBLNOTE">
+                <ScalarProperty Name="LetterGrade" ColumnName="LetterGrade" />
                 <ScalarProperty Name="NoteID" ColumnName="NoteID" />
                 <ScalarProperty Name="MidtermExam" ColumnName="MidtermExam" />
                 <ScalarProperty Name="FinalExam" ColumnName="FinalExam" />
@@ -828,6 +887,17 @@ warning 6002: The table/view 'DbEducation.dbo.View_2' does not have a primary ke
               <MappingFragment StoreEntitySet="View_2">
                 <ScalarProperty Name="StudentName" ColumnName="StudentName" />
                 <ScalarProperty Name="LessonID" ColumnName="LessonID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="TBLTODOLIST">
+            <EntityTypeMapping TypeName="DbEducationModel.TBLTODOLIST">
+              <MappingFragment StoreEntitySet="TBLTODOLIST">
+                <ScalarProperty Name="Student" ColumnName="Student" />
+                <ScalarProperty Name="ToDoListContent" ColumnName="ToDoListContent" />
+                <ScalarProperty Name="ToDoListTitle" ColumnName="ToDoListTitle" />
+                <ScalarProperty Name="ToDoListDate" ColumnName="ToDoListDate" />
+                <ScalarProperty Name="ToDoListID" ColumnName="ToDoListID" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>

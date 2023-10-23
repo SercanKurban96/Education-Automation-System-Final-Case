@@ -6,7 +6,6 @@ using System.Linq;
 using System.Windows.Forms;
 using EducationAutomationSystem.Academician;
 using EducationAutomationSystem.Entity;
-using static System.Windows.Forms.VisualStyles.VisualStyleElement;
 
 namespace EducationAutomationSystem.Forms.Academician
 {
@@ -59,8 +58,6 @@ namespace EducationAutomationSystem.Forms.Academician
             CmbLesson.DisplayMember = "LessonName";
             CmbLesson.ValueMember = "LessonID";
 
-            label6.Text = akademisyenID.ToString();
-
             lblderssec.Text = Localization.lblderssec;
             lblfinalsinavi.Text = Localization.lblfinalsinavi;
             lblnotislemleri.Text = Localization.lblnotislemleri;
@@ -71,6 +68,7 @@ namespace EducationAutomationSystem.Forms.Academician
             BtnCalculate.Text = Localization.BtnCalculate;
             BtnCancel.Text = Localization.BtnCancel;
             BtnEdit.Text = Localization.BtnEdit;
+            lblharfnotu.Text = Localization.lblharfnotu;
 
             var examnotes = (from x in db.TBLNOTE
                              select new
@@ -80,10 +78,11 @@ namespace EducationAutomationSystem.Forms.Academician
                                  Vize = x.MidtermExam,
                                  Final = x.FinalExam,
                                  Ortalama = x.Average,
+                                 HarfNotu = x.LetterGrade,
                                  AdSoyad = x.TBLSTUDENT.StudentName + " " + x.TBLSTUDENT.StudentSurname,
                                  Öğrenci = x.Student,
                                  Akademisyen = x.Academician
-                             }).Where(y=>y.Akademisyen == akademisyenID).ToList();
+                             }).Where(y => y.Akademisyen == academicianid).ToList();
             DtgStudentNotes.DataSource = examnotes;
             DtgStudentNotes.Columns["ID"].Visible = false;
             DtgStudentNotes.Columns["Öğrenci"].Visible = false;
@@ -102,15 +101,56 @@ namespace EducationAutomationSystem.Forms.Academician
         {
             byte vizeNotu, finalNotu;
             double ortalama;
+            string harfNotu = "";
             vizeNotu = Convert.ToByte(TxtMidtermExam.Text);
             finalNotu = Convert.ToByte(TxtFinalExam.Text);
             ortalama = (vizeNotu * 0.40) + (finalNotu * 0.60);
             TxtAverage.Text = ortalama.ToString();
+            if (ortalama < 50)
+            {
+                harfNotu = "FF";
+            }
+            else if (ortalama >= 50 && ortalama < 55)
+            {
+                harfNotu = "DD";
+            }
+            else if (ortalama >= 55 && ortalama < 60)
+            {
+                harfNotu = "DC";
+            }
+            else if (ortalama >= 60 && ortalama < 65)
+            {
+                harfNotu = "CC";
+            }
+            else if (ortalama >= 65 && ortalama < 70)
+            {
+                harfNotu = "CB";
+            }
+            else if (ortalama >= 70 && ortalama < 80)
+            {
+                harfNotu = "BB";
+            }
+            else if (ortalama >= 80 && ortalama < 90)
+            {
+                harfNotu = "BA";
+            }
+            else
+            {
+                harfNotu = "AA";
+            }
+            TxtLetterGrade.Text = harfNotu;
         }
 
         private void BtnAdd_Click(object sender, EventArgs e)
         {
-            int akademisyenID = db.TBLACADEMICIAN.Where(x => x.AcademicianTRNumber == number).Select(y => y.AcademicianID).FirstOrDefault();
+            academicianid = db.TBLACADEMICIAN.Where(x => x.AcademicianTRNumber == number).Select(y => y.AcademicianID).FirstOrDefault();
+
+            departmentid = db.TBLACADEMICIAN.Where(x => x.AcademicianTRNumber == number).Select(y => y.TBLDEPARTMENT.DepartmentID).FirstOrDefault();
+
+            label1.Text = academicianid.ToString();
+            label2.Text = departmentid.ToString();
+
+            studentid = db.TBLSTUDENT.Where(x => x.StudentNumber == number).Select(y => y.StudentID).FirstOrDefault();
 
             TBLNOTE t = new TBLNOTE();
             t.MidtermExam = byte.Parse(TxtMidtermExam.Text);
@@ -118,7 +158,8 @@ namespace EducationAutomationSystem.Forms.Academician
             t.Average = decimal.Parse(TxtAverage.Text);
             t.Lesson = int.Parse(CmbLesson.SelectedValue.ToString());
             t.Student = int.Parse(TxtStudentID.Text.ToString());
-            t.Academician = int.Parse(label6.Text);
+            t.Academician = int.Parse(label1.Text);
+            t.LetterGrade = TxtLetterGrade.Text;
             db.TBLNOTE.Add(t);
             db.SaveChanges();
             MessageBox.Show(String.Format(Localization.ogrencinotukaydedildi), String.Format(Localization.bilgi), MessageBoxButtons.OK, MessageBoxIcon.Information);
@@ -132,10 +173,11 @@ namespace EducationAutomationSystem.Forms.Academician
                                  Vize = x.MidtermExam,
                                  Final = x.FinalExam,
                                  Ortalama = x.Average,
+                                 HarfNotu = x.LetterGrade,
                                  AdSoyad = x.TBLSTUDENT.StudentName + " " + x.TBLSTUDENT.StudentSurname,
                                  Öğrenci = x.Student,
                                  Akademisyen = x.Academician
-                             }).Where(y => y.Akademisyen == akademisyenID).ToList();
+                             }).Where(y => y.Akademisyen == academicianid).ToList();
             DtgStudentNotes.DataSource = examnotes;
             DtgStudentNotes.Columns["ID"].Visible = false;
             DtgStudentNotes.Columns["Öğrenci"].Visible = false;
@@ -147,7 +189,6 @@ namespace EducationAutomationSystem.Forms.Academician
             TxtMidtermExam.Text = "0";
             TxtFinalExam.Text = "0";
             TxtAverage.Text = "0";
-            //TxtID.Text = "";
             TxtStudentID.Text = "";
         }
 
@@ -156,12 +197,14 @@ namespace EducationAutomationSystem.Forms.Academician
             try
             {
                 TxtID.Text = DtgStudentNotes.Rows[e.RowIndex].Cells[0].Value.ToString();
+                CmbLesson.Text = DtgStudentNotes.Rows[e.RowIndex].Cells[1].Value.ToString();
                 TxtMidtermExam.Text = DtgStudentNotes.Rows[e.RowIndex].Cells[2].Value.ToString();
                 TxtFinalExam.Text = DtgStudentNotes.Rows[e.RowIndex].Cells[3].Value.ToString();
                 TxtAverage.Text = DtgStudentNotes.Rows[e.RowIndex].Cells[4].Value.ToString();
-                CmbLesson.Text = DtgStudentNotes.Rows[e.RowIndex].Cells[5].Value.ToString();
-                TxtStudentID.Text = DtgStudentNotes.Rows[e.RowIndex].Cells[6].Value.ToString();
-                label6.Text = DtgStudentNotes.Rows[e.RowIndex].Cells[7].Value.ToString();
+                TxtLetterGrade.Text = DtgStudentNotes.Rows[e.RowIndex].Cells[5].Value.ToString();
+                TxtStudentID.Text = DtgStudentNotes.Rows[e.RowIndex].Cells[7].Value.ToString();
+                label1.Text = DtgStudentNotes.Rows[e.RowIndex].Cells[7].Value.ToString();
+                
 
             }
             catch (Exception)
@@ -182,7 +225,7 @@ namespace EducationAutomationSystem.Forms.Academician
 
         private void TxtID_TextChanged(object sender, EventArgs e)
         {
-            
+
         }
 
         private void BtnNumbers_Click(object sender, EventArgs e)
@@ -202,12 +245,19 @@ namespace EducationAutomationSystem.Forms.Academician
 
         private void TxtStudentID_TextChanged(object sender, EventArgs e)
         {
-            
+
         }
 
         private void BtnEdit_Click(object sender, EventArgs e)
         {
-            int akademisyenID = db.TBLACADEMICIAN.Where(x => x.AcademicianTRNumber == number).Select(y => y.AcademicianID).FirstOrDefault();
+            academicianid = db.TBLACADEMICIAN.Where(x => x.AcademicianTRNumber == number).Select(y => y.AcademicianID).FirstOrDefault();
+
+            departmentid = db.TBLACADEMICIAN.Where(x => x.AcademicianTRNumber == number).Select(y => y.TBLDEPARTMENT.DepartmentID).FirstOrDefault();
+
+            label1.Text = academicianid.ToString();
+            label2.Text = departmentid.ToString();
+
+            studentid = db.TBLSTUDENT.Where(x => x.StudentNumber == number).Select(y => y.StudentID).FirstOrDefault();
 
             int id = int.Parse(TxtID.Text);
             var t = db.TBLNOTE.Find(id);
@@ -215,8 +265,8 @@ namespace EducationAutomationSystem.Forms.Academician
             t.FinalExam = byte.Parse(TxtFinalExam.Text);
             t.Average = decimal.Parse(TxtAverage.Text);
             t.Lesson = int.Parse(CmbLesson.SelectedValue.ToString());
-            //t.Student = int.Parse(TxtStudentID.Text.ToString());
-            t.Academician = int.Parse(label6.Text);
+            t.Academician = int.Parse(label1.Text);
+            t.LetterGrade = TxtLetterGrade.Text;
             db.SaveChanges();
             MessageBox.Show(String.Format(Localization.ogrencinotuguncellendi), String.Format(Localization.bilgi), MessageBoxButtons.OK, MessageBoxIcon.Information);
             Temizle();
@@ -228,10 +278,11 @@ namespace EducationAutomationSystem.Forms.Academician
                                  Vize = x.MidtermExam,
                                  Final = x.FinalExam,
                                  Ortalama = x.Average,
+                                 HarfNotu = x.LetterGrade,
                                  AdSoyad = x.TBLSTUDENT.StudentName + " " + x.TBLSTUDENT.StudentSurname,
                                  Öğrenci = x.Student,
                                  Akademisyen = x.Academician
-                             }).Where(y => y.Akademisyen == akademisyenID).ToList();
+                             }).Where(y => y.Akademisyen == academicianid).ToList();
             DtgStudentNotes.DataSource = examnotes;
             DtgStudentNotes.Columns["ID"].Visible = false;
             DtgStudentNotes.Columns["Öğrenci"].Visible = false;
