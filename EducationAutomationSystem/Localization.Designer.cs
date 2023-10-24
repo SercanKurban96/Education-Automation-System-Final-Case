@@ -736,6 +736,15 @@ namespace EducationAutomationSystem {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Geçerli bir e-posta adresi değil!.
+        /// </summary>
+        internal static string gecersizmailadresi {
+            get {
+                return ResourceManager.GetString("gecersizmailadresi", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Gizle.
         /// </summary>
         internal static string gizleToolStripMenuItem {
@@ -2734,6 +2743,15 @@ namespace EducationAutomationSystem {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Öğrenci bilgileri güncellendi..
+        /// </summary>
+        internal static string ogrencibilgileriguncellendi {
+            get {
+                return ResourceManager.GetString("ogrencibilgileriguncellendi", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Lütfen bir öğrenci seçiniz..
         /// </summary>
         internal static string ogrencibos {
@@ -3009,6 +3027,15 @@ namespace EducationAutomationSystem {
         internal static string semtbos {
             get {
                 return ResourceManager.GetString("semtbos", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Eğitim Otomasyon Sistemi Projesi Sercan KURBAN tarafından yapılmıştır..
+        /// </summary>
+        internal static string statusStrip1 {
+            get {
+                return ResourceManager.GetString("statusStrip1", resourceCulture);
             }
         }
         

@@ -204,7 +204,7 @@ namespace EducationAutomationSystem.Forms.Academician
                 TxtLetterGrade.Text = DtgStudentNotes.Rows[e.RowIndex].Cells[5].Value.ToString();
                 TxtStudentID.Text = DtgStudentNotes.Rows[e.RowIndex].Cells[7].Value.ToString();
                 label1.Text = DtgStudentNotes.Rows[e.RowIndex].Cells[7].Value.ToString();
-                
+
 
             }
             catch (Exception)

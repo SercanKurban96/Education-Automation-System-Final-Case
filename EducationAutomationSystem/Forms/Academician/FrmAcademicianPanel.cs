@@ -65,6 +65,7 @@ namespace EducationAutomationSystem.Academician
             lbluygulamalar.Text = Localization.lbluygulamalar;
             lbldersler.Text = Localization.lbldersler;
             lblduyurular.Text = Localization.lblduyurular;
+            toolStripStatusLabel1.Text = Localization.statusStrip1;
 
             academicianid = db.TBLACADEMICIAN.Where(x => x.AcademicianTRNumber == number).Select(y => y.AcademicianID).FirstOrDefault();
 

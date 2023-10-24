@@ -193,7 +193,9 @@ warning 6002: The table/view 'DbEducation.dbo.View_2' does not have a primary ke
           </ReferentialConstraint>
         </Association>
         <Association Name="FK_TBLLESSON_TBLACADEMICIAN">
-          <End Role="TBLACADEMICIAN" Type="Self.TBLACADEMICIAN" Multiplicity="0..1" />
+          <End Role="TBLACADEMICIAN" Type="Self.TBLACADEMICIAN" Multiplicity="0..1">
+            <OnDelete Action="Cascade" />
+          </End>
           <End Role="TBLLESSON" Type="Self.TBLLESSON" Multiplicity="*" />
           <ReferentialConstraint>
             <Principal Role="TBLACADEMICIAN">

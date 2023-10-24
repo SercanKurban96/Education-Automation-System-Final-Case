@@ -11,7 +11,7 @@ namespace EducationAutomationSystem
     {
         public SqlConnection connection()
         {
-            SqlConnection conn = new SqlConnection("Data Source=DESKTOP-9H60TTH\\SERCANKURBAN;Initial Catalog=DbEducation;User ID=WebMobile_302;Password=webmobile.302");
+            SqlConnection conn = new SqlConnection("Data Source=DESKTOP-2VA2JL1\\SQLSERCAN;Initial Catalog=DbEducation;User ID=WebMobile_302;Password=webmobile.302");
             conn.Open();
             return conn;
         }

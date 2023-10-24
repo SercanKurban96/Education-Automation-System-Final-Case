@@ -10,6 +10,7 @@ using System.Windows.Forms;
 using System.Data.SqlClient;
 using static System.Windows.Forms.VisualStyles.VisualStyleElement.Button;
 using EducationAutomationSystem.Entity;
+using System.Text.RegularExpressions;
 
 namespace EducationAutomationSystem.Academician
 {
@@ -290,6 +291,11 @@ namespace EducationAutomationSystem.Academician
             lblakademisyensayisi.Text = Localization.lblakademisyensayisi;
             lblakademisyenduzenlemeformu.Text = Localization.lblakademisyenduzenlemeformu;
         }
+        private bool IsEmailValid(string input)
+        {
+            string emailPattern = @"^\w+([-+.']\w+)*@\w+([-.]\w+)*\.\w+([-.]\w+)*$";
+            return Regex.IsMatch(input, emailPattern);
+        }
 
         private void BtnEdit_Click(object sender, EventArgs e)
         {
@@ -299,6 +305,8 @@ namespace EducationAutomationSystem.Academician
             int yas = buGun.Year - dogumGunu.Year;
             if (dogumGunu > buGun.AddYears(-yas))
                 yas--;
+
+            string mail = TxtMail.Text;
 
             if (MskTRNumber.Text == "")
             {
@@ -348,7 +356,11 @@ namespace EducationAutomationSystem.Academician
             {
                 MessageBox.Show(String.Format(Localization.mailbos, TxtMail.Text), String.Format(Localization.uyari), MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
-            else if (TxtPicture.Text == "" && PctAcademicianImage.Image == null)
+            else if (!IsEmailValid(mail))
+            {
+                MessageBox.Show(String.Format(Localization.gecersizmailadresi, TxtMail.Text), String.Format(Localization.uyari), MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
+            else if (TxtPicture.Text == "" || PctAcademicianImage.Image == null)
             {
                 MessageBox.Show(String.Format(Localization.resimbos, TxtPicture.Text), String.Format(Localization.uyari), MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }

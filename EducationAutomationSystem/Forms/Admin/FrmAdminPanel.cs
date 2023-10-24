@@ -96,6 +96,8 @@ namespace EducationAutomationSystem
             lbluygulamalar.Text = Localization.lbluygulamalar;
             lblyoneticibasligi.Text = Localization.lblyoneticibasligi;
             hideshowexit();
+
+            toolStripStatusLabel1.Text = Localization.statusStrip1;
         }
 
         private void PctSettings_Click(object sender, EventArgs e)

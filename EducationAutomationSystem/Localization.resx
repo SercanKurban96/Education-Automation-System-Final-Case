@@ -333,6 +333,9 @@
   <data name="exceldosyasinikaydet" xml:space="preserve">
     <value>Excel Dosyasını Kaydet</value>
   </data>
+  <data name="gecersizmailadresi" xml:space="preserve">
+    <value>Geçerli bir e-posta adresi değil!</value>
+  </data>
   <data name="gizleToolStripMenuItem" xml:space="preserve">
     <value>Gizle</value>
   </data>
@@ -999,6 +1002,9 @@
   <data name="ogrenciadibos" xml:space="preserve">
     <value>Öğrenci adı boş bırakılamaz.</value>
   </data>
+  <data name="ogrencibilgileriguncellendi" xml:space="preserve">
+    <value>Öğrenci bilgileri güncellendi.</value>
+  </data>
   <data name="ogrencibos" xml:space="preserve">
     <value>Lütfen bir öğrenci seçiniz.</value>
   </data>
@@ -1091,6 +1097,9 @@
   </data>
   <data name="semtbos" xml:space="preserve">
     <value>Semt boş bırakılamaz.</value>
+  </data>
+  <data name="statusStrip1" xml:space="preserve">
+    <value>Eğitim Otomasyon Sistemi Projesi Sercan KURBAN tarafından yapılmıştır.</value>
   </data>
   <data name="tcnobos" xml:space="preserve">
     <value>T.C. Kimlik Numarası boş bırakılamaz.</value>

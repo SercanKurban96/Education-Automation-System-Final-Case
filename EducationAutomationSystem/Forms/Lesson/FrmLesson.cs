@@ -94,7 +94,6 @@ namespace EducationAutomationSystem.Lesson
             FrmListLesson fr = new FrmListLesson();
             fr.number = number;
             fr.Show();
-            this.Hide();
         }
     }
 }

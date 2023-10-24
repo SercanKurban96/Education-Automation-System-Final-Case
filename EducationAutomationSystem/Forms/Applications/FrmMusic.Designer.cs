@@ -48,12 +48,14 @@
             this.BtnFastForward = new System.Windows.Forms.Button();
             this.BtnFastBackward = new System.Windows.Forms.Button();
             this.BtnClearAll = new System.Windows.Forms.Button();
+            this.pictureBox4 = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.PctBack)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.axWindowsMediaPlayer1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.trackBar1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
             this.SuspendLayout();
             // 
             // PctBack
@@ -226,9 +228,9 @@
             // pictureBox3
             // 
             this.pictureBox3.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox3.Image")));
-            this.pictureBox3.Location = new System.Drawing.Point(375, 28);
+            this.pictureBox3.Location = new System.Drawing.Point(365, 38);
             this.pictureBox3.Name = "pictureBox3";
-            this.pictureBox3.Size = new System.Drawing.Size(143, 97);
+            this.pictureBox3.Size = new System.Drawing.Size(94, 74);
             this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox3.TabIndex = 24;
             this.pictureBox3.TabStop = false;
@@ -272,6 +274,16 @@
             this.BtnClearAll.UseVisualStyleBackColor = true;
             this.BtnClearAll.Click += new System.EventHandler(this.BtnClearAll_Click);
             // 
+            // pictureBox4
+            // 
+            this.pictureBox4.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox4.Image")));
+            this.pictureBox4.Location = new System.Drawing.Point(499, 38);
+            this.pictureBox4.Name = "pictureBox4";
+            this.pictureBox4.Size = new System.Drawing.Size(94, 74);
+            this.pictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox4.TabIndex = 28;
+            this.pictureBox4.TabStop = false;
+            // 
             // FrmMusic
             // 
             this.AcceptButton = this.BtnAddMusic;
@@ -281,6 +293,7 @@
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
             this.CancelButton = this.BtnStop;
             this.ClientSize = new System.Drawing.Size(687, 465);
+            this.Controls.Add(this.pictureBox4);
             this.Controls.Add(this.BtnClearAll);
             this.Controls.Add(this.BtnFastBackward);
             this.Controls.Add(this.BtnFastForward);
@@ -315,6 +328,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.trackBar1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -341,5 +355,6 @@
         private System.Windows.Forms.Button BtnFastForward;
         private System.Windows.Forms.Button BtnFastBackward;
         private System.Windows.Forms.Button BtnClearAll;
+        private System.Windows.Forms.PictureBox pictureBox4;
     }
 }

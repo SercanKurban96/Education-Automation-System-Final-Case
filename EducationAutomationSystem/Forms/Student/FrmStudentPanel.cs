@@ -40,7 +40,6 @@ namespace EducationAutomationSystem.Forms.Student
             this.Hide();
             notifyIcon3.Visible = false;
         }
-
         private void FrmStudentPanel_Load(object sender, EventArgs e)
         {
             hideshowexit();
@@ -63,6 +62,7 @@ namespace EducationAutomationSystem.Forms.Student
             lbluygulamalar.Text = Localization.lbluygulamalar;
             lblogrencino.Text = Localization.lblogrencino;
             lblyapilacaklar.Text = Localization.lblyapilacaklar;
+            toolStripStatusLabel1.Text = Localization.statusStrip1;
         }
         public void hideshowexit()
         {

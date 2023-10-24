@@ -175,7 +175,7 @@
     <value>{0} TR Number available.</value>
   </data>
   <data name="aynibolum" xml:space="preserve">
-    <value>There is a section named {0}.</value>
+    <value>There is a department named {0}.</value>
   </data>
   <data name="aynidersadi" xml:space="preserve">
     <value>There is already a course called {0}.</value>
@@ -332,6 +332,9 @@
   </data>
   <data name="exceldosyasinikaydet" xml:space="preserve">
     <value>Save Excel File</value>
+  </data>
+  <data name="gecersizmailadresi" xml:space="preserve">
+    <value>Invalid email address!</value>
   </data>
   <data name="gizleToolStripMenuItem" xml:space="preserve">
     <value>Hide</value>
@@ -999,6 +1002,9 @@
   <data name="ogrenciadibos" xml:space="preserve">
     <value>Student Name cannot be left blank.</value>
   </data>
+  <data name="ogrencibilgileriguncellendi" xml:space="preserve">
+    <value>Student information has been updated.</value>
+  </data>
   <data name="ogrencibos" xml:space="preserve">
     <value>Please choose a student.</value>
   </data>
@@ -1091,6 +1097,9 @@
   </data>
   <data name="semtbos" xml:space="preserve">
     <value>Neighborhood cannot be left blank.</value>
+  </data>
+  <data name="statusStrip1" xml:space="preserve">
+    <value>Education Automation System Project was made by Sercan KURBAN.</value>
   </data>
   <data name="tcnobos" xml:space="preserve">
     <value>TR ID Number cannot be left blank.</value>

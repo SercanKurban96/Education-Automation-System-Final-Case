@@ -35,7 +35,14 @@
             this.LblNumber = new System.Windows.Forms.Label();
             this.groupBox5 = new System.Windows.Forms.GroupBox();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.TxtPicture = new System.Windows.Forms.TextBox();
+            this.BtnPicture = new System.Windows.Forms.Button();
+            this.lblphoto = new System.Windows.Forms.Label();
+            this.PctStudentImage = new System.Windows.Forms.PictureBox();
+            this.BtnEdit = new System.Windows.Forms.Button();
+            this.BtnAdd = new System.Windows.Forms.Button();
             this.TxtDepartment = new System.Windows.Forms.TextBox();
+            this.BtnCancel = new System.Windows.Forms.Button();
             this.lblcinsiyet = new System.Windows.Forms.Label();
             this.lblmail = new System.Windows.Forms.Label();
             this.TxtMail = new System.Windows.Forms.TextBox();
@@ -54,9 +61,11 @@
             this.TxtStudentSurname = new System.Windows.Forms.TextBox();
             this.DtpBirthDate = new System.Windows.Forms.DateTimePicker();
             this.PctBack = new System.Windows.Forms.PictureBox();
+            this.openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
             ((System.ComponentModel.ISupportInitialize)(this.DtgStudentNotes)).BeginInit();
             this.groupBox5.SuspendLayout();
             this.groupBox1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.PctStudentImage)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.PctBack)).BeginInit();
             this.SuspendLayout();
             // 
@@ -67,14 +76,14 @@
             this.DtgStudentNotes.Dock = System.Windows.Forms.DockStyle.Fill;
             this.DtgStudentNotes.Location = new System.Drawing.Point(3, 22);
             this.DtgStudentNotes.Name = "DtgStudentNotes";
-            this.DtgStudentNotes.Size = new System.Drawing.Size(474, 306);
+            this.DtgStudentNotes.Size = new System.Drawing.Size(592, 372);
             this.DtgStudentNotes.TabIndex = 0;
             // 
             // lblnotlarim
             // 
             this.lblnotlarim.AutoSize = true;
             this.lblnotlarim.Font = new System.Drawing.Font("Segoe Script", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.lblnotlarim.Location = new System.Drawing.Point(338, 6);
+            this.lblnotlarim.Location = new System.Drawing.Point(398, 6);
             this.lblnotlarim.Name = "lblnotlarim";
             this.lblnotlarim.Size = new System.Drawing.Size(216, 51);
             this.lblnotlarim.TabIndex = 40;
@@ -105,7 +114,7 @@
             this.groupBox5.Controls.Add(this.DtgStudentNotes);
             this.groupBox5.Location = new System.Drawing.Point(-3, 60);
             this.groupBox5.Name = "groupBox5";
-            this.groupBox5.Size = new System.Drawing.Size(480, 331);
+            this.groupBox5.Size = new System.Drawing.Size(598, 397);
             this.groupBox5.TabIndex = 52;
             this.groupBox5.TabStop = false;
             this.groupBox5.Text = "Not Bilgileri";
@@ -113,7 +122,14 @@
             // groupBox1
             // 
             this.groupBox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(224)))), ((int)(((byte)(192)))));
+            this.groupBox1.Controls.Add(this.TxtPicture);
+            this.groupBox1.Controls.Add(this.BtnPicture);
+            this.groupBox1.Controls.Add(this.lblphoto);
+            this.groupBox1.Controls.Add(this.PctStudentImage);
+            this.groupBox1.Controls.Add(this.BtnEdit);
+            this.groupBox1.Controls.Add(this.BtnAdd);
             this.groupBox1.Controls.Add(this.TxtDepartment);
+            this.groupBox1.Controls.Add(this.BtnCancel);
             this.groupBox1.Controls.Add(this.lblcinsiyet);
             this.groupBox1.Controls.Add(this.lblmail);
             this.groupBox1.Controls.Add(this.TxtMail);
@@ -131,13 +147,78 @@
             this.groupBox1.Controls.Add(this.TxtStudentName);
             this.groupBox1.Controls.Add(this.TxtStudentSurname);
             this.groupBox1.Controls.Add(this.DtpBirthDate);
-            this.groupBox1.Enabled = false;
-            this.groupBox1.Location = new System.Drawing.Point(483, 60);
+            this.groupBox1.Location = new System.Drawing.Point(599, 60);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(415, 331);
+            this.groupBox1.Size = new System.Drawing.Size(589, 394);
             this.groupBox1.TabIndex = 120;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Öğrenci Bilgileri";
+            // 
+            // TxtPicture
+            // 
+            this.TxtPicture.Location = new System.Drawing.Point(539, 371);
+            this.TxtPicture.Name = "TxtPicture";
+            this.TxtPicture.Size = new System.Drawing.Size(40, 26);
+            this.TxtPicture.TabIndex = 152;
+            this.TxtPicture.Visible = false;
+            // 
+            // BtnPicture
+            // 
+            this.BtnPicture.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            this.BtnPicture.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.BtnPicture.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.BtnPicture.Location = new System.Drawing.Point(506, 200);
+            this.BtnPicture.Name = "BtnPicture";
+            this.BtnPicture.Size = new System.Drawing.Size(57, 26);
+            this.BtnPicture.TabIndex = 150;
+            this.BtnPicture.Text = "...";
+            this.BtnPicture.UseVisualStyleBackColor = false;
+            this.BtnPicture.Click += new System.EventHandler(this.BtnPicture_Click);
+            // 
+            // lblphoto
+            // 
+            this.lblphoto.AutoSize = true;
+            this.lblphoto.Location = new System.Drawing.Point(427, 203);
+            this.lblphoto.Name = "lblphoto";
+            this.lblphoto.Size = new System.Drawing.Size(73, 18);
+            this.lblphoto.TabIndex = 151;
+            this.lblphoto.Text = "Fotoğraf:";
+            // 
+            // PctStudentImage
+            // 
+            this.PctStudentImage.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.PctStudentImage.Location = new System.Drawing.Point(430, 36);
+            this.PctStudentImage.Name = "PctStudentImage";
+            this.PctStudentImage.Size = new System.Drawing.Size(133, 150);
+            this.PctStudentImage.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.PctStudentImage.TabIndex = 122;
+            this.PctStudentImage.TabStop = false;
+            // 
+            // BtnEdit
+            // 
+            this.BtnEdit.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
+            this.BtnEdit.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.BtnEdit.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.BtnEdit.Location = new System.Drawing.Point(9, 344);
+            this.BtnEdit.Name = "BtnEdit";
+            this.BtnEdit.Size = new System.Drawing.Size(129, 39);
+            this.BtnEdit.TabIndex = 149;
+            this.BtnEdit.Text = "Düzenle";
+            this.BtnEdit.UseVisualStyleBackColor = false;
+            this.BtnEdit.Click += new System.EventHandler(this.BtnEdit_Click);
+            // 
+            // BtnAdd
+            // 
+            this.BtnAdd.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            this.BtnAdd.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.BtnAdd.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.BtnAdd.Location = new System.Drawing.Point(271, 344);
+            this.BtnAdd.Name = "BtnAdd";
+            this.BtnAdd.Size = new System.Drawing.Size(129, 39);
+            this.BtnAdd.TabIndex = 147;
+            this.BtnAdd.Text = "Kaydet";
+            this.BtnAdd.UseVisualStyleBackColor = false;
+            this.BtnAdd.Click += new System.EventHandler(this.BtnAdd_Click);
             // 
             // TxtDepartment
             // 
@@ -146,6 +227,21 @@
             this.TxtDepartment.Name = "TxtDepartment";
             this.TxtDepartment.Size = new System.Drawing.Size(255, 26);
             this.TxtDepartment.TabIndex = 82;
+            // 
+            // BtnCancel
+            // 
+            this.BtnCancel.BackColor = System.Drawing.Color.RosyBrown;
+            this.BtnCancel.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.BtnCancel.DialogResult = System.Windows.Forms.DialogResult.Cancel;
+            this.BtnCancel.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.BtnCancel.ForeColor = System.Drawing.Color.White;
+            this.BtnCancel.Location = new System.Drawing.Point(434, 281);
+            this.BtnCancel.Name = "BtnCancel";
+            this.BtnCancel.Size = new System.Drawing.Size(129, 39);
+            this.BtnCancel.TabIndex = 148;
+            this.BtnCancel.Text = "İptal Et";
+            this.BtnCancel.UseVisualStyleBackColor = false;
+            this.BtnCancel.Click += new System.EventHandler(this.BtnCancel_Click);
             // 
             // lblcinsiyet
             // 
@@ -297,7 +393,7 @@
             this.PctBack.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.PctBack.Cursor = System.Windows.Forms.Cursors.Hand;
             this.PctBack.Image = ((System.Drawing.Image)(resources.GetObject("PctBack.Image")));
-            this.PctBack.Location = new System.Drawing.Point(842, 1);
+            this.PctBack.Location = new System.Drawing.Point(1130, 1);
             this.PctBack.Name = "PctBack";
             this.PctBack.Size = new System.Drawing.Size(58, 53);
             this.PctBack.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -307,13 +403,19 @@
             this.PctBack.MouseLeave += new System.EventHandler(this.PctBack_MouseLeave);
             this.PctBack.MouseHover += new System.EventHandler(this.PctBack_MouseHover);
             // 
+            // openFileDialog1
+            // 
+            this.openFileDialog1.FileName = "openFileDialog1";
+            // 
             // FrmStudentNotes
             // 
+            this.AcceptButton = this.BtnAdd;
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 18F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
-            this.ClientSize = new System.Drawing.Size(901, 392);
+            this.CancelButton = this.BtnCancel;
+            this.ClientSize = new System.Drawing.Size(1190, 457);
             this.Controls.Add(this.PctBack);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.groupBox5);
@@ -332,6 +434,7 @@
             this.groupBox5.ResumeLayout(false);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.PctStudentImage)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.PctBack)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -365,5 +468,13 @@
         private System.Windows.Forms.Label lblcinsiyet;
         private System.Windows.Forms.TextBox TxtDepartment;
         private System.Windows.Forms.PictureBox PctBack;
+        private System.Windows.Forms.Button BtnEdit;
+        private System.Windows.Forms.Button BtnAdd;
+        private System.Windows.Forms.Button BtnCancel;
+        private System.Windows.Forms.PictureBox PctStudentImage;
+        private System.Windows.Forms.Button BtnPicture;
+        private System.Windows.Forms.Label lblphoto;
+        private System.Windows.Forms.TextBox TxtPicture;
+        private System.Windows.Forms.OpenFileDialog openFileDialog1;
     }
 }

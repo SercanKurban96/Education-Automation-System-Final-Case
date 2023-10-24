@@ -62,6 +62,8 @@
             this.lblduyurular = new System.Windows.Forms.Label();
             this.PctNotification = new System.Windows.Forms.PictureBox();
             this.toolTip14 = new System.Windows.Forms.ToolTip(this.components);
+            this.statusStrip1 = new System.Windows.Forms.StatusStrip();
+            this.toolStripStatusLabel1 = new System.Windows.Forms.ToolStripStatusLabel();
             ((System.ComponentModel.ISupportInitialize)(this.PctSettings)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.PctNotes)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.PctMinimize)).BeginInit();
@@ -70,6 +72,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.PctAcademicianImage)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.PctLesson)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.PctNotification)).BeginInit();
+            this.statusStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
             // lbluygulamalar
@@ -373,13 +376,30 @@
             this.toolTip14.ToolTipIcon = System.Windows.Forms.ToolTipIcon.Info;
             this.toolTip14.ToolTipTitle = "Duyuru İşlemleri";
             // 
+            // statusStrip1
+            // 
+            this.statusStrip1.BackColor = System.Drawing.Color.Transparent;
+            this.statusStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.toolStripStatusLabel1});
+            this.statusStrip1.Location = new System.Drawing.Point(0, 556);
+            this.statusStrip1.Name = "statusStrip1";
+            this.statusStrip1.Size = new System.Drawing.Size(732, 22);
+            this.statusStrip1.TabIndex = 136;
+            this.statusStrip1.Text = "statusStrip1";
+            // 
+            // toolStripStatusLabel1
+            // 
+            this.toolStripStatusLabel1.Name = "toolStripStatusLabel1";
+            this.toolStripStatusLabel1.Size = new System.Drawing.Size(0, 17);
+            // 
             // FrmAcademicianPanel
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 18F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(224)))), ((int)(((byte)(192)))));
-            this.ClientSize = new System.Drawing.Size(732, 544);
+            this.ClientSize = new System.Drawing.Size(732, 578);
+            this.Controls.Add(this.statusStrip1);
             this.Controls.Add(this.lblduyurular);
             this.Controls.Add(this.PctNotification);
             this.Controls.Add(this.lbldersler);
@@ -416,6 +436,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.PctAcademicianImage)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.PctLesson)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.PctNotification)).EndInit();
+            this.statusStrip1.ResumeLayout(false);
+            this.statusStrip1.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -455,5 +477,7 @@
         private System.Windows.Forms.Label lblduyurular;
         private System.Windows.Forms.PictureBox PctNotification;
         private System.Windows.Forms.ToolTip toolTip14;
+        private System.Windows.Forms.StatusStrip statusStrip1;
+        private System.Windows.Forms.ToolStripStatusLabel toolStripStatusLabel1;
     }
 }

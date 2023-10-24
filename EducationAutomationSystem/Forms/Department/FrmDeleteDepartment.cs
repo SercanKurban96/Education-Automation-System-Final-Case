@@ -63,14 +63,14 @@ namespace EducationAutomationSystem.Department
         }
 
         private void BtnDelete_Click(object sender, EventArgs e)
-        {       
+        {
             if (TxtDepartmentName.Text == "")
             {
                 MessageBox.Show(String.Format(Localization.bolumsilmebos), String.Format(Localization.uyari), MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 TxtDepartmentName.Focus();
             }
             else
-            {
+            {              
                 DialogResult dialogResult = new DialogResult();
                 dialogResult = MessageBox.Show(String.Format(Localization.bolumsil,TxtDepartmentName.Text), String.Format(Localization.uyari), MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
                 if (dialogResult == DialogResult.Yes)
@@ -86,7 +86,7 @@ namespace EducationAutomationSystem.Department
                     TxtDepartmentName.Focus();
                     kayitsayisi();
                 }
-            }
+            } 
         }
 
         private void FrmDeleteDepartment_Load(object sender, EventArgs e)

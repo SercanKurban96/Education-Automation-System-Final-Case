@@ -61,6 +61,8 @@
             this.lblyapilacaklar = new System.Windows.Forms.Label();
             this.PctToDoList = new System.Windows.Forms.PictureBox();
             this.toolTip15 = new System.Windows.Forms.ToolTip(this.components);
+            this.statusStrip1 = new System.Windows.Forms.StatusStrip();
+            this.toolStripStatusLabel1 = new System.Windows.Forms.ToolStripStatusLabel();
             ((System.ComponentModel.ISupportInitialize)(this.PctMinimize)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.PctExit)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.PctSettings)).BeginInit();
@@ -69,6 +71,7 @@
             this.contextMenuStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.PctStudentImage)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.PctToDoList)).BeginInit();
+            this.statusStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
             // PctMinimize
@@ -359,13 +362,30 @@
             this.toolTip15.IsBalloon = true;
             this.toolTip15.ToolTipIcon = System.Windows.Forms.ToolTipIcon.Info;
             // 
+            // statusStrip1
+            // 
+            this.statusStrip1.BackColor = System.Drawing.Color.Transparent;
+            this.statusStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.toolStripStatusLabel1});
+            this.statusStrip1.Location = new System.Drawing.Point(0, 569);
+            this.statusStrip1.Name = "statusStrip1";
+            this.statusStrip1.Size = new System.Drawing.Size(732, 22);
+            this.statusStrip1.TabIndex = 133;
+            this.statusStrip1.Text = "statusStrip1";
+            // 
+            // toolStripStatusLabel1
+            // 
+            this.toolStripStatusLabel1.Name = "toolStripStatusLabel1";
+            this.toolStripStatusLabel1.Size = new System.Drawing.Size(0, 17);
+            // 
             // FrmStudentPanel
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 18F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
-            this.ClientSize = new System.Drawing.Size(732, 572);
+            this.ClientSize = new System.Drawing.Size(732, 591);
+            this.Controls.Add(this.statusStrip1);
             this.Controls.Add(this.lblyapilacaklar);
             this.Controls.Add(this.PctToDoList);
             this.Controls.Add(this.label1);
@@ -401,6 +421,8 @@
             this.contextMenuStrip1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.PctStudentImage)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.PctToDoList)).EndInit();
+            this.statusStrip1.ResumeLayout(false);
+            this.statusStrip1.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -439,5 +461,7 @@
         private System.Windows.Forms.Label lblyapilacaklar;
         private System.Windows.Forms.PictureBox PctToDoList;
         private System.Windows.Forms.ToolTip toolTip15;
+        private System.Windows.Forms.StatusStrip statusStrip1;
+        private System.Windows.Forms.ToolStripStatusLabel toolStripStatusLabel1;
     }
 }
